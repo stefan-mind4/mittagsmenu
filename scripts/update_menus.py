@@ -328,28 +328,190 @@ def scrape_wolfsberger():
 
 
 # ─────────────────────────────────────────────
-# SCRAPER: Klaghofer (Bild-Menü)
+# OCR-Hilfsfunktionen (Klaghofer + NIGLS)
+# ─────────────────────────────────────────────
+_DAY_VARIANTS_OCR = {
+    "Montag":    ["MONTAG"],
+    "Dienstag":  ["DIENSTAG"],
+    "Mittwoch":  ["MITTWOCH", "NITTWOCH"],
+    "Donnerstag":["DONNERSTAG"],
+    "Freitag":   ["FREITAG"],
+    "Samstag":   ["SAMSTAG"],
+}
+_PRICE_OCR      = re.compile(r"€\s*(\d+[,\.]\d{2})\d*")
+_ALLERGEN_OCR   = re.compile(r"^\(?[A-Z0-9](\s*[,\.]\s*[A-Z0-9])*\s*\.?\)?\.?$")
+_CONTINUATION   = ("mit ", "und ", "an ", "auf ", "in ", "dazu ", "jeweils ",
+                   "vom ", "von ", "sowie ")
+_OCR_STOPWORDS  = ("appetit", "wunschen", "wünschen", "guten appetit",
+                   "gedffnet", "geöffnet", "geoffnet", "kiiche", "küche bis",
+                   "kuche bis", "bis 15:", "bis 16:", "tweeter")
+
+
+def _ocr_detect_day(line):
+    upper = line.upper().replace(",", "").replace(".", "").strip()
+    for day, variants in _DAY_VARIANTS_OCR.items():
+        for v in variants:
+            if v in upper:
+                return day
+    return None
+
+
+def _ocr_is_allergen(line):
+    without_price = _PRICE_OCR.sub("", line).strip().rstrip(".")
+    return bool(_ALLERGEN_OCR.match(without_price)) and len(without_price) < 30
+
+
+def _ocr_is_junk(line):
+    if any(w in line.lower() for w in _OCR_STOPWORDS):
+        return True
+    if _PRICE_OCR.search(line):
+        return False
+    alpha = sum(1 for c in line if c.isalpha())
+    if alpha < 2:
+        return True
+    if re.match(r"^\([a-z]", line):   # OCR-Garbage wie "(eon rR sar"
+        return True
+    return False
+
+
+def _ocr_clean(s):
+    s = re.sub(r"\([A-Z0-9](\s*[,\.]\s*[A-Z0-9]){1,12}\)", "", s)
+    s = re.sub(r"[°™]+", "", s)
+    s = re.sub(r"\s\d{1,2}[\"'\.]?\s", " ", s)
+    s = re.sub(r'"{2,}|,,', '"', s)
+    s = re.sub(r"\s+", " ", s).strip().strip(".,;:'\"()")
+    return s
+
+
+def _ocr_parse_days(lines):
+    days, current_day, pending, feiertag = [], None, [], False
+
+    def flush(price=None):
+        if pending and days:
+            name = _ocr_clean(" ".join(pending))
+            if name and len(name) > 3:
+                days[-1]["items"].append({"name": name, "price": price})
+            pending.clear()
+
+    def append_to_last(text):
+        if days and days[-1]["items"]:
+            days[-1]["items"][-1]["name"] = _ocr_clean(
+                days[-1]["items"][-1]["name"] + " " + text
+            )
+
+    for line in lines:
+        line = line.strip()
+        if not line or _ocr_is_junk(line):
+            continue
+
+        day = _ocr_detect_day(line)
+        if day:
+            flush()
+            current_day, feiertag = day, False
+            days.append({"day": day, "items": []})
+            continue
+        if not current_day or feiertag:
+            continue
+
+        if "feiertag" in line.lower():
+            flush()
+            days[-1]["items"].append({"name": "Feiertag", "price": None})
+            feiertag = True
+            continue
+
+        # Reine Kopfzeilen wie "NIGLS Schnitzeltag:" überspringen
+        stripped = line.rstrip(":").strip()
+        if stripped.endswith("tag") or stripped.endswith("tag:"):
+            if not _PRICE_OCR.search(line):
+                continue
+
+        if _ocr_is_allergen(line):
+            pm = _PRICE_OCR.search(line)
+            if pm:
+                flush(pm.group(1).replace(",", ".") + " €")
+            continue
+
+        pm = _PRICE_OCR.search(line)
+        price_val = pm.group(1).replace(",", ".") + " €" if pm else None
+        clean_line = _PRICE_OCR.sub("", line).strip()
+        name_part = _ocr_clean(clean_line) if clean_line else ""
+
+        if not name_part and price_val:
+            flush(price_val)
+            continue
+
+        if name_part:
+            # Fortsetzung ohne Pending (z.B. "jeweils mit..." nach geflushem Item)
+            if not pending and name_part.lower().startswith(_CONTINUATION):
+                append_to_last(name_part)
+                continue
+            is_cont = pending and (
+                name_part.lower().startswith(_CONTINUATION)
+                or name_part[0].islower()
+            )
+            if is_cont:
+                pending.append(name_part)
+                if price_val:
+                    flush(price_val)
+            else:
+                flush()
+                pending.append(name_part)
+                if price_val:
+                    flush(price_val)
+
+    flush()
+    return [d for d in days if d["items"]]
+
+
+def _ocr_image(img):
+    """OCR auf PIL-Bild, gibt Tagesmenü-Liste zurück."""
+    try:
+        import pytesseract
+        # Deutschen Tesseract bevorzugen, Fallback auf Englisch
+        try:
+            raw = pytesseract.image_to_string(img, lang="deu+eng", config="--psm 6")
+        except Exception:
+            raw = pytesseract.image_to_string(img, lang="eng", config="--psm 6")
+        return _ocr_parse_days(raw.splitlines())
+    except ImportError:
+        print("  ⚠ pytesseract nicht installiert – OCR übersprungen", file=sys.stderr)
+        return []
+
+
+# ─────────────────────────────────────────────
+# SCRAPER: Klaghofer (Bild-Menü mit OCR)
 # ─────────────────────────────────────────────
 def scrape_klaghofer():
     url = "https://klaghofer-fleisch.at/wochenkarte/"
     try:
+        from PIL import Image as PILImage
+        import io as _io
+
         r = requests.get(url, headers=HEADERS, timeout=15)
         r.raise_for_status()
         soup = BeautifulSoup(r.text, "html.parser")
 
-        # Menübild aus .wochenkarte-Section
         section = soup.find("section", class_="wochenkarte")
         image_url = None
         week_label = ""
 
         if section:
-            img = section.find("img")
-            if img:
-                image_url = img.get("src") or img.get("data-src")
-                # KW aus Dateinamen extrahieren
+            img_tag = section.find("img")
+            if img_tag:
+                image_url = img_tag.get("src") or img_tag.get("data-src")
                 kw_match = re.search(r"KW(\d+)", image_url or "")
                 if kw_match:
                     week_label = f"KW {kw_match.group(1)}"
+
+        days = []
+        if image_url:
+            img_r = requests.get(image_url, headers=HEADERS, timeout=20)
+            img_r.raise_for_status()
+            pil_img = PILImage.open(_io.BytesIO(img_r.content))
+            pil_img = pil_img.resize(
+                (pil_img.width * 3, pil_img.height * 3), PILImage.LANCZOS
+            ).convert("L")
+            days = _ocr_image(pil_img)
 
         return {
             "id": "klaghofer",
@@ -360,8 +522,8 @@ def scrape_klaghofer():
             "phone": "+43 1 493 91 84",
             "price_note": None,
             "week_label": week_label,
-            "menu_image": image_url,
-            "days": [],
+            "menu_image": None,
+            "days": days,
         }
     except Exception as e:
         print(f"  ✗ Klaghofer Fehler: {e}", file=sys.stderr)
@@ -482,55 +644,54 @@ def scrape_goesser():
 def scrape_nigls():
     url = "https://nigls.at/"
     try:
+        import pdfplumber
+        import io as _io
+        from PIL import Image as PILImage
+
         r = requests.get(url, headers=HEADERS, timeout=15)
         r.raise_for_status()
         soup = BeautifulSoup(r.text, "html.parser")
 
-        # Elementor-Button mit Text "Mittagsmenu" finden
+        # Elementor-Button mit Text "Mittagsmenü" finden
         pdf_url = None
         for a in soup.find_all("a", class_=lambda c: c and "elementor-button" in c):
-            btn_text = a.get_text().strip()
-            if "mittag" in btn_text.lower():
+            if "mittag" in a.get_text().strip().lower():
                 pdf_url = a.get("href", "").strip()
                 break
 
-        if not pdf_url:
-            print("  NIGLS: Kein Mittagsmenu-Button gefunden")
-            return {
-                "id": "nigls",
-                "name": "NIGLS Gastwirtschaft",
-                "url": url,
-                "cuisine": "Oesterreichische Kueche",
-                "address": "Rankgasse 36, 1160 Wien",
-                "phone": "+43 1 4055077",
-                "price_note": None,
-                "week_label": "",
-                "menu_image": None,
-                "menu_pdf": None,
-                "days": [],
-            }
-
-        # KW aus Dateiname extrahieren
         week_label = ""
-        kw_match = re.search(r"KW(\d+)", pdf_url, re.I)
-        if kw_match:
-            week_label = f"KW {kw_match.group(1)}"
+        days = []
+
+        if not pdf_url:
+            print("  ⚠ NIGLS: Kein Mittagsmenü-Button gefunden")
+        else:
+            # KW aus Dateiname
+            kw_match = re.search(r"KW(\d+)", pdf_url, re.I)
+            if kw_match:
+                week_label = f"KW {kw_match.group(1)}"
+
+            # PDF laden + OCR
+            pdf_r = requests.get(pdf_url, headers=HEADERS, timeout=20)
+            pdf_r.raise_for_status()
+            with pdfplumber.open(_io.BytesIO(pdf_r.content)) as pdf:
+                pil_img = pdf.pages[0].to_image(resolution=200).original
+            days = _ocr_image(pil_img)
 
         return {
             "id": "nigls",
             "name": "NIGLS Gastwirtschaft",
             "url": url,
-            "cuisine": "Oesterreichische Kueche",
+            "cuisine": "Österreichische Küche",
             "address": "Rankgasse 36, 1160 Wien",
             "phone": "+43 1 4055077",
             "price_note": None,
             "week_label": week_label,
             "menu_image": None,
-            "menu_pdf": pdf_url,
-            "days": [],
+            "menu_pdf": None,
+            "days": days,
         }
     except Exception as e:
-        print(f"  NIGLS Fehler: {e}", file=sys.stderr)
+        print(f"  ✗ NIGLS Fehler: {e}", file=sys.stderr)
         return None
 
 
