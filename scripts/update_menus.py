@@ -150,7 +150,7 @@ def scrape_casamora():
                 "id": "casa-mora", "name": "Casa Mora", "url": url,
                 "cuisine": "Kolumbianisch 🇨🇴",
                 "address": "Neulerchenfelder Straße 6, 1160 Wien",
-                "phone": None, "price_note": None, "week_label": "",
+                "phone": None, "price_note": "Mittagsangebot 12–14 Uhr: 12,90 €", "week_label": "",
                 "menu_image": None, "days": [],
             }
 
@@ -208,7 +208,7 @@ def scrape_casamora():
             "cuisine": "Kolumbianisch 🇨🇴",
             "address": "Neulerchenfelder Straße 6, 1160 Wien",
             "phone": None,
-            "price_note": None,
+            "price_note": "Mittagsangebot 12–14 Uhr: 12,90 €",
             "week_label": "",
             "menu_image": None,
             "days": days,
@@ -463,7 +463,7 @@ def scrape_goesser():
             "cuisine": "Österreichische Küche",
             "address": "Elisabethstraße 3, 1010 Wien",
             "phone": None,
-            "price_note": None,
+            "price_note": "Hauptspeise 9,80 € · mit Suppe 10,80 €",
             "week_label": week_label,
             "menu_image": None,
             "days": days,
@@ -490,10 +490,10 @@ def main():
 
     scrapers = [
         ("Ottakringer Stub'n", scrape_ottakringer),
-        ("Casa Mora", scrape_casamora),
+        ("Gösser Bräu Wien", scrape_goesser),
         ("Gastwirtschaft Wolfsberger", scrape_wolfsberger),
         ("Klaghofer Fleisch", scrape_klaghofer),
-        ("Gösser Bräu Wien", scrape_goesser),
+        ("Casa Mora", scrape_casamora),
     ]
 
     restaurants = []
