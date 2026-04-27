@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-27T12:08:09.208386",
+  "updated": "2026-04-27T11:52:35.125637",
   "week": "KW 18",
   "restaurants": [
     {
@@ -77,21 +77,46 @@
       ]
     },
     {
-      "id": "casa-mora",
-      "name": "Casa Mora",
-      "url": "https://www.casamora.at/menu/",
-      "cuisine": "Kolumbianisch 🇨🇴",
-      "address": "Neulerchenfelder Straße 6, 1160 Wien",
+      "id": "goesser-braeu",
+      "name": "Gösser Bräu Wien",
+      "url": "https://www.goesserbraeuwien.at/",
+      "cuisine": "Österreichische Küche",
+      "address": "Elisabethstraße 3, 1010 Wien",
       "phone": null,
-      "price_note": null,
-      "week_label": "",
+      "price_note": "Hauptspeise 9,80 € · mit Suppe 10,80 €",
+      "week_label": "UNSERE MITTAGSTELLER vom 20.4. bis 24.4.2026",
       "menu_image": null,
       "days": [
+        {
+          "day": "Montag",
+          "items": [
+            {
+              "name": "Krautfleisch mit Sauerrahmdupfen und Kümmelerdäpfel",
+              "price": null
+            },
+            {
+              "name": "— oder —",
+              "price": null
+            },
+            {
+              "name": "Gebackene Champignons mit Sauce Tartare",
+              "price": null
+            }
+          ]
+        },
         {
           "day": "Dienstag",
           "items": [
             {
-              "name": "Sudado de Res Rindsragout mit Erdäpfeln und Yuca dazu Reis, Salat und Maduros",
+              "name": "Spaghetti Bolognese mit frischem Grana",
+              "price": null
+            },
+            {
+              "name": "— oder —",
+              "price": null
+            },
+            {
+              "name": "Spaghetti mit Gorgonzolasauce und frischem Grana",
               "price": null
             }
           ]
@@ -100,7 +125,15 @@
           "day": "Mittwoch",
           "items": [
             {
-              "name": "Schopfbraten vom Grill mit Reis, Salat und Kichererbsen",
+              "name": "Gebackener Schweinslungenbraten mit Petersilerdäpfel",
+              "price": null
+            },
+            {
+              "name": "— oder —",
+              "price": null
+            },
+            {
+              "name": "Erdäpfelpuffer mit Knoblauchsauce",
               "price": null
             }
           ]
@@ -109,11 +142,15 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "klare Suppe",
+              "name": "Hühnerbrust in Paprika-Schaum-Sauce mit Butternockerl",
               "price": null
             },
             {
-              "name": "Arroz PAISA kolumbianischer Mixreis mit Salat und Kochbananen-Chips",
+              "name": "— oder —",
+              "price": null
+            },
+            {
+              "name": "Reisauflauf mit Früchten auf Himbeerspiegel mit Schlagobers",
               "price": null
             }
           ]
@@ -122,20 +159,7 @@
           "day": "Freitag",
           "items": [
             {
-              "name": "BANDEJA PAISA kolumbianischer Bauernschmaus",
-              "price": null
-            }
-          ]
-        },
-        {
-          "day": "Samstag",
-          "items": [
-            {
-              "name": "Sancocho de Cola Suppentopf",
-              "price": null
-            },
-            {
-              "name": "Rinderschlepp in Saft mit Reis und Avocado",
+              "name": "Gebackenes Fischfilet mit Erdäpfelsalat und Sauce Tartare",
               "price": null
             }
           ]
@@ -215,46 +239,21 @@
       "days": []
     },
     {
-      "id": "goesser-braeu",
-      "name": "Gösser Bräu Wien",
-      "url": "https://www.goesserbraeuwien.at/",
-      "cuisine": "Österreichische Küche",
-      "address": "Elisabethstraße 3, 1010 Wien",
+      "id": "casa-mora",
+      "name": "Casa Mora",
+      "url": "https://www.casamora.at/menu/",
+      "cuisine": "Kolumbianisch 🇨🇴",
+      "address": "Neulerchenfelder Straße 6, 1160 Wien",
       "phone": null,
-      "price_note": null,
-      "week_label": "UNSERE MITTAGSTELLER vom 27.4. bis 30.4.2026",
+      "price_note": "Mittagsangebot 12–14 Uhr: 12,90 €",
+      "week_label": "",
       "menu_image": null,
       "days": [
-        {
-          "day": "Montag",
-          "items": [
-            {
-              "name": "Jägerschnitzel mit Reis",
-              "price": null
-            },
-            {
-              "name": "— oder —",
-              "price": null
-            },
-            {
-              "name": "Champignonsauce mit Serviettenknödel",
-              "price": null
-            }
-          ]
-        },
         {
           "day": "Dienstag",
           "items": [
             {
-              "name": "Gekochtes Rindfleisch mit Cremespinat und Erdäpfelschmarr‘n",
-              "price": null
-            },
-            {
-              "name": "— oder —",
-              "price": null
-            },
-            {
-              "name": "Spargelrisotto mit frischem Grana",
+              "name": "Sudado de Res Rindsragout mit Erdäpfeln und Yuca dazu Reis, Salat und Maduros",
               "price": null
             }
           ]
@@ -263,15 +262,7 @@
           "day": "Mittwoch",
           "items": [
             {
-              "name": "Gebackenes Schweinsschnitzerl mit Petersilerdäpfel",
-              "price": null
-            },
-            {
-              "name": "— oder —",
-              "price": null
-            },
-            {
-              "name": "Geröstete Knödel mit buntem Blattsalat",
+              "name": "Schopfbraten vom Grill mit Reis, Salat und Kichererbsen",
               "price": null
             }
           ]
@@ -280,15 +271,11 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Faschierter Stefaniebraten mit Erdäpfelpürree und Röstzwiebel",
+              "name": "klare Suppe",
               "price": null
             },
             {
-              "name": "— oder —",
-              "price": null
-            },
-            {
-              "name": "Topfenpalatschinke mit Vanillesauce und Schlagobers",
+              "name": "Arroz PAISA kolumbianischer Mixreis mit Salat und Kochbananen-Chips",
               "price": null
             }
           ]
@@ -297,7 +284,20 @@
           "day": "Freitag",
           "items": [
             {
-              "name": "Feiertag!",
+              "name": "BANDEJA PAISA kolumbianischer Bauernschmaus",
+              "price": null
+            }
+          ]
+        },
+        {
+          "day": "Samstag",
+          "items": [
+            {
+              "name": "Sancocho de Cola Suppentopf",
+              "price": null
+            },
+            {
+              "name": "Rinderschlepp in Saft mit Reis und Avocado",
               "price": null
             }
           ]
