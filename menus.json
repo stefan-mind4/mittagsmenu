@@ -248,61 +248,7 @@
       "price_note": "Mittagsangebot 12–14 Uhr: 12,90 €",
       "week_label": "",
       "menu_image": null,
-      "days": [
-        {
-          "day": "Dienstag",
-          "items": [
-            {
-              "name": "Sudado de Res Rindsragout mit Erdäpfeln und Yuca dazu Reis, Salat und Maduros",
-              "price": null
-            }
-          ]
-        },
-        {
-          "day": "Mittwoch",
-          "items": [
-            {
-              "name": "Schopfbraten vom Grill mit Reis, Salat und Kichererbsen",
-              "price": null
-            }
-          ]
-        },
-        {
-          "day": "Donnerstag",
-          "items": [
-            {
-              "name": "klare Suppe",
-              "price": null
-            },
-            {
-              "name": "Arroz PAISA kolumbianischer Mixreis mit Salat und Kochbananen-Chips",
-              "price": null
-            }
-          ]
-        },
-        {
-          "day": "Freitag",
-          "items": [
-            {
-              "name": "BANDEJA PAISA kolumbianischer Bauernschmaus",
-              "price": null
-            }
-          ]
-        },
-        {
-          "day": "Samstag",
-          "items": [
-            {
-              "name": "Sancocho de Cola Suppentopf",
-              "price": null
-            },
-            {
-              "name": "Rinderschlepp in Saft mit Reis und Avocado",
-              "price": null
-            }
-          ]
-        }
-      ]
+      "days": []
     }
   ]
 }
