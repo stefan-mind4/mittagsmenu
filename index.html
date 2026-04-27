@@ -224,6 +224,36 @@
       border: 1px solid var(--border);
     }
 
+    /* ── PDF CARD (NIGLS) ───────────────────── */
+    .menu-pdf-wrap {
+      padding: 14px 20px 18px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .menu-pdf-embed {
+      width: 100%;
+      height: 480px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      display: block;
+    }
+    .menu-pdf-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--green-lt);
+      color: var(--green);
+      font-weight: 600;
+      font-size: .85rem;
+      border-radius: 8px;
+      padding: 8px 14px;
+      text-decoration: none;
+      align-self: flex-start;
+    }
+    .menu-pdf-link:hover { background: var(--green); color: #fff; }
+
     /* ── EMPTY STATE ────────────────────────── */
     .empty-state {
       padding: 24px 20px;
@@ -416,13 +446,14 @@ const COORDS = {
   "goesser-braeu":     [48.2120838, 16.3140795],  // Thaliastraße 125A
   "wolfsberger":       [48.2161410, 16.3143023],  // Lienfeldergasse 35
   "klaghofer":         [48.2108755, 16.3052411],  // Rankgasse 25
+  "nigls":             [48.2111394, 16.3048215],  // Rankgasse 36
   "casa-mora":         [48.2087942, 16.3168854],  // Possingergasse 59-61
 };
 
 // ── Gehzeit via OSRM ─────────────────────────
 async function fetchWalkMins(toLat, toLon) {
   try {
-    const url = `https://router.project-osrm.org/route/v1/foot/` +
+    const url = `https://routing.openstreetmap.de/routed-foot/route/v1/foot/` +
       `${HOME.lon},${HOME.lat};${toLon},${toLat}?overview=false`;
     const res = await fetch(url);
     const d   = await res.json();
@@ -557,11 +588,21 @@ function buildCard(r, today) {
       </div>
     </div>`;
 
+  const hasPdf   = r.menu_pdf;
+
   let bodyHtml = "";
   if (hasImage) {
     bodyHtml = `
       <div class="menu-image-wrap">
         <img src="${r.menu_image}" alt="Menükarte ${r.name}" loading="lazy" />
+      </div>`;
+  } else if (hasPdf) {
+    bodyHtml = `
+      <div class="menu-pdf-wrap">
+        <embed class="menu-pdf-embed" src="${r.menu_pdf}" type="application/pdf" />
+        <a class="menu-pdf-link" href="${r.menu_pdf}" target="_blank" rel="noopener">
+          📄 Mittagsmenü als PDF öffnen
+        </a>
       </div>`;
   } else if (hasDays) {
     const sorted = [...r.days].sort((a, b) =>

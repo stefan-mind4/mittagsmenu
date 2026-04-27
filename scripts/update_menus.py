@@ -207,7 +207,7 @@ def scrape_casamora():
             "url": url,
             "cuisine": "Kolumbianisch 🇨🇴",
             "address": "Possingergasse 59-61, 1160 Wien",
-            "phone": None,
+            "phone": "+43 676 3868711",
             "price_note": "Mittagsangebot 12–14 Uhr: 12,90 €",
             "week_label": "",
             "menu_image": None,
@@ -462,7 +462,7 @@ def scrape_goesser():
             "url": "https://www.goesserbraeuwien.at/",
             "cuisine": "Österreichische Küche",
             "address": "Thaliastraße 125A, 1160 Wien",
-            "phone": None,
+            "phone": "+43 1 3692286",
             "price_note": "Hauptspeise 9,80 € · mit Suppe 10,80 €",
             "week_label": week_label,
             "menu_image": None,
@@ -473,6 +473,64 @@ def scrape_goesser():
         return None
     except Exception as e:
         print(f"  ✗ Gösser Fehler: {e}", file=sys.stderr)
+        return None
+
+
+# ─────────────────────────────────────────────
+# SCRAPER: NIGLS Gastwirtschaft (PDF via Elementor-Button)
+# ─────────────────────────────────────────────
+def scrape_nigls():
+    url = "https://nigls.at/"
+    try:
+        r = requests.get(url, headers=HEADERS, timeout=15)
+        r.raise_for_status()
+        soup = BeautifulSoup(r.text, "html.parser")
+
+        # Elementor-Button mit Text "Mittagsmenu" finden
+        pdf_url = None
+        for a in soup.find_all("a", class_=lambda c: c and "elementor-button" in c):
+            btn_text = a.get_text().strip()
+            if "mittag" in btn_text.lower():
+                pdf_url = a.get("href", "").strip()
+                break
+
+        if not pdf_url:
+            print("  NIGLS: Kein Mittagsmenu-Button gefunden")
+            return {
+                "id": "nigls",
+                "name": "NIGLS Gastwirtschaft",
+                "url": url,
+                "cuisine": "Oesterreichische Kueche",
+                "address": "Rankgasse 36, 1160 Wien",
+                "phone": "+43 1 4055077",
+                "price_note": None,
+                "week_label": "",
+                "menu_image": None,
+                "menu_pdf": None,
+                "days": [],
+            }
+
+        # KW aus Dateiname extrahieren
+        week_label = ""
+        kw_match = re.search(r"KW(\d+)", pdf_url, re.I)
+        if kw_match:
+            week_label = f"KW {kw_match.group(1)}"
+
+        return {
+            "id": "nigls",
+            "name": "NIGLS Gastwirtschaft",
+            "url": url,
+            "cuisine": "Oesterreichische Kueche",
+            "address": "Rankgasse 36, 1160 Wien",
+            "phone": "+43 1 4055077",
+            "price_note": None,
+            "week_label": week_label,
+            "menu_image": None,
+            "menu_pdf": pdf_url,
+            "days": [],
+        }
+    except Exception as e:
+        print(f"  NIGLS Fehler: {e}", file=sys.stderr)
         return None
 
 
@@ -493,6 +551,7 @@ def main():
         ("Gösser Bräu Wien", scrape_goesser),
         ("Gastwirtschaft Wolfsberger", scrape_wolfsberger),
         ("Klaghofer Fleisch", scrape_klaghofer),
+        ("NIGLS Gastwirtschaft", scrape_nigls),
         ("Casa Mora", scrape_casamora),
     ]
 
