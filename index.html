@@ -3,30 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mittagsmenü – 1160 Wien</title>
+  <title>Wos essma heit? – 1160 Wien</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 
   <style>
     :root {
-      --bg:        #F5F1EB;
-      --surface:   #FFFFFF;
-      --green:     #2C5F2E;
-      --green-lt:  #EAF2EA;
-      --amber:     #D4861C;
-      --amber-lt:  #FEF3E2;
-      --text:      #1C1C1C;
-      --muted:     #6B6766;
-      --border:    #E3DDD5;
-      --today-bg:  #FFF8ED;
-      --today-border: #D4861C;
-      --radius:    14px;
-      --shadow:    0 2px 12px rgba(0,0,0,.08);
+      --bg:          #F5F1EB;
+      --surface:     #FFFFFF;
+      --green:       #2C5F2E;
+      --green-lt:    #EAF2EA;
+      --amber:       #D4861C;
+      --amber-lt:    #FEF3E2;
+      --text:        #1C1C1C;
+      --muted:       #6B6766;
+      --border:      #E3DDD5;
+      --today-bg:    #FFF8ED;
+      --today-border:#D4861C;
+      --radius:      14px;
+      --shadow:      0 2px 12px rgba(0,0,0,.08);
+      --nav-h:       48px;
     }
 
+    html { scroll-behavior: smooth; }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
@@ -40,51 +42,212 @@
     .site-header {
       background: var(--green);
       color: #fff;
-      padding: 28px 24px 24px;
+      padding: 20px 24px 0;
+    }
+    .header-top {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      justify-content: space-between;
+      padding-bottom: 16px;
+    }
+    .site-logo {
+      height: 36px;
+      width: auto;
+      flex-shrink: 0;
+    }
+    .header-center {
+      flex: 1;
       text-align: center;
     }
-    .site-header h1 {
+    .header-center h1 {
       font-family: 'Playfair Display', Georgia, serif;
-      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      font-size: clamp(1.3rem, 3.5vw, 2.2rem);
       letter-spacing: -.02em;
-      margin-bottom: 6px;
+      line-height: 1.2;
     }
-    .site-header .meta {
-      font-size: .875rem;
-      opacity: .8;
+    .header-meta {
+      font-size: .8rem;
+      opacity: .75;
+      margin-top: 4px;
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       flex-wrap: wrap;
     }
     .badge-week {
       background: rgba(255,255,255,.15);
       border-radius: 20px;
-      padding: 3px 12px;
+      padding: 2px 10px;
       font-weight: 600;
       letter-spacing: .03em;
+    }
+
+    /* ── NAV ────────────────────────────────── */
+    .site-nav {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      border-top: 1px solid rgba(255,255,255,.15);
+      margin: 0 -24px;
+    }
+    .site-nav a {
+      color: rgba(255,255,255,.75);
+      text-decoration: none;
+      font-size: .8rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      padding: 0 20px;
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      border-bottom: 3px solid transparent;
+      transition: color .15s, border-color .15s;
+    }
+    .site-nav a:hover,
+    .site-nav a.active {
+      color: #fff;
+      border-bottom-color: var(--amber);
+    }
+
+    /* ── STICKY NAV CLONE ───────────────────── */
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: var(--green);
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,.2);
+    }
+    .sticky-nav a {
+      color: rgba(255,255,255,.75);
+      text-decoration: none;
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      padding: 0 20px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      border-bottom: 3px solid transparent;
+      transition: color .15s, border-color .15s;
+    }
+    .sticky-nav a:hover,
+    .sticky-nav a.active {
+      color: #fff;
+      border-bottom-color: var(--amber);
     }
 
     /* ── TODAY BANNER ──────────────────────── */
     .today-banner {
       background: var(--amber-lt);
       border-bottom: 2px solid var(--amber);
-      padding: 10px 24px;
+      padding: 8px 24px;
       text-align: center;
       font-size: .875rem;
       color: var(--amber);
       font-weight: 600;
     }
 
-    /* ── GRID ───────────────────────────────── */
-    .grid {
+    /* ── SECTIONS ───────────────────────────── */
+    .section {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 40px 20px 20px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.6rem;
+      color: var(--green);
+      margin-bottom: 24px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+    }
+    .section-divider {
+      border: none;
+      border-top: 3px solid var(--border);
+      margin: 0;
+    }
+
+    /* ── TAGESMENÜ-GRID ─────────────────────── */
+    .tages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .tages-card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      border-top: 4px solid var(--green);
+    }
+    .tages-dishes {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .tages-dish-main {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.15rem;
+      line-height: 1.3;
+      color: var(--text);
+    }
+    .tages-dish-soup {
+      font-size: .85rem;
+      color: var(--muted);
+      line-height: 1.35;
+    }
+    .tages-dish-other {
+      font-size: .85rem;
+      color: var(--muted);
+    }
+    .tages-separator {
+      border: none;
+      border-top: 1px solid var(--border);
+    }
+    .tages-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .tages-restaurant {
+      font-size: .78rem;
+      font-weight: 600;
+      color: var(--green);
+      text-decoration: none;
+      letter-spacing: .02em;
+    }
+    .tages-restaurant:hover { text-decoration: underline; }
+    .tages-price {
+      font-size: .8rem;
+      font-weight: 600;
+      color: var(--amber);
+      white-space: nowrap;
+    }
+    .tages-empty {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 48px 24px;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    /* ── WOCHENMENÜ GRID ────────────────────── */
+    .restaurant-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
       gap: 20px;
-      padding: 28px 20px 48px;
-      max-width: 1300px;
-      margin: 0 auto;
     }
 
     /* ── CARD ───────────────────────────────── */
@@ -96,7 +259,6 @@
       display: flex;
       flex-direction: column;
     }
-
     .card-header {
       padding: 18px 20px 14px;
       border-bottom: 1px solid var(--border);
@@ -112,12 +274,8 @@
       font-size: 1.25rem;
       line-height: 1.25;
     }
-    .card-header h2 a {
-      color: var(--text);
-      text-decoration: none;
-    }
+    .card-header h2 a { color: var(--text); text-decoration: none; }
     .card-header h2 a:hover { color: var(--green); }
-
     .cuisine-badge {
       white-space: nowrap;
       background: var(--green-lt);
@@ -128,7 +286,6 @@
       padding: 3px 10px;
       flex-shrink: 0;
     }
-
     .card-address {
       margin-top: 6px;
       font-size: .8rem;
@@ -137,7 +294,6 @@
       align-items: center;
       gap: 4px;
     }
-
     .week-chip {
       display: inline-block;
       margin-top: 6px;
@@ -156,18 +312,15 @@
       flex-direction: column;
       gap: 12px;
     }
-
     .day-block {
       border-radius: 10px;
       padding: 10px 12px;
       border: 1px solid var(--border);
-      transition: border-color .15s;
     }
     .day-block.is-today {
       background: var(--today-bg);
       border-color: var(--today-border);
     }
-
     .day-name {
       font-size: .7rem;
       font-weight: 700;
@@ -182,14 +335,11 @@
     .day-block.is-today .day-name { color: var(--amber); }
     .today-dot {
       display: inline-block;
-      width: 7px;
-      height: 7px;
+      width: 7px; height: 7px;
       border-radius: 50%;
       background: var(--amber);
     }
-
     .menu-items { display: flex; flex-direction: column; gap: 4px; }
-
     .menu-item {
       display: flex;
       justify-content: space-between;
@@ -206,53 +356,14 @@
       font-size: .82rem;
     }
 
-    .price-note {
-      margin-top: 4px;
-      font-size: .75rem;
-      color: var(--muted);
-      font-style: italic;
-    }
-
-    /* ── IMAGE CARD (Klaghofer) ─────────────── */
-    .menu-image-wrap {
-      padding: 14px 20px 18px;
-    }
+    /* ── IMAGE CARD ─────────────────────────── */
+    .menu-image-wrap { padding: 14px 20px 18px; }
     .menu-image-wrap img {
       width: 100%;
       border-radius: 8px;
       display: block;
       border: 1px solid var(--border);
     }
-
-    /* ── PDF CARD (NIGLS) ───────────────────── */
-    .menu-pdf-wrap {
-      padding: 14px 20px 18px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .menu-pdf-embed {
-      width: 100%;
-      height: 480px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      display: block;
-    }
-    .menu-pdf-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: var(--green-lt);
-      color: var(--green);
-      font-weight: 600;
-      font-size: .85rem;
-      border-radius: 8px;
-      padding: 8px 14px;
-      text-decoration: none;
-      align-self: flex-start;
-    }
-    .menu-pdf-link:hover { background: var(--green); color: #fff; }
 
     /* ── EMPTY STATE ────────────────────────── */
     .empty-state {
@@ -261,25 +372,19 @@
       color: var(--muted);
       font-size: .875rem;
     }
-    .empty-state svg {
-      margin: 0 auto 8px;
-      display: block;
-      opacity: .4;
-    }
 
     /* ── MAP CARD ───────────────────────────── */
-    .card--map {
-      grid-column: 1 / -1;
+    .map-wrap {
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
     }
     .map-body {
       display: flex;
-      min-height: 360px;
+      min-height: 380px;
     }
-    #map {
-      flex: 1;
-      min-height: 360px;
-      z-index: 0;
-    }
+    #map { flex: 1; min-height: 380px; z-index: 0; }
     .walktime-list {
       width: 230px;
       flex-shrink: 0;
@@ -287,7 +392,6 @@
       border-left: 1px solid var(--border);
       display: flex;
       flex-direction: column;
-      gap: 0;
     }
     .walktime-list-title {
       font-size: .7rem;
@@ -317,8 +421,6 @@
       text-align: right;
     }
     .walktime-val.loading { color: var(--muted); font-weight: 400; }
-
-    /* Leaflet marker override */
     .map-pin {
       background: var(--green);
       color: #fff;
@@ -331,11 +433,9 @@
       line-height: 1.4;
       border: 2px solid #fff;
     }
-    .map-pin.is-home {
-      background: var(--amber);
-    }
+    .map-pin.is-home { background: var(--amber); }
 
-    /* ── LOADING ────────────────────────────── */
+    /* ── LOADING / ERROR ────────────────────── */
     #loading {
       text-align: center;
       padding: 80px 24px;
@@ -351,8 +451,6 @@
       margin: 0 auto 16px;
     }
     @keyframes spin { to { transform: rotate(360deg); } }
-
-    /* ── ERROR ──────────────────────────────── */
     #error-msg {
       display: none;
       background: #fff3f3;
@@ -368,53 +466,76 @@
     /* ── FOOTER ─────────────────────────────── */
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 24px 20px;
       font-size: .8rem;
       color: var(--muted);
       border-top: 1px solid var(--border);
+      margin-top: 20px;
     }
     footer a { color: var(--green); }
 
     /* ── RESPONSIVE ─────────────────────────── */
     @media (max-width: 700px) {
       .map-body { flex-direction: column; }
-      #map { min-height: 260px; }
+      #map { min-height: 240px; }
       .walktime-list {
         width: 100%;
         border-left: none;
         border-top: 1px solid var(--border);
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 0;
         padding: 12px 16px;
       }
-      .walktime-list-title { width: 100%; margin-bottom: 8px; }
+      .walktime-list-title { width: 100%; margin-bottom: 6px; }
       .walktime-row {
         flex-direction: column;
         align-items: flex-start;
-        gap: 2px;
-        padding: 8px 12px 8px 0;
+        gap: 1px;
+        padding: 6px 10px 6px 0;
         border-bottom: none;
         width: 50%;
       }
-      .walktime-val { text-align: left; }
     }
     @media (max-width: 480px) {
-      .grid { padding: 16px 12px 40px; gap: 14px; }
-      .card-header { padding: 14px 16px 12px; }
-      .card-days { padding: 12px 16px 16px; }
+      .site-nav a, .sticky-nav a { padding: 0 12px; font-size: .7rem; }
+      .section { padding: 28px 12px 16px; }
+      .restaurant-grid { grid-template-columns: 1fr; }
+      .header-top { gap: 10px; }
+      .site-logo { height: 28px; }
     }
   </style>
 </head>
 <body>
 
+<!-- ── HEADER ─────────────────────────────── -->
 <header class="site-header">
-  <h1>🍽&nbsp;Mittagsmenü</h1>
-  <div class="meta">
-    <span class="badge-week" id="week-badge">KW –</span>
-    <span id="updated-label">Wird geladen …</span>
+  <div class="header-top">
+    <a href="https://mind4.at" target="_blank" rel="noopener">
+      <img src="https://mind4.at/wp-content/uploads/2023/07/logo_vector_white.png"
+           alt="mind4" class="site-logo" />
+    </a>
+    <div class="header-center">
+      <h1>Wos essma heit?</h1>
+      <div class="header-meta">
+        <span class="badge-week" id="week-badge">KW –</span>
+        <span id="updated-label">Wird geladen …</span>
+      </div>
+    </div>
+    <div style="width:60px"></div><!-- Platzhalter für Symmetrie -->
   </div>
+  <nav class="site-nav">
+    <a href="#tagesmenus">Tagesmenüs</a>
+    <a href="#karte">Karte &amp; Gehzeiten</a>
+    <a href="#wochenmenus">Wochenmenüs</a>
+  </nav>
 </header>
+
+<!-- ── STICKY NAV ────────────────────────── -->
+<nav class="sticky-nav" id="sticky-nav">
+  <a href="#tagesmenus">Tagesmenüs</a>
+  <a href="#karte">Karte &amp; Gehzeiten</a>
+  <a href="#wochenmenus">Wochenmenüs</a>
+</nav>
 
 <div class="today-banner" id="today-banner" style="display:none"></div>
 
@@ -422,13 +543,49 @@
   <div class="spinner"></div>
   Menüplan wird geladen …
 </div>
-
 <div id="error-msg">
   ❌ Menüplan konnte nicht geladen werden.<br />
   Bitte Seite neu laden oder später nochmal versuchen.
 </div>
 
-<main class="grid" id="restaurants" style="display:none"></main>
+<div id="app" style="display:none">
+
+  <!-- ── SEKTION 1: TAGESMENÜS ────────────── -->
+  <section id="tagesmenus">
+    <div class="section" style="padding-bottom:40px">
+      <h2 class="section-title" id="tages-title">Tagesmenüs</h2>
+      <div class="tages-grid" id="tages-grid"></div>
+    </div>
+  </section>
+
+  <hr class="section-divider" />
+
+  <!-- ── SEKTION 2: KARTE ──────────────────── -->
+  <section id="karte">
+    <div class="section" style="padding-bottom:40px">
+      <h2 class="section-title">Karte &amp; Gehzeiten</h2>
+      <div class="map-wrap">
+        <div class="map-body">
+          <div id="map"></div>
+          <div class="walktime-list" id="walktime-list">
+            <div class="walktime-list-title">🚶 Gehminuten</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider" />
+
+  <!-- ── SEKTION 3: WOCHENMENÜS ───────────── -->
+  <section id="wochenmenus">
+    <div class="section">
+      <h2 class="section-title">Wochenmenüs</h2>
+      <div class="restaurant-grid" id="restaurants"></div>
+    </div>
+  </section>
+
+</div>
 
 <footer>
   Menüdaten werden jeden Montag automatisch aktualisiert. ·
@@ -437,73 +594,114 @@
 
 <script>
 const DAY_ORDER = ["Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag","Sonntag"];
-
-// ── Koordinaten ──────────────────────────────
-const HOME = { lat: 48.2107484, lon: 16.3146618 }; // Hasnerstraße 123, 1160 Wien
-
+const HOME = { lat: 48.2107484, lon: 16.3146618 };
 const COORDS = {
-  "ottakringer-stubn": [48.2135743, 16.3180030],  // Ottakringerstraße 152
-  "goesser-braeu":     [48.2120838, 16.3140795],  // Thaliastraße 125A
-  "wolfsberger":       [48.2161410, 16.3143023],  // Lienfeldergasse 35
-  "klaghofer":         [48.2108755, 16.3052411],  // Rankgasse 25
-  "nigls":             [48.2111394, 16.3048215],  // Rankgasse 36
-  "casa-mora":         [48.2087942, 16.3168854],  // Possingergasse 59-61
+  "ottakringer-stubn": [48.2135743, 16.3180030],
+  "goesser-braeu":     [48.2120838, 16.3140795],
+  "wolfsberger":       [48.2161410, 16.3143023],
+  "klaghofer":         [48.2108755, 16.3052411],
+  "nigls":             [48.2111394, 16.3048215],
+  "casa-mora":         [48.2087942, 16.3168854],
 };
 
-// ── Gehzeit via OSRM ─────────────────────────
+function todayDayName() {
+  const d = new Date().getDay();
+  return DAY_ORDER[d === 0 ? 6 : d - 1] ?? "";
+}
+
+function formatUpdated(iso) {
+  try {
+    return new Date(iso).toLocaleString("de-AT", {
+      weekday:"short", day:"numeric", month:"long",
+      hour:"2-digit", minute:"2-digit"
+    });
+  } catch { return iso; }
+}
+
+// ── SEKTION 1: Tagesmenüs ────────────────────
+function buildTagesGrid(restaurants, today) {
+  const grid = document.getElementById("tages-grid");
+  const title = document.getElementById("tages-title");
+  title.textContent = `Tagesmenüs – ${today}`;
+
+  const cardsHtml = restaurants
+    .map(r => {
+      if (!r.days || !r.days.length) return "";
+      const dayData = r.days.find(d => d.day === today);
+      if (!dayData || !dayData.items.length) return "";
+
+      // Feiertag
+      const isFeiertag = dayData.items.some(i => i.name.toLowerCase().includes("feiertag"));
+      if (isFeiertag) return "";
+
+      // Suppe vom Hauptgericht trennen
+      const items = dayData.items.filter(i => i.name !== "— oder —");
+      const soup = items.find(i =>
+        i.name.toLowerCase().includes("suppe") ||
+        i.name.toLowerCase().includes("supp")
+      );
+      const mains = items.filter(i => i !== soup);
+
+      const soupHtml = soup
+        ? `<div class="tages-dish-soup">🍲 ${soup.name}</div>` : "";
+
+      const mainsHtml = mains.map((item, idx) => {
+        const isFirst = idx === 0;
+        const priceSpan = item.price
+          ? `<span style="color:var(--green);font-weight:600;font-size:.85rem;margin-left:6px">${item.price}</span>` : "";
+        return isFirst
+          ? `<div class="tages-dish-main">${item.name}${priceSpan}</div>`
+          : `<div class="tages-dish-other">· ${item.name}${priceSpan}</div>`;
+      }).join("");
+
+      if (!mainsHtml && !soupHtml) return "";
+
+      const priceNote = r.price_note
+        ? `<span class="tages-price">${r.price_note}</span>` : "";
+
+      return `
+        <div class="tages-card">
+          <div class="tages-dishes">
+            ${mainsHtml}
+            ${soupHtml}
+          </div>
+          <hr class="tages-separator" />
+          <div class="tages-footer">
+            <a class="tages-restaurant" href="#card-${r.id}">${r.name}</a>
+            ${priceNote}
+          </div>
+        </div>`;
+    })
+    .join("");
+
+  if (!cardsHtml.trim()) {
+    const dayDE = today || "heute";
+    grid.innerHTML = `<div class="tages-empty">
+      Für ${dayDE} sind keine Menüdaten verfügbar.<br />
+      Schau direkt bei den <a href="#wochenmenus" style="color:var(--green)">Wochenmenüs</a> vorbei.
+    </div>`;
+  } else {
+    grid.innerHTML = cardsHtml;
+  }
+}
+
+// ── SEKTION 2: Karte ─────────────────────────
 async function fetchWalkMins(toLat, toLon) {
   try {
     const url = `https://routing.openstreetmap.de/routed-foot/route/v1/foot/` +
       `${HOME.lon},${HOME.lat};${toLon},${toLat}?overview=false`;
-    const res = await fetch(url);
-    const d   = await res.json();
+    const d = await fetch(url).then(r => r.json());
     return Math.round(d.routes[0].duration / 60);
   } catch { return null; }
 }
 
-// ── Karten-Kachel ────────────────────────────
-function buildMapCard(restaurants) {
-  const rows = restaurants.map(r => `
-    <div class="walktime-row">
-      <span class="walktime-name">${r.name}</span>
-      <span class="walktime-val loading" id="wt-${r.id}">…</span>
-    </div>`).join("");
-
-  return `
-    <article class="card card--map">
-      <div class="card-header">
-        <div class="top-row">
-          <h2>📍 Karte &amp; Gehzeiten</h2>
-          <span class="cuisine-badge">ab Hasnerstraße 123</span>
-        </div>
-        <div class="card-address">
-          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-            <circle cx="12" cy="9" r="2.5"/>
-          </svg>
-          Fußweg ab Hasnerstraße 123, 1160 Wien
-        </div>
-      </div>
-      <div class="map-body">
-        <div id="map"></div>
-        <div class="walktime-list">
-          <div class="walktime-list-title">🚶 Gehminuten</div>
-          ${rows}
-        </div>
-      </div>
-    </article>`;
-}
-
 async function initMap(restaurants) {
-  const map = L.map("map", { scrollWheelZoom: false })
-    .setView([HOME.lat, HOME.lon], 14);
-
+  const map = L.map("map", { scrollWheelZoom: false }).setView([HOME.lat, HOME.lon], 14);
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution: '© <a href="https://openstreetmap.org">OpenStreetMap</a>',
     maxZoom: 19,
   }).addTo(map);
 
-  // Startpunkt-Marker
   const homeIcon = L.divIcon({
     html: `<div class="map-pin is-home">🏠 Start</div>`,
     iconSize: null, iconAnchor: [30, 14], className: "",
@@ -512,7 +710,7 @@ async function initMap(restaurants) {
     .addTo(map)
     .bindPopup("<b>Hasnerstraße 123</b><br/>1160 Wien");
 
-  // Restaurant-Marker + Gehzeiten laden
+  const wtList = document.getElementById("walktime-list");
   const bounds = [[HOME.lat, HOME.lon]];
 
   for (const r of restaurants) {
@@ -520,10 +718,17 @@ async function initMap(restaurants) {
     if (!coords) continue;
     bounds.push(coords);
 
+    // Walktime-Zeile sofort einfügen (mit Spinner)
+    const row = document.createElement("div");
+    row.className = "walktime-row";
+    row.innerHTML = `
+      <span class="walktime-name">${r.name}</span>
+      <span class="walktime-val loading" id="wt-${r.id}">…</span>`;
+    wtList.appendChild(row);
+
     const mins = await fetchWalkMins(coords[0], coords[1]);
     const label = mins !== null ? `🚶 ${mins} min` : r.name;
 
-    // Marker
     const icon = L.divIcon({
       html: `<div class="map-pin">${label}</div>`,
       iconSize: null, iconAnchor: [0, 14], className: "",
@@ -532,7 +737,6 @@ async function initMap(restaurants) {
       .addTo(map)
       .bindPopup(`<b>${r.name}</b><br/>${r.address}${mins !== null ? `<br/>🚶 ${mins} Minuten zu Fuß` : ""}`);
 
-    // Seitenleiste aktualisieren
     const el = document.getElementById(`wt-${r.id}`);
     if (el) {
       el.textContent = mins !== null ? `${mins} min` : "–";
@@ -540,30 +744,15 @@ async function initMap(restaurants) {
     }
   }
 
-  // Karte auf alle Marker zoomen
   if (bounds.length > 1) map.fitBounds(bounds, { padding: [40, 40] });
 }
 
-// ── Hilfsfunktionen ──────────────────────────
-function todayDayName() {
-  return DAY_ORDER[new Date().getDay() === 0 ? 6 : new Date().getDay() - 1] ?? "";
-}
-
-function formatUpdated(iso) {
-  try {
-    const d = new Date(iso);
-    return d.toLocaleString("de-AT", {
-      weekday: "short", day: "numeric", month: "long",
-      hour: "2-digit", minute: "2-digit"
-    });
-  } catch { return iso; }
-}
-
+// ── SEKTION 3: Wochenmenüs ───────────────────
 function buildCard(r, today) {
   const hasDays  = r.days && r.days.length > 0;
   const hasImage = r.menu_image;
 
-  const weekChip = r.week_label
+  const weekChip  = r.week_label
     ? `<span class="week-chip">📅 ${r.week_label}</span>` : "";
   const priceNote = r.price_note
     ? `<span class="week-chip" style="background:var(--green-lt);color:var(--green)">💶 ${r.price_note}</span>` : "";
@@ -588,21 +777,11 @@ function buildCard(r, today) {
       </div>
     </div>`;
 
-  const hasPdf   = r.menu_pdf;
-
   let bodyHtml = "";
   if (hasImage) {
     bodyHtml = `
       <div class="menu-image-wrap">
         <img src="${r.menu_image}" alt="Menükarte ${r.name}" loading="lazy" />
-      </div>`;
-  } else if (hasPdf) {
-    bodyHtml = `
-      <div class="menu-pdf-wrap">
-        <embed class="menu-pdf-embed" src="${r.menu_pdf}" type="application/pdf" />
-        <a class="menu-pdf-link" href="${r.menu_pdf}" target="_blank" rel="noopener">
-          📄 Mittagsmenü als PDF öffnen
-        </a>
       </div>`;
   } else if (hasDays) {
     const sorted = [...r.days].sort((a, b) =>
@@ -625,55 +804,76 @@ function buildCard(r, today) {
   } else {
     bodyHtml = `
       <div class="empty-state">
-        <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-          <circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/>
-        </svg>
         Menüplan noch nicht verfügbar.<br />
-        Bitte direkt auf der <a href="${r.url}" target="_blank" rel="noopener">Website nachsehen</a>.
+        <a href="${r.url}" target="_blank" rel="noopener" style="color:var(--green)">Direkt auf der Website nachsehen</a>.
       </div>`;
   }
 
   return `<article class="card" id="card-${r.id}">${headerHtml}${bodyHtml}</article>`;
 }
 
-// ── Init ─────────────────────────────────────
-async function init() {
-  const loading   = document.getElementById("loading");
-  const errorMsg  = document.getElementById("error-msg");
-  const container = document.getElementById("restaurants");
-  const weekBadge = document.getElementById("week-badge");
-  const updLabel  = document.getElementById("updated-label");
-  const todayBanner = document.getElementById("today-banner");
+// ── STICKY NAV HIGHLIGHT ─────────────────────
+function initStickyNav() {
+  const sections = ["tagesmenus","karte","wochenmenus"];
+  const navLinks = document.querySelectorAll(".sticky-nav a");
 
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(a => a.classList.remove("active"));
+        const link = document.querySelector(`.sticky-nav a[href="#${e.target.id}"]`);
+        if (link) link.classList.add("active");
+      }
+    });
+  }, { rootMargin: "-40% 0px -55% 0px" });
+
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) obs.observe(el);
+  });
+}
+
+// ── INIT ─────────────────────────────────────
+async function init() {
   try {
     const res  = await fetch("menus.json?t=" + Date.now());
     if (!res.ok) throw new Error("HTTP " + res.status);
     const data = await res.json();
-
     const today = todayDayName();
 
-    weekBadge.textContent = data.week || "KW –";
-    updLabel.textContent  = "Aktualisiert: " + formatUpdated(data.updated);
+    // Header meta
+    document.getElementById("week-badge").textContent  = data.week || "KW –";
+    document.getElementById("updated-label").textContent =
+      "Aktualisiert: " + formatUpdated(data.updated);
 
-    const dateStr = new Date().toLocaleDateString("de-AT", {weekday:"long", day:"numeric", month:"long"});
-    todayBanner.textContent = `📅 Heute ist ${dateStr}`;
-    todayBanner.style.display = "block";
+    // Today banner
+    const dateStr = new Date().toLocaleDateString("de-AT",
+      {weekday:"long", day:"numeric", month:"long"});
+    const banner = document.getElementById("today-banner");
+    banner.textContent = `📅 Heute ist ${dateStr}`;
+    banner.style.display = "block";
 
-    // Karten-Kachel zuerst, dann Restaurants
-    container.innerHTML =
-      buildMapCard(data.restaurants) +
+    // Sektion 1
+    buildTagesGrid(data.restaurants, today);
+
+    // Sektion 3
+    document.getElementById("restaurants").innerHTML =
       data.restaurants.map(r => buildCard(r, today)).join("");
 
-    loading.style.display   = "none";
-    container.style.display = "grid";
+    // App anzeigen
+    document.getElementById("loading").style.display = "none";
+    document.getElementById("app").style.display     = "block";
 
-    // Karte initialisieren (nach DOM-Render)
+    // Sticky Nav
+    initStickyNav();
+
+    // Karte (async, nach Render)
     requestAnimationFrame(() => initMap(data.restaurants));
 
   } catch (err) {
     console.error(err);
-    loading.style.display  = "none";
-    errorMsg.style.display = "block";
+    document.getElementById("loading").style.display  = "none";
+    document.getElementById("error-msg").style.display = "block";
   }
 }
 
