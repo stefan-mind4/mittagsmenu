@@ -7,7 +7,10 @@ on:
  
   # Manuell ausführbar über GitHub → Actions → "Run workflow"
   workflow_dispatch:
- 
+  
+ permissions:
+  contents: write
+  
 jobs:
   scrape-and-commit:
     runs-on: ubuntu-latest
