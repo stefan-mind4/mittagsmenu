@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-27T14:55:07.530100",
+  "updated": "2026-04-27T15:14:58.937468",
   "week": "KW 18",
   "restaurants": [
     {
@@ -243,19 +243,21 @@
             {
               "name": "Gekochtes Selchfleisch mit Erdäpfelpüree",
               "price": "8.90 €"
-            },
-            {
-              "name": "__HiEnsTA0,20.nrn. 4",
-              "price": null
-            },
+            }
+          ]
+        },
+        {
+          "day": "Dienstag",
+          "items": [
             {
               "name": "Steirisches Wurzelfleisch mit Kren und Salzkartoffeln",
               "price": "9.90 €"
-            },
-            {
-              "name": "__HrWocn,20.Art. 4",
-              "price": null
-            },
+            }
+          ]
+        },
+        {
+          "day": "Mittwoch",
+          "items": [
             {
               "name": "Gefüllte Kalbsbrust mit Semmelfülle und Blattsalat",
               "price": "11.90 €"
@@ -268,15 +270,6 @@
             {
               "name": "Rindsroulade mit Saft und Teigspiralen",
               "price": "10.90 €"
-            }
-          ]
-        },
-        {
-          "day": "Freitag",
-          "items": [
-            {
-              "name": "7 abe ze th",
-              "price": null
             }
           ]
         }
