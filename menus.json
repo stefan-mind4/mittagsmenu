@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-27T11:52:35.125637",
+  "updated": "2026-04-27T12:08:09.208386",
   "week": "KW 18",
   "restaurants": [
     {
@@ -222,14 +222,14 @@
       "address": "Elisabethstraße 3, 1010 Wien",
       "phone": null,
       "price_note": null,
-      "week_label": "UNSERE MITTAGSTELLER vom 20.4. bis 24.4.2026",
+      "week_label": "UNSERE MITTAGSTELLER vom 27.4. bis 30.4.2026",
       "menu_image": null,
       "days": [
         {
           "day": "Montag",
           "items": [
             {
-              "name": "Krautfleisch mit Sauerrahmdupfen und Kümmelerdäpfel",
+              "name": "Jägerschnitzel mit Reis",
               "price": null
             },
             {
@@ -237,7 +237,7 @@
               "price": null
             },
             {
-              "name": "Gebackene Champignons mit Sauce Tartare",
+              "name": "Champignonsauce mit Serviettenknödel",
               "price": null
             }
           ]
@@ -246,7 +246,7 @@
           "day": "Dienstag",
           "items": [
             {
-              "name": "Spaghetti Bolognese mit frischem Grana",
+              "name": "Gekochtes Rindfleisch mit Cremespinat und Erdäpfelschmarr‘n",
               "price": null
             },
             {
@@ -254,7 +254,7 @@
               "price": null
             },
             {
-              "name": "Spaghetti mit Gorgonzolasauce und frischem Grana",
+              "name": "Spargelrisotto mit frischem Grana",
               "price": null
             }
           ]
@@ -263,7 +263,7 @@
           "day": "Mittwoch",
           "items": [
             {
-              "name": "Gebackener Schweinslungenbraten mit Petersilerdäpfel",
+              "name": "Gebackenes Schweinsschnitzerl mit Petersilerdäpfel",
               "price": null
             },
             {
@@ -271,7 +271,7 @@
               "price": null
             },
             {
-              "name": "Erdäpfelpuffer mit Knoblauchsauce",
+              "name": "Geröstete Knödel mit buntem Blattsalat",
               "price": null
             }
           ]
@@ -280,7 +280,7 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Hühnerbrust in Paprika-Schaum-Sauce mit Butternockerl",
+              "name": "Faschierter Stefaniebraten mit Erdäpfelpürree und Röstzwiebel",
               "price": null
             },
             {
@@ -288,7 +288,7 @@
               "price": null
             },
             {
-              "name": "Reisauflauf mit Früchten auf Himbeerspiegel mit Schlagobers",
+              "name": "Topfenpalatschinke mit Vanillesauce und Schlagobers",
               "price": null
             }
           ]
@@ -297,7 +297,7 @@
           "day": "Freitag",
           "items": [
             {
-              "name": "Gebackenes Fischfilet mit Erdäpfelsalat und Sauce Tartare",
+              "name": "Feiertag!",
               "price": null
             }
           ]
