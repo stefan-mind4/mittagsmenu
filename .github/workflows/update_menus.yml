@@ -1,39 +1,34 @@
-name: Menüplan aktualisieren
- 
+name: Menuplan aktualisieren
+
 on:
-  # Jeden Montag um 9:30 Uhr Wiener Zeit (UTC+2 im Sommer = UTC 07:30)
   schedule:
     - cron: "30 7 * * 1"
- 
-  # Manuell ausführbar über GitHub → Actions → "Run workflow"
   workflow_dispatch:
-  
- permissions:
+
+permissions:
   contents: write
-  
+
 jobs:
   scrape-and-commit:
     runs-on: ubuntu-latest
- 
+
     steps:
       - name: Repository auschecken
         uses: actions/checkout@v4
- 
+
       - name: Python 3.11 einrichten
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
- 
-      - name: Abhängigkeiten installieren
-        run: |
-          pip install requests beautifulsoup4 pdfplumber lxml
- 
-      - name: Menüs scrapen
+
+      - name: Abhaengigkeiten installieren
+        run: pip install requests beautifulsoup4 pdfplumber lxml
+
+      - name: Menues scrapen
         run: python scripts/update_menus.py
- 
+
       - name: menus.json committen
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "🍽 Menüplan KW aktualisiert – ${{ github.run_number }}"
+          commit_message: "Update menus.json"
           file_pattern: menus.json
-          commit_author: "Menü-Bot <menubot@users.noreply.github.com>"
