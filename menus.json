@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-27T11:52:35.125637",
+  "updated": "2026-04-27T14:55:07.530100",
   "week": "KW 18",
   "restaurants": [
     {
@@ -84,14 +84,14 @@
       "address": "Thaliastraße 125A, 1160 Wien",
       "phone": "+43 1 3692286",
       "price_note": "Hauptspeise 9,80 € · mit Suppe 10,80 €",
-      "week_label": "UNSERE MITTAGSTELLER vom 20.4. bis 24.4.2026",
+      "week_label": "UNSERE MITTAGSTELLER vom 27.4. bis 30.4.2026",
       "menu_image": null,
       "days": [
         {
           "day": "Montag",
           "items": [
             {
-              "name": "Krautfleisch mit Sauerrahmdupfen und Kümmelerdäpfel",
+              "name": "Jägerschnitzel mit Reis",
               "price": null
             },
             {
@@ -99,7 +99,7 @@
               "price": null
             },
             {
-              "name": "Gebackene Champignons mit Sauce Tartare",
+              "name": "Champignonsauce mit Serviettenknödel",
               "price": null
             }
           ]
@@ -108,7 +108,7 @@
           "day": "Dienstag",
           "items": [
             {
-              "name": "Spaghetti Bolognese mit frischem Grana",
+              "name": "Gekochtes Rindfleisch mit Cremespinat und Erdäpfelschmarr‘n",
               "price": null
             },
             {
@@ -116,7 +116,7 @@
               "price": null
             },
             {
-              "name": "Spaghetti mit Gorgonzolasauce und frischem Grana",
+              "name": "Spargelrisotto mit frischem Grana",
               "price": null
             }
           ]
@@ -125,7 +125,7 @@
           "day": "Mittwoch",
           "items": [
             {
-              "name": "Gebackener Schweinslungenbraten mit Petersilerdäpfel",
+              "name": "Gebackenes Schweinsschnitzerl mit Petersilerdäpfel",
               "price": null
             },
             {
@@ -133,7 +133,7 @@
               "price": null
             },
             {
-              "name": "Erdäpfelpuffer mit Knoblauchsauce",
+              "name": "Geröstete Knödel mit buntem Blattsalat",
               "price": null
             }
           ]
@@ -142,7 +142,7 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Hühnerbrust in Paprika-Schaum-Sauce mit Butternockerl",
+              "name": "Faschierter Stefaniebraten mit Erdäpfelpürree und Röstzwiebel",
               "price": null
             },
             {
@@ -150,7 +150,7 @@
               "price": null
             },
             {
-              "name": "Reisauflauf mit Früchten auf Himbeerspiegel mit Schlagobers",
+              "name": "Topfenpalatschinke mit Vanillesauce und Schlagobers",
               "price": null
             }
           ]
@@ -159,7 +159,7 @@
           "day": "Freitag",
           "items": [
             {
-              "name": "Gebackenes Fischfilet mit Erdäpfelsalat und Sauce Tartare",
+              "name": "Feiertag!",
               "price": null
             }
           ]
@@ -235,8 +235,52 @@
       "phone": "+43 1 493 91 84",
       "price_note": null,
       "week_label": "KW 18",
-      "menu_image": "https://klaghofer-fleisch.at/wp-content/uploads/2026/04/Klaghofer-Speisekarte-2026_KW18-Online.jpg",
-      "days": []
+      "menu_image": null,
+      "days": [
+        {
+          "day": "Montag",
+          "items": [
+            {
+              "name": "Gekochtes Selchfleisch mit Erdäpfelpüree",
+              "price": "8.90 €"
+            },
+            {
+              "name": "__HiEnsTA0,20.nrn. 4",
+              "price": null
+            },
+            {
+              "name": "Steirisches Wurzelfleisch mit Kren und Salzkartoffeln",
+              "price": "9.90 €"
+            },
+            {
+              "name": "__HrWocn,20.Art. 4",
+              "price": null
+            },
+            {
+              "name": "Gefüllte Kalbsbrust mit Semmelfülle und Blattsalat",
+              "price": "11.90 €"
+            }
+          ]
+        },
+        {
+          "day": "Donnerstag",
+          "items": [
+            {
+              "name": "Rindsroulade mit Saft und Teigspiralen",
+              "price": "10.90 €"
+            }
+          ]
+        },
+        {
+          "day": "Freitag",
+          "items": [
+            {
+              "name": "7 abe ze th",
+              "price": null
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "nigls",
@@ -248,8 +292,82 @@
       "price_note": null,
       "week_label": "",
       "menu_image": null,
-      "menu_pdf": "https://nigls.at/wp-content/uploads/2026/04/Mittagsmenue_NIGLS_27_4_2026-1.pdf",
-      "days": []
+      "menu_pdf": null,
+      "days": [
+        {
+          "day": "Montag",
+          "items": [
+            {
+              "name": "Nudelsuppe",
+              "price": null
+            },
+            {
+              "name": "Bärlauchnockerl mit Käsesauce und grünem Salat",
+              "price": "11.90 €"
+            }
+          ]
+        },
+        {
+          "day": "Dienstag",
+          "items": [
+            {
+              "name": "Lauchcremesuppe mit Croütons",
+              "price": null
+            },
+            {
+              "name": "Lasagne \"Bolognese“ mit Tomatensauce und griinem Salat",
+              "price": "11.90 €"
+            }
+          ]
+        },
+        {
+          "day": "Mittwoch",
+          "items": [
+            {
+              "name": "Schweinsschnitzel 1.M",
+              "price": "12.50 €"
+            },
+            {
+              "name": "Surschnitzel (vom Schwein) 4%",
+              "price": "13.50 €"
+            },
+            {
+              "name": "Hühnerschnitzel",
+              "price": "13.50 €"
+            },
+            {
+              "name": "Kalbsschnitzel jeweils mit Erdäpfel-Vogerlsalat",
+              "price": "18.90 €"
+            }
+          ]
+        },
+        {
+          "day": "Donnerstag",
+          "items": [
+            {
+              "name": "Klare Suppe mit Reis",
+              "price": null
+            },
+            {
+              "name": "Bauernschmaus",
+              "price": null
+            },
+            {
+              "name": "Schweinsbraten, Selchfleisch, gebackenem Blunzenradl gebratener Wurst mit Sauerkraut und Knödel",
+              "price": "11.90 €"
+            }
+          ]
+        },
+        {
+          "day": "Freitag",
+          "items": [
+            {
+              "name": "Feiertag",
+              "price": null
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "casa-mora",
@@ -261,7 +379,56 @@
       "price_note": "Mittagsangebot 12–14 Uhr: 12,90 €",
       "week_label": "",
       "menu_image": null,
-      "days": []
+      "days": [
+        {
+          "day": "Dienstag",
+          "items": [
+            {
+              "name": "klare Suppe",
+              "price": null
+            },
+            {
+              "name": "Papa rellena gefüllter Erdapfel mit pikanter Sauce und Avocado-Salat",
+              "price": null
+            }
+          ]
+        },
+        {
+          "day": "Mittwoch",
+          "items": [
+            {
+              "name": "Sonnenweizen – Suppe",
+              "price": null
+            },
+            {
+              "name": "Schopfbraten vom Grill mit Reis und Avocado",
+              "price": null
+            }
+          ]
+        },
+        {
+          "day": "Donnerstag",
+          "items": [
+            {
+              "name": "Sudado de Pollo Hühner – Eintopf mit Erdäpfeln und Yuca dazu Reis, Salat und frittierte Kochbananen",
+              "price": null
+            }
+          ]
+        },
+        {
+          "day": "Samstag",
+          "items": [
+            {
+              "name": "klare Suppe",
+              "price": null
+            },
+            {
+              "name": "Tamal Valluno in Bananenblatt gedünsteter Maisteig mit dreierlei Fleisch und Gemüse dazu Reis und frittierte Kochbananen",
+              "price": null
+            }
+          ]
+        }
+      ]
     }
   ]
 }
