@@ -7,6 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 
   <style>
     :root {
@@ -235,6 +237,74 @@
       opacity: .4;
     }
 
+    /* ── MAP CARD ───────────────────────────── */
+    .card--map {
+      grid-column: 1 / -1;
+    }
+    .map-body {
+      display: flex;
+      min-height: 360px;
+    }
+    #map {
+      flex: 1;
+      min-height: 360px;
+      z-index: 0;
+    }
+    .walktime-list {
+      width: 230px;
+      flex-shrink: 0;
+      padding: 16px 18px;
+      border-left: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .walktime-list-title {
+      font-size: .7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    .walktime-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: .85rem;
+    }
+    .walktime-row:last-child { border-bottom: none; }
+    .walktime-name { color: var(--text); flex: 1; line-height: 1.3; }
+    .walktime-val {
+      font-weight: 600;
+      color: var(--green);
+      white-space: nowrap;
+      font-size: .82rem;
+      min-width: 48px;
+      text-align: right;
+    }
+    .walktime-val.loading { color: var(--muted); font-weight: 400; }
+
+    /* Leaflet marker override */
+    .map-pin {
+      background: var(--green);
+      color: #fff;
+      border-radius: 20px;
+      padding: 3px 9px;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+      box-shadow: 0 2px 6px rgba(0,0,0,.35);
+      line-height: 1.4;
+      border: 2px solid #fff;
+    }
+    .map-pin.is-home {
+      background: var(--amber);
+    }
+
     /* ── LOADING ────────────────────────────── */
     #loading {
       text-align: center;
@@ -276,6 +346,29 @@
     footer a { color: var(--green); }
 
     /* ── RESPONSIVE ─────────────────────────── */
+    @media (max-width: 700px) {
+      .map-body { flex-direction: column; }
+      #map { min-height: 260px; }
+      .walktime-list {
+        width: 100%;
+        border-left: none;
+        border-top: 1px solid var(--border);
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0;
+        padding: 12px 16px;
+      }
+      .walktime-list-title { width: 100%; margin-bottom: 8px; }
+      .walktime-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+        padding: 8px 12px 8px 0;
+        border-bottom: none;
+        width: 50%;
+      }
+      .walktime-val { text-align: left; }
+    }
     @media (max-width: 480px) {
       .grid { padding: 16px 12px 40px; gap: 14px; }
       .card-header { padding: 14px 16px 12px; }
@@ -314,8 +407,113 @@
 
 <script>
 const DAY_ORDER = ["Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag","Sonntag"];
-const DAY_SHORT  = ["So","Mo","Di","Mi","Do","Fr","Sa"]; // index = getDay()
 
+// ── Koordinaten ──────────────────────────────
+const HOME = { lat: 48.20718, lon: 16.32954 }; // Hasnerstraße 123, 1160 Wien
+
+const COORDS = {
+  "ottakringer-stubn": [48.21330, 16.31960],  // Ottakringerstraße 152
+  "goesser-braeu":     [48.19924, 16.36812],  // Elisabethstraße 3, 1010
+  "wolfsberger":       [48.20585, 16.32782],  // Lienfeldergasse 35
+  "klaghofer":         [48.20812, 16.32498],  // Rankgasse 25
+  "casa-mora":         [48.21005, 16.33872],  // Neulerchenfelder Str. 6
+};
+
+// ── Gehzeit via OSRM ─────────────────────────
+async function fetchWalkMins(toLat, toLon) {
+  try {
+    const url = `https://router.project-osrm.org/route/v1/foot/` +
+      `${HOME.lon},${HOME.lat};${toLon},${toLat}?overview=false`;
+    const res = await fetch(url);
+    const d   = await res.json();
+    return Math.round(d.routes[0].duration / 60);
+  } catch { return null; }
+}
+
+// ── Karten-Kachel ────────────────────────────
+function buildMapCard(restaurants) {
+  const rows = restaurants.map(r => `
+    <div class="walktime-row">
+      <span class="walktime-name">${r.name}</span>
+      <span class="walktime-val loading" id="wt-${r.id}">…</span>
+    </div>`).join("");
+
+  return `
+    <article class="card card--map">
+      <div class="card-header">
+        <div class="top-row">
+          <h2>📍 Karte &amp; Gehzeiten</h2>
+          <span class="cuisine-badge">ab Hasnerstraße 123</span>
+        </div>
+        <div class="card-address">
+          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+            <circle cx="12" cy="9" r="2.5"/>
+          </svg>
+          Fußweg ab Hasnerstraße 123, 1160 Wien
+        </div>
+      </div>
+      <div class="map-body">
+        <div id="map"></div>
+        <div class="walktime-list">
+          <div class="walktime-list-title">🚶 Gehminuten</div>
+          ${rows}
+        </div>
+      </div>
+    </article>`;
+}
+
+async function initMap(restaurants) {
+  const map = L.map("map", { scrollWheelZoom: false })
+    .setView([HOME.lat, HOME.lon], 14);
+
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: '© <a href="https://openstreetmap.org">OpenStreetMap</a>',
+    maxZoom: 19,
+  }).addTo(map);
+
+  // Startpunkt-Marker
+  const homeIcon = L.divIcon({
+    html: `<div class="map-pin is-home">🏠 Start</div>`,
+    iconSize: null, iconAnchor: [30, 14], className: "",
+  });
+  L.marker([HOME.lat, HOME.lon], { icon: homeIcon })
+    .addTo(map)
+    .bindPopup("<b>Hasnerstraße 123</b><br/>1160 Wien");
+
+  // Restaurant-Marker + Gehzeiten laden
+  const bounds = [[HOME.lat, HOME.lon]];
+
+  for (const r of restaurants) {
+    const coords = COORDS[r.id];
+    if (!coords) continue;
+    bounds.push(coords);
+
+    const mins = await fetchWalkMins(coords[0], coords[1]);
+    const label = mins !== null ? `🚶 ${mins} min` : r.name;
+
+    // Marker
+    const icon = L.divIcon({
+      html: `<div class="map-pin">${label}</div>`,
+      iconSize: null, iconAnchor: [0, 14], className: "",
+    });
+    L.marker(coords, { icon })
+      .addTo(map)
+      .bindPopup(`<b>${r.name}</b><br/>${r.address}${mins !== null ? `<br/>🚶 ${mins} Minuten zu Fuß` : ""}`);
+
+    // Seitenleiste aktualisieren
+    const el = document.getElementById(`wt-${r.id}`);
+    if (el) {
+      el.textContent = mins !== null ? `${mins} min` : "–";
+      el.classList.remove("loading");
+    }
+  }
+
+  // Karte auf alle Marker zoomen
+  if (bounds.length > 1) map.fitBounds(bounds, { padding: [40, 40] });
+}
+
+// ── Hilfsfunktionen ──────────────────────────
 function todayDayName() {
   return DAY_ORDER[new Date().getDay() === 0 ? 6 : new Date().getDay() - 1] ?? "";
 }
@@ -331,21 +529,15 @@ function formatUpdated(iso) {
 }
 
 function buildCard(r, today) {
-  const hasDays   = r.days && r.days.length > 0;
-  const hasImage  = r.menu_image;
+  const hasDays  = r.days && r.days.length > 0;
+  const hasImage = r.menu_image;
 
-  // ── Header ──────────────────────────────
   const weekChip = r.week_label
-    ? `<span class="week-chip">📅 ${r.week_label}</span>`
-    : "";
-
+    ? `<span class="week-chip">📅 ${r.week_label}</span>` : "";
   const priceNote = r.price_note
-    ? `<span class="week-chip" style="background:var(--green-lt);color:var(--green)">💶 ${r.price_note}</span>`
-    : "";
-
+    ? `<span class="week-chip" style="background:var(--green-lt);color:var(--green)">💶 ${r.price_note}</span>` : "";
   const phone = r.phone
-    ? `&nbsp;·&nbsp;<a href="tel:${r.phone}" style="color:var(--muted);text-decoration:none">${r.phone}</a>`
-    : "";
+    ? `&nbsp;·&nbsp;<a href="tel:${r.phone}" style="color:var(--muted);text-decoration:none">${r.phone}</a>` : "";
 
   const headerHtml = `
     <div class="card-header">
@@ -365,31 +557,22 @@ function buildCard(r, today) {
       </div>
     </div>`;
 
-  // ── Body ─────────────────────────────────
   let bodyHtml = "";
-
   if (hasImage) {
     bodyHtml = `
       <div class="menu-image-wrap">
         <img src="${r.menu_image}" alt="Menükarte ${r.name}" loading="lazy" />
       </div>`;
   } else if (hasDays) {
-    // Sort days by canonical order
     const sorted = [...r.days].sort((a, b) =>
-      DAY_ORDER.indexOf(a.day) - DAY_ORDER.indexOf(b.day)
-    );
+      DAY_ORDER.indexOf(a.day) - DAY_ORDER.indexOf(b.day));
 
     const dayBlocks = sorted.map(d => {
       const isToday = d.day === today;
-      const todayDot = isToday ? `<span class="today-dot"></span>Heute` : d.day;
-
       const items = d.items.map(item => {
-        const price = item.price
-          ? `<span class="price">${item.price}</span>`
-          : "";
+        const price = item.price ? `<span class="price">${item.price}</span>` : "";
         return `<div class="menu-item"><span class="dish">${item.name}</span>${price}</div>`;
       }).join("");
-
       return `
         <div class="day-block${isToday ? " is-today" : ""}">
           <div class="day-name">${isToday ? '<span class="today-dot"></span>' : ""}${d.day}</div>
@@ -412,6 +595,7 @@ function buildCard(r, today) {
   return `<article class="card" id="card-${r.id}">${headerHtml}${bodyHtml}</article>`;
 }
 
+// ── Init ─────────────────────────────────────
 async function init() {
   const loading   = document.getElementById("loading");
   const errorMsg  = document.getElementById("error-msg");
@@ -427,22 +611,23 @@ async function init() {
 
     const today = todayDayName();
 
-    // Header meta
     weekBadge.textContent = data.week || "KW –";
     updLabel.textContent  = "Aktualisiert: " + formatUpdated(data.updated);
 
-    // Today banner
     const dateStr = new Date().toLocaleDateString("de-AT", {weekday:"long", day:"numeric", month:"long"});
     todayBanner.textContent = `📅 Heute ist ${dateStr}`;
     todayBanner.style.display = "block";
 
-    // Cards
-    container.innerHTML = data.restaurants
-      .map(r => buildCard(r, today))
-      .join("");
+    // Karten-Kachel zuerst, dann Restaurants
+    container.innerHTML =
+      buildMapCard(data.restaurants) +
+      data.restaurants.map(r => buildCard(r, today)).join("");
 
     loading.style.display   = "none";
     container.style.display = "grid";
+
+    // Karte initialisieren (nach DOM-Render)
+    requestAnimationFrame(() => initMap(data.restaurants));
 
   } catch (err) {
     console.error(err);
