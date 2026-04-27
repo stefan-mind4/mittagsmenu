@@ -331,12 +331,12 @@ def scrape_wolfsberger():
 # OCR-Hilfsfunktionen (Klaghofer + NIGLS)
 # ─────────────────────────────────────────────
 _DAY_VARIANTS_OCR = {
-    "Montag":    ["MONTAG"],
-    "Dienstag":  ["DIENSTAG"],
-    "Mittwoch":  ["MITTWOCH", "NITTWOCH"],
-    "Donnerstag":["DONNERSTAG"],
-    "Freitag":   ["FREITAG"],
-    "Samstag":   ["SAMSTAG"],
+    "Montag":    ["MONTAG", "MONTA"],
+    "Dienstag":  ["DIENSTAG", "IENSTA", "ENSTA", "HIENTA"],
+    "Mittwoch":  ["MITTWOCH", "NITTWOCH", "WOCN", "HRWOC", "ITWOC"],
+    "Donnerstag":["DONNERSTAG", "ONNERST", "ONNERSTAG"],
+    "Freitag":   ["FREITAG", "REITA"],
+    "Samstag":   ["SAMSTAG", "AMSTA"],
 }
 _PRICE_OCR      = re.compile(r"€\s*(\d+[,\.]\d{2})\d*")
 _ALLERGEN_OCR   = re.compile(r"^\(?[A-Z0-9](\s*[,\.]\s*[A-Z0-9])*\s*\.?\)?\.?$")
@@ -344,7 +344,8 @@ _CONTINUATION   = ("mit ", "und ", "an ", "auf ", "in ", "dazu ", "jeweils ",
                    "vom ", "von ", "sowie ")
 _OCR_STOPWORDS  = ("appetit", "wunschen", "wünschen", "guten appetit",
                    "gedffnet", "geöffnet", "geoffnet", "kiiche", "küche bis",
-                   "kuche bis", "bis 15:", "bis 16:", "tweeter")
+                   "kuche bis", "bis 15:", "bis 16:", "tweeter",
+                   "schonen", "schönen", "gesegneten", "wir wunsch")
 
 
 def _ocr_detect_day(line):
@@ -370,6 +371,9 @@ def _ocr_is_junk(line):
     if alpha < 2:
         return True
     if re.match(r"^\([a-z]", line):   # OCR-Garbage wie "(eon rR sar"
+        return True
+    # Zeile beginnt mit Ziffer aber kein Preis → OCR-Müll (z.B. "7 abe ze th")
+    if re.match(r"^\d", line):
         return True
     return False
 
