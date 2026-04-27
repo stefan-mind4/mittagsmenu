@@ -149,7 +149,7 @@ def scrape_casamora():
             return {
                 "id": "casa-mora", "name": "Casa Mora", "url": url,
                 "cuisine": "Kolumbianisch 🇨🇴",
-                "address": "Neulerchenfelder Straße 6, 1160 Wien",
+                "address": "Possingergasse 59-61, 1160 Wien",
                 "phone": None, "price_note": "Mittagsangebot 12–14 Uhr: 12,90 €", "week_label": "",
                 "menu_image": None, "days": [],
             }
@@ -206,7 +206,7 @@ def scrape_casamora():
             "name": "Casa Mora",
             "url": url,
             "cuisine": "Kolumbianisch 🇨🇴",
-            "address": "Neulerchenfelder Straße 6, 1160 Wien",
+            "address": "Possingergasse 59-61, 1160 Wien",
             "phone": None,
             "price_note": "Mittagsangebot 12–14 Uhr: 12,90 €",
             "week_label": "",
@@ -461,7 +461,7 @@ def scrape_goesser():
             "name": "Gösser Bräu Wien",
             "url": "https://www.goesserbraeuwien.at/",
             "cuisine": "Österreichische Küche",
-            "address": "Elisabethstraße 3, 1010 Wien",
+            "address": "Thaliastraße 125A, 1160 Wien",
             "phone": None,
             "price_note": "Hauptspeise 9,80 € · mit Suppe 10,80 €",
             "week_label": week_label,
