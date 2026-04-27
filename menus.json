@@ -1,0 +1,308 @@
+{
+  "updated": "2026-04-27T11:52:35.125637",
+  "week": "KW 18",
+  "restaurants": [
+    {
+      "id": "ottakringer-stubn",
+      "name": "Ottakringer Stub'n",
+      "url": "https://ottakringerstubn.jimdofree.com/wochenmen%C3%BC/",
+      "cuisine": "Wiener Küche",
+      "address": "Ottakringerstraße 152, 1160 Wien",
+      "phone": "01 486 21 82",
+      "price_note": "9–12 €",
+      "week_label": "27/Apr 01/Mai",
+      "menu_image": null,
+      "days": [
+        {
+          "day": "Montag",
+          "items": [
+            {
+              "name": "Suppe",
+              "price": null
+            },
+            {
+              "name": "Schnitzel mit Kartoffeln und Salat",
+              "price": null
+            }
+          ]
+        },
+        {
+          "day": "Dienstag",
+          "items": [
+            {
+              "name": "Suppe",
+              "price": null
+            },
+            {
+              "name": "Krautfleckerl",
+              "price": null
+            }
+          ]
+        },
+        {
+          "day": "Mittwoch",
+          "items": [
+            {
+              "name": "Suppe",
+              "price": null
+            },
+            {
+              "name": "Faschierter Braten mit Püree und Röstzwiebeln",
+              "price": null
+            }
+          ]
+        },
+        {
+          "day": "Donnerstag",
+          "items": [
+            {
+              "name": "Suppe",
+              "price": null
+            },
+            {
+              "name": "Gebratene Hühnerkeule mit Reis und Salat",
+              "price": null
+            }
+          ]
+        },
+        {
+          "day": "Freitag",
+          "items": [
+            {
+              "name": "Feiertag",
+              "price": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "casa-mora",
+      "name": "Casa Mora",
+      "url": "https://www.casamora.at/menu/",
+      "cuisine": "Kolumbianisch 🇨🇴",
+      "address": "Neulerchenfelder Straße 6, 1160 Wien",
+      "phone": null,
+      "price_note": null,
+      "week_label": "",
+      "menu_image": null,
+      "days": [
+        {
+          "day": "Dienstag",
+          "items": [
+            {
+              "name": "Sudado de Res Rindsragout mit Erdäpfeln und Yuca dazu Reis, Salat und Maduros",
+              "price": null
+            }
+          ]
+        },
+        {
+          "day": "Mittwoch",
+          "items": [
+            {
+              "name": "Schopfbraten vom Grill mit Reis, Salat und Kichererbsen",
+              "price": null
+            }
+          ]
+        },
+        {
+          "day": "Donnerstag",
+          "items": [
+            {
+              "name": "klare Suppe",
+              "price": null
+            },
+            {
+              "name": "Arroz PAISA kolumbianischer Mixreis mit Salat und Kochbananen-Chips",
+              "price": null
+            }
+          ]
+        },
+        {
+          "day": "Freitag",
+          "items": [
+            {
+              "name": "BANDEJA PAISA kolumbianischer Bauernschmaus",
+              "price": null
+            }
+          ]
+        },
+        {
+          "day": "Samstag",
+          "items": [
+            {
+              "name": "Sancocho de Cola Suppentopf",
+              "price": null
+            },
+            {
+              "name": "Rinderschlepp in Saft mit Reis und Avocado",
+              "price": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wolfsberger",
+      "name": "Gastwirtschaft Wolfsberger",
+      "url": "https://www.gastwirtschaftwolfsberger.at/mittagsmen%C3%BC/",
+      "cuisine": "Österreichische Küche",
+      "address": "Lienfeldergasse 35, 1160 Wien",
+      "phone": "+43 1 4861455",
+      "price_note": null,
+      "week_label": "Der Menüplan für 22. bis 24. April",
+      "menu_image": null,
+      "days": [
+        {
+          "day": "Mittwoch",
+          "items": [
+            {
+              "name": "Frittatensuppe",
+              "price": null
+            },
+            {
+              "name": "Gebratener Leberkäse mit Spiegelei & Petersilkartoffeln dazu gemischter Salat",
+              "price": "13.50 €"
+            }
+          ]
+        },
+        {
+          "day": "Donnerstag",
+          "items": [
+            {
+              "name": "Grießnockerlsuppe",
+              "price": null
+            },
+            {
+              "name": "Lasagne",
+              "price": "13.50 €"
+            }
+          ]
+        },
+        {
+          "day": "Freitag",
+          "items": [
+            {
+              "name": "Paradeissuppe mit Basilikumöl",
+              "price": null
+            },
+            {
+              "name": "Gebackenes Seelachsfilet mit Erdäpfelsalat",
+              "price": "14.50 €"
+            },
+            {
+              "name": "oder",
+              "price": null
+            },
+            {
+              "name": "Gemüsewok mit Tofu & Koriander dazu Jasminreis",
+              "price": "13.50 €"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "klaghofer",
+      "name": "Klaghofer Fleisch",
+      "url": "https://klaghofer-fleisch.at/wochenkarte/",
+      "cuisine": "Fleischerei & Mittagstisch",
+      "address": "Rankgasse 25, 1160 Wien",
+      "phone": "+43 1 493 91 84",
+      "price_note": null,
+      "week_label": "KW 18",
+      "menu_image": "https://klaghofer-fleisch.at/wp-content/uploads/2026/04/Klaghofer-Speisekarte-2026_KW18-Online.jpg",
+      "days": []
+    },
+    {
+      "id": "goesser-braeu",
+      "name": "Gösser Bräu Wien",
+      "url": "https://www.goesserbraeuwien.at/",
+      "cuisine": "Österreichische Küche",
+      "address": "Elisabethstraße 3, 1010 Wien",
+      "phone": null,
+      "price_note": null,
+      "week_label": "UNSERE MITTAGSTELLER vom 20.4. bis 24.4.2026",
+      "menu_image": null,
+      "days": [
+        {
+          "day": "Montag",
+          "items": [
+            {
+              "name": "Krautfleisch mit Sauerrahmdupfen und Kümmelerdäpfel",
+              "price": null
+            },
+            {
+              "name": "— oder —",
+              "price": null
+            },
+            {
+              "name": "Gebackene Champignons mit Sauce Tartare",
+              "price": null
+            }
+          ]
+        },
+        {
+          "day": "Dienstag",
+          "items": [
+            {
+              "name": "Spaghetti Bolognese mit frischem Grana",
+              "price": null
+            },
+            {
+              "name": "— oder —",
+              "price": null
+            },
+            {
+              "name": "Spaghetti mit Gorgonzolasauce und frischem Grana",
+              "price": null
+            }
+          ]
+        },
+        {
+          "day": "Mittwoch",
+          "items": [
+            {
+              "name": "Gebackener Schweinslungenbraten mit Petersilerdäpfel",
+              "price": null
+            },
+            {
+              "name": "— oder —",
+              "price": null
+            },
+            {
+              "name": "Erdäpfelpuffer mit Knoblauchsauce",
+              "price": null
+            }
+          ]
+        },
+        {
+          "day": "Donnerstag",
+          "items": [
+            {
+              "name": "Hühnerbrust in Paprika-Schaum-Sauce mit Butternockerl",
+              "price": null
+            },
+            {
+              "name": "— oder —",
+              "price": null
+            },
+            {
+              "name": "Reisauflauf mit Früchten auf Himbeerspiegel mit Schlagobers",
+              "price": null
+            }
+          ]
+        },
+        {
+          "day": "Freitag",
+          "items": [
+            {
+              "name": "Gebackenes Fischfilet mit Erdäpfelsalat und Sauce Tartare",
+              "price": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
