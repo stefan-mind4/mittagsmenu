@@ -42,14 +42,13 @@
     .site-header {
       background: var(--green);
       color: #fff;
-      padding: 20px 24px 0;
+      padding: 20px 24px 20px;
     }
     .header-top {
       display: flex;
       align-items: center;
       gap: 16px;
       justify-content: space-between;
-      padding-bottom: 16px;
     }
     .site-logo {
       height: 36px;
@@ -84,35 +83,7 @@
       letter-spacing: .03em;
     }
 
-    /* ── NAV ────────────────────────────────── */
-    .site-nav {
-      display: flex;
-      justify-content: center;
-      gap: 0;
-      border-top: 1px solid rgba(255,255,255,.15);
-      margin: 0 -24px;
-    }
-    .site-nav a {
-      color: rgba(255,255,255,.75);
-      text-decoration: none;
-      font-size: .8rem;
-      font-weight: 600;
-      letter-spacing: .04em;
-      text-transform: uppercase;
-      padding: 0 20px;
-      height: var(--nav-h);
-      display: flex;
-      align-items: center;
-      border-bottom: 3px solid transparent;
-      transition: color .15s, border-color .15s;
-    }
-    .site-nav a:hover,
-    .site-nav a.active {
-      color: #fff;
-      border-bottom-color: var(--amber);
-    }
-
-    /* ── STICKY NAV CLONE ───────────────────── */
+    /* ── STICKY NAV ────────────────────────── */
     .sticky-nav {
       position: sticky;
       top: 0;
@@ -196,20 +167,21 @@
       flex-direction: column;
       gap: 8px;
     }
-    .tages-dish-main {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 1.15rem;
-      line-height: 1.3;
+    .tages-dish-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+      font-size: .95rem;
+      line-height: 1.45;
       color: var(--text);
     }
-    .tages-dish-soup {
-      font-size: .85rem;
-      color: var(--muted);
-      line-height: 1.35;
-    }
-    .tages-dish-other {
-      font-size: .85rem;
-      color: var(--muted);
+    .tages-dish-name { flex: 1; }
+    .tages-dish-price {
+      font-weight: 600;
+      color: var(--green);
+      white-space: nowrap;
+      font-size: .9rem;
     }
     .tages-separator {
       border: none;
@@ -523,11 +495,6 @@
     </div>
     <div style="width:60px"></div><!-- Platzhalter für Symmetrie -->
   </div>
-  <nav class="site-nav">
-    <a href="#tagesmenus">Tagesmenüs</a>
-    <a href="#karte">Karte &amp; Gehzeiten</a>
-    <a href="#wochenmenus">Wochenmenüs</a>
-  </nav>
 </header>
 
 <!-- ── STICKY NAV ────────────────────────── -->
@@ -631,53 +598,43 @@ function buildTagesGrid(restaurants, today) {
       if (!dayData || !dayData.items.length) return "";
 
       // Feiertag
-      const isFeiertag = dayData.items.some(i => i.name.toLowerCase().includes("feiertag"));
-      if (isFeiertag) return "";
+      if (dayData.items.some(i => i.name.toLowerCase().includes("feiertag"))) return "";
 
-      // Suppe vom Hauptgericht trennen
-      const items = dayData.items.filter(i => i.name !== "— oder —");
-      const soup = items.find(i =>
-        i.name.toLowerCase().includes("suppe") ||
-        i.name.toLowerCase().includes("supp")
+      // Trennzeilen herausfiltern
+      const items = dayData.items.filter(
+        i => i.name !== "— oder —" && i.name !== "oder"
       );
-      const mains = items.filter(i => i !== soup);
+      if (!items.length) return "";
 
-      const soupHtml = soup
-        ? `<div class="tages-dish-soup">🍲 ${soup.name}</div>` : "";
-
-      const mainsHtml = mains.map((item, idx) => {
-        const isFirst = idx === 0;
-        const priceSpan = item.price
-          ? `<span style="color:var(--green);font-weight:600;font-size:.85rem;margin-left:6px">${item.price}</span>` : "";
-        return isFirst
-          ? `<div class="tages-dish-main">${item.name}${priceSpan}</div>`
-          : `<div class="tages-dish-other">· ${item.name}${priceSpan}</div>`;
+      const itemsHtml = items.map(item => {
+        const priceHtml = item.price
+          ? `<span class="tages-dish-price">${item.price}</span>` : "";
+        return `<div class="tages-dish-row">
+          <span class="tages-dish-name">${item.name}</span>${priceHtml}
+        </div>`;
       }).join("");
 
-      if (!mainsHtml && !soupHtml) return "";
-
-      const priceNote = r.price_note
-        ? `<span class="tages-price">${r.price_note}</span>` : "";
+      // price_note: bei mehreren Preisen (getrennt mit ·) nur den ersten anzeigen
+      let displayPrice = r.price_note || "";
+      if (displayPrice.includes("·")) displayPrice = displayPrice.split("·")[0].trim();
+      const priceNoteHtml = displayPrice
+        ? `<span class="tages-price">${displayPrice}</span>` : "";
 
       return `
         <div class="tages-card">
-          <div class="tages-dishes">
-            ${mainsHtml}
-            ${soupHtml}
-          </div>
+          <div class="tages-dishes">${itemsHtml}</div>
           <hr class="tages-separator" />
           <div class="tages-footer">
             <a class="tages-restaurant" href="#card-${r.id}">${r.name}</a>
-            ${priceNote}
+            ${priceNoteHtml}
           </div>
         </div>`;
     })
     .join("");
 
   if (!cardsHtml.trim()) {
-    const dayDE = today || "heute";
     grid.innerHTML = `<div class="tages-empty">
-      Für ${dayDE} sind keine Menüdaten verfügbar.<br />
+      Für ${today || "heute"} sind keine Menüdaten verfügbar.<br />
       Schau direkt bei den <a href="#wochenmenus" style="color:var(--green)">Wochenmenüs</a> vorbei.
     </div>`;
   } else {
