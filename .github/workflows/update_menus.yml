@@ -3,6 +3,7 @@ name: Menuplan aktualisieren
 on:
   schedule:
     - cron: "30 7 * * 1"
+    - cron: "0 8 * * 2"
   workflow_dispatch:
 
 permissions:
@@ -21,8 +22,11 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Tesseract OCR installieren
+        run: sudo apt-get install -y tesseract-ocr tesseract-ocr-deu
+
       - name: Abhaengigkeiten installieren
-        run: pip install requests beautifulsoup4 pdfplumber lxml
+        run: pip install requests beautifulsoup4 pdfplumber lxml pytesseract pillow
 
       - name: Menues scrapen
         run: python scripts/update_menus.py
