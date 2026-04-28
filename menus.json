@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-27T15:14:58.937468",
+  "updated": "2026-04-28T10:09:59.166205",
   "week": "KW 18",
   "restaurants": [
     {
@@ -221,55 +221,6 @@
             {
               "name": "Gemüsewok mit Tofu & Koriander dazu Jasminreis",
               "price": "13.50 €"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "klaghofer",
-      "name": "Klaghofer Fleisch",
-      "url": "https://klaghofer-fleisch.at/wochenkarte/",
-      "cuisine": "Fleischerei & Mittagstisch",
-      "address": "Rankgasse 25, 1160 Wien",
-      "phone": "+43 1 493 91 84",
-      "price_note": null,
-      "week_label": "KW 18",
-      "menu_image": null,
-      "days": [
-        {
-          "day": "Montag",
-          "items": [
-            {
-              "name": "Gekochtes Selchfleisch mit Erdäpfelpüree",
-              "price": "8.90 €"
-            }
-          ]
-        },
-        {
-          "day": "Dienstag",
-          "items": [
-            {
-              "name": "Steirisches Wurzelfleisch mit Kren und Salzkartoffeln",
-              "price": "9.90 €"
-            }
-          ]
-        },
-        {
-          "day": "Mittwoch",
-          "items": [
-            {
-              "name": "Gefüllte Kalbsbrust mit Semmelfülle und Blattsalat",
-              "price": "11.90 €"
-            }
-          ]
-        },
-        {
-          "day": "Donnerstag",
-          "items": [
-            {
-              "name": "Rindsroulade mit Saft und Teigspiralen",
-              "price": "10.90 €"
             }
           ]
         }
