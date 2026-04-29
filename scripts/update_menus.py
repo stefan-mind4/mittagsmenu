@@ -711,43 +711,93 @@ def get_kw_label():
     return f"KW {iso[1]}"
 
 
+ALL_SCRAPERS = [
+    ("ottakringer-stubn",  "Ottakringer Stub'n",       scrape_ottakringer),
+    ("goesser-braeu",      "Gösser Bräu Wien",          scrape_goesser),
+    ("wolfsberger",        "Gastwirtschaft Wolfsberger", scrape_wolfsberger),
+    ("klaghofer",          "Klaghofer Fleisch",          scrape_klaghofer),
+    ("nigls",              "NIGLS Gastwirtschaft",       scrape_nigls),
+    ("casa-mora",          "Casa Mora",                  scrape_casamora),
+]
+
+
 def main():
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--update-only",
+        metavar="ID",
+        help="Nur ein Restaurant aktualisieren (z.B. casa-mora); "
+             "alle anderen werden aus der bestehenden menus.json übernommen."
+    )
+    args = parser.parse_args()
+
+    out_dir  = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    out_path = os.path.join(out_dir, "menus.json")
+
     print(f"🍽  Menü-Scraper startet – {datetime.now().strftime('%d.%m.%Y %H:%M')}")
 
-    scrapers = [
-        ("Ottakringer Stub'n", scrape_ottakringer),
-        ("Gösser Bräu Wien", scrape_goesser),
-        ("Gastwirtschaft Wolfsberger", scrape_wolfsberger),
-        ("Klaghofer Fleisch", scrape_klaghofer),
-        ("NIGLS Gastwirtschaft", scrape_nigls),
-        ("Casa Mora", scrape_casamora),
-    ]
+    if args.update_only:
+        # ── Partial-Update: nur ein Restaurant neu scrapen ──────────────
+        target_id = args.update_only.strip().lower()
+        print(f"   Modus: nur '{target_id}' aktualisieren")
 
-    restaurants = []
-    for name, fn in scrapers:
+        # Bestehende menus.json laden
+        try:
+            with open(out_path, encoding="utf-8") as f:
+                existing = json.load(f)
+        except Exception as e:
+            print(f"  ✗ Konnte menus.json nicht lesen: {e}", file=sys.stderr)
+            existing = {"week": get_kw_label(), "restaurants": []}
+
+        # Nur den Ziel-Scraper ausführen
+        scraper_entry = next((s for s in ALL_SCRAPERS if s[0] == target_id), None)
+        if not scraper_entry:
+            print(f"  ✗ Unbekannte Restaurant-ID: {target_id}", file=sys.stderr)
+            return
+
+        sid, name, fn = scraper_entry
         print(f"  → {name} …", end=" ", flush=True)
         result = fn()
+        print("✓" if result else "✗")
+
+        # Ergebnis in bestehende Liste einsetzen (oder anhängen)
+        restaurants = existing.get("restaurants", [])
+        idx = next((i for i, r in enumerate(restaurants) if r["id"] == target_id), None)
         if result:
-            restaurants.append(result)
-            print("✓")
-        else:
-            print("✗ (kein Ergebnis)")
+            if idx is not None:
+                restaurants[idx] = result
+            else:
+                restaurants.append(result)
 
-    output = {
-        "updated": datetime.now().isoformat(),
-        "week": get_kw_label(),
-        "restaurants": restaurants,
-    }
+        output = {
+            "updated": datetime.now().isoformat(),
+            "week": existing.get("week", get_kw_label()),
+            "restaurants": restaurants,
+        }
 
-    # Ausgabe-Pfad: Projekt-Root (eine Ebene über /scripts/)
-    out_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    out_path = os.path.join(out_dir, "menus.json")
+    else:
+        # ── Full-Update: alle Restaurants scrapen ───────────────────────
+        restaurants = []
+        for sid, name, fn in ALL_SCRAPERS:
+            print(f"  → {name} …", end=" ", flush=True)
+            result = fn()
+            if result:
+                restaurants.append(result)
+                print("✓")
+            else:
+                print("✗ (kein Ergebnis)")
+
+        output = {
+            "updated": datetime.now().isoformat(),
+            "week": get_kw_label(),
+            "restaurants": restaurants,
+        }
 
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
     print(f"\n✅ menus.json gespeichert → {out_path}")
-    print(f"   {len(restaurants)} von {len(scrapers)} Restaurants gescraped")
 
 
 if __name__ == "__main__":
