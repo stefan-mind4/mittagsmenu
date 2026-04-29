@@ -227,6 +227,18 @@
       ]
     },
     {
+      "id": "klaghofer",
+      "name": "Klaghofer Fleisch",
+      "url": "https://klaghofer-fleisch.at/wochenkarte/",
+      "cuisine": "Fleischerei & Mittagstisch",
+      "address": "Rankgasse 25, 1160 Wien",
+      "phone": "+43 1 493 91 84",
+      "price_note": null,
+      "week_label": "KW 18",
+      "menu_image": "https://klaghofer-fleisch.at/wp-content/uploads/2026/04/Klaghofer-Speisekarte-2026_KW18-Online.jpg",
+      "days": []
+    },
+    {
       "id": "nigls",
       "name": "NIGLS Gastwirtschaft",
       "url": "https://nigls.at/",
