@@ -28,8 +28,13 @@ jobs:
       - name: Abhaengigkeiten installieren
         run: pip install requests beautifulsoup4 pdfplumber lxml pytesseract pillow
 
-      - name: Menues scrapen
+      - name: Menues scrapen (Montag – alle Restaurants)
+        if: github.event.schedule == '30 7 * * 1' || github.event_name == 'workflow_dispatch'
         run: python scripts/update_menus.py
+
+      - name: Menues scrapen (Dienstag – nur Casa Mora)
+        if: github.event.schedule == '0 8 * * 2'
+        run: python scripts/update_menus.py --update-only casa-mora
 
       - name: menus.json committen
         uses: stefanzweifel/git-auto-commit-action@v5
