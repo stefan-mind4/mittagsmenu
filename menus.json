@@ -235,8 +235,45 @@
       "phone": "+43 1 493 91 84",
       "price_note": null,
       "week_label": "KW 18",
-      "menu_image": "https://klaghofer-fleisch.at/wp-content/uploads/2026/04/Klaghofer-Speisekarte-2026_KW18-Online.jpg",
-      "days": []
+      "menu_image": null,
+      "days": [
+        {
+          "day": "Montag",
+          "items": [
+            {
+              "name": "Gekochtes Selchfleisch mit Erdäpfelpüree",
+              "price": "8.90 €"
+            }
+          ]
+        },
+        {
+          "day": "Dienstag",
+          "items": [
+            {
+              "name": "Steirisches Wurzelfleisch mit Kren und Salzkartoffeln",
+              "price": "9.90 €"
+            }
+          ]
+        },
+        {
+          "day": "Mittwoch",
+          "items": [
+            {
+              "name": "Gefüllte Kalbsbrust mit Semmelfülle und Blattsalat",
+              "price": "11.90 €"
+            }
+          ]
+        },
+        {
+          "day": "Donnerstag",
+          "items": [
+            {
+              "name": "Rindsroulade mit Saft und Teigspiralen",
+              "price": "10.90 €"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "nigls",
