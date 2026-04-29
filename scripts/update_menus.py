@@ -487,6 +487,18 @@ def _ocr_image(img):
 # ─────────────────────────────────────────────
 def scrape_klaghofer():
     url = "https://klaghofer-fleisch.at/wochenkarte/"
+    result = {
+        "id": "klaghofer",
+        "name": "Klaghofer Fleisch",
+        "url": url,
+        "cuisine": "Fleischerei & Mittagstisch",
+        "address": "Rankgasse 25, 1160 Wien",
+        "phone": "+43 1 493 91 84",
+        "price_note": None,
+        "week_label": "",
+        "menu_image": None,
+        "days": [],
+    }
     try:
         from PIL import Image as PILImage
         import io as _io
@@ -497,7 +509,6 @@ def scrape_klaghofer():
 
         section = soup.find("section", class_="wochenkarte")
         image_url = None
-        week_label = ""
 
         if section:
             img_tag = section.find("img")
@@ -505,33 +516,25 @@ def scrape_klaghofer():
                 image_url = img_tag.get("src") or img_tag.get("data-src")
                 kw_match = re.search(r"KW(\d+)", image_url or "")
                 if kw_match:
-                    week_label = f"KW {kw_match.group(1)}"
+                    result["week_label"] = f"KW {kw_match.group(1)}"
 
-        days = []
         if image_url:
-            img_r = requests.get(image_url, headers=HEADERS, timeout=20)
-            img_r.raise_for_status()
-            pil_img = PILImage.open(_io.BytesIO(img_r.content))
-            pil_img = pil_img.resize(
-                (pil_img.width * 3, pil_img.height * 3), PILImage.LANCZOS
-            ).convert("L")
-            days = _ocr_image(pil_img)
+            try:
+                img_r = requests.get(image_url, headers=HEADERS, timeout=20)
+                img_r.raise_for_status()
+                pil_img = PILImage.open(_io.BytesIO(img_r.content))
+                pil_img = pil_img.resize(
+                    (pil_img.width * 3, pil_img.height * 3), PILImage.LANCZOS
+                ).convert("L")
+                result["days"] = _ocr_image(pil_img)
+            except Exception as e:
+                print(f"  ⚠ Klaghofer OCR/Download Fehler: {e}", file=sys.stderr)
+                result["menu_image"] = image_url  # Fallback: Bild anzeigen
 
-        return {
-            "id": "klaghofer",
-            "name": "Klaghofer Fleisch",
-            "url": url,
-            "cuisine": "Fleischerei & Mittagstisch",
-            "address": "Rankgasse 25, 1160 Wien",
-            "phone": "+43 1 493 91 84",
-            "price_note": None,
-            "week_label": week_label,
-            "menu_image": None,
-            "days": days,
-        }
     except Exception as e:
         print(f"  ✗ Klaghofer Fehler: {e}", file=sys.stderr)
-        return None
+
+    return result  # Immer zurückgeben, auch wenn leer
 
 
 # ─────────────────────────────────────────────
@@ -647,6 +650,19 @@ def scrape_goesser():
 # ─────────────────────────────────────────────
 def scrape_nigls():
     url = "https://nigls.at/"
+    result = {
+        "id": "nigls",
+        "name": "NIGLS Gastwirtschaft",
+        "url": url,
+        "cuisine": "Österreichische Küche",
+        "address": "Rankgasse 36, 1160 Wien",
+        "phone": "+43 1 4055077",
+        "price_note": None,
+        "week_label": "",
+        "menu_image": None,
+        "menu_pdf": None,
+        "days": [],
+    }
     try:
         import pdfplumber
         import io as _io
@@ -663,40 +679,27 @@ def scrape_nigls():
                 pdf_url = a.get("href", "").strip()
                 break
 
-        week_label = ""
-        days = []
-
         if not pdf_url:
             print("  ⚠ NIGLS: Kein Mittagsmenü-Button gefunden")
         else:
-            # KW aus Dateiname
             kw_match = re.search(r"KW(\d+)", pdf_url, re.I)
             if kw_match:
-                week_label = f"KW {kw_match.group(1)}"
+                result["week_label"] = f"KW {kw_match.group(1)}"
 
-            # PDF laden + OCR
-            pdf_r = requests.get(pdf_url, headers=HEADERS, timeout=20)
-            pdf_r.raise_for_status()
-            with pdfplumber.open(_io.BytesIO(pdf_r.content)) as pdf:
-                pil_img = pdf.pages[0].to_image(resolution=200).original
-            days = _ocr_image(pil_img)
+            try:
+                pdf_r = requests.get(pdf_url, headers=HEADERS, timeout=20)
+                pdf_r.raise_for_status()
+                with pdfplumber.open(_io.BytesIO(pdf_r.content)) as pdf:
+                    pil_img = pdf.pages[0].to_image(resolution=200).original
+                result["days"] = _ocr_image(pil_img)
+            except Exception as e:
+                print(f"  ⚠ NIGLS OCR/Download Fehler: {e}", file=sys.stderr)
+                result["menu_pdf"] = pdf_url  # Fallback: PDF-Link speichern
 
-        return {
-            "id": "nigls",
-            "name": "NIGLS Gastwirtschaft",
-            "url": url,
-            "cuisine": "Österreichische Küche",
-            "address": "Rankgasse 36, 1160 Wien",
-            "phone": "+43 1 4055077",
-            "price_note": None,
-            "week_label": week_label,
-            "menu_image": None,
-            "menu_pdf": None,
-            "days": days,
-        }
     except Exception as e:
         print(f"  ✗ NIGLS Fehler: {e}", file=sys.stderr)
-        return None
+
+    return result  # Immer zurückgeben, auch wenn leer
 
 
 # ─────────────────────────────────────────────
