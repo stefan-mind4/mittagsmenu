@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-04T09:38:44.226503",
+  "updated": "2026-05-05T09:58:59.980044",
   "week": "KW 19",
   "restaurants": [
     {
@@ -348,11 +348,7 @@
           "day": "Dienstag",
           "items": [
             {
-              "name": "klare Suppe",
-              "price": null
-            },
-            {
-              "name": "Papa rellena gefüllter Erdapfel mit pikanter Sauce und Avocado-Salat",
+              "name": "Rostbraten vom Grill mit kreolischen Linsen, Reis und Salat",
               "price": null
             }
           ]
@@ -361,11 +357,11 @@
           "day": "Mittwoch",
           "items": [
             {
-              "name": "Sonnenweizen – Suppe",
+              "name": "Pastinakensuppe",
               "price": null
             },
             {
-              "name": "Schopfbraten vom Grill mit Reis und Avocado",
+              "name": "Picadillo de Carne kleinwürfeliges Rindsragout mit Gemüse dazu Reis und überbackene gelbe Kochbanane",
               "price": null
             }
           ]
@@ -374,7 +370,16 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Sudado de Pollo Hühner – Eintopf mit Erdäpfeln und Yuca dazu Reis, Salat und frittierte Kochbananen",
+              "name": "Higado de Res geröstete Rindsleber mit Reis, Spiegelei und Avocado",
+              "price": null
+            }
+          ]
+        },
+        {
+          "day": "Freitag",
+          "items": [
+            {
+              "name": "BANDEJA PAISA kolumbianischer Bauernschmaus",
               "price": null
             }
           ]
@@ -383,11 +388,7 @@
           "day": "Samstag",
           "items": [
             {
-              "name": "klare Suppe",
-              "price": null
-            },
-            {
-              "name": "Tamal Valluno in Bananenblatt gedünsteter Maisteig mit dreierlei Fleisch und Gemüse dazu Reis und frittierte Kochbananen",
+              "name": "Sancocho de Gallina Hühner – Suppentopf mit Reis, kreolischen Salat und Avocado",
               "price": null
             }
           ]
