@@ -1,6 +1,6 @@
 {
-  "updated": "2026-05-05T09:58:59.980044",
-  "week": "KW 19",
+  "updated": "2026-05-11T10:47:35.492926",
+  "week": "KW 20",
   "restaurants": [
     {
       "id": "ottakringer-stubn",
@@ -10,7 +10,7 @@
       "address": "Ottakringerstraße 152, 1160 Wien",
       "phone": "01 486 21 82",
       "price_note": "9–12 €",
-      "week_label": "04/08Mai",
+      "week_label": "11/15 Mai",
       "menu_image": null,
       "days": [
         {
@@ -34,7 +34,7 @@
               "price": null
             },
             {
-              "name": "Eiernockerl mit grünem Salat",
+              "name": "Blunzengröstl mit Kraut",
               "price": null
             }
           ]
@@ -47,7 +47,7 @@
               "price": null
             },
             {
-              "name": "Holzfällersteak mit Rosmarinkartoffeln und Speckfisolen",
+              "name": "Reisfleisch mit grünem Salat",
               "price": null
             }
           ]
@@ -56,11 +56,7 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Suppe",
-              "price": null
-            },
-            {
-              "name": "Chili con Carne mit Fladenbrot",
+              "name": "Feiertag",
               "price": null
             }
           ]
@@ -88,14 +84,14 @@
       "address": "Thaliastraße 125A, 1160 Wien",
       "phone": "+43 1 3692286",
       "price_note": "Hauptspeise 9,80 € · mit Suppe 10,80 €",
-      "week_label": "UNSERE MITTAGSTELLER vom 4.5. bis 8.5.2026",
+      "week_label": "UNSERE MITTAGSTELLER vom 11.5. bis 15.5.2026",
       "menu_image": null,
       "days": [
         {
           "day": "Montag",
           "items": [
             {
-              "name": "Gratinierte Fleischpalatschinke mit buntem Blattsalat",
+              "name": "Lasagne in der Pfanne mit buntem Blattsalat",
               "price": null
             },
             {
@@ -103,7 +99,7 @@
               "price": null
             },
             {
-              "name": "Spaghetti mit Gemüsebolognese und frischem Grana",
+              "name": "Spinatspätzle in Käse-Obers-Sauce",
               "price": null
             }
           ]
@@ -112,7 +108,7 @@
           "day": "Dienstag",
           "items": [
             {
-              "name": "Rindsbraten in Gemüse-Rahm-Sauce mit Serviettenknödel",
+              "name": "Blunz’n-Gröst’l mit Kren und Krautsalat",
               "price": null
             },
             {
@@ -120,7 +116,7 @@
               "price": null
             },
             {
-              "name": "Gebackener Käse mit Sauce Tartare und Preiselbeeren",
+              "name": "Erdäpfelpuffer mit Knoblauchsauce",
               "price": null
             }
           ]
@@ -129,7 +125,7 @@
           "day": "Mittwoch",
           "items": [
             {
-              "name": "Gebackenes Surschnitzerl mit Petersilerdäpfel",
+              "name": "Cordon Bleu mit Petersilerdäpfel",
               "price": null
             },
             {
@@ -137,7 +133,7 @@
               "price": null
             },
             {
-              "name": "Eiernockerl mit grünem Salat",
+              "name": "Grießschmarr’n mit Zwetschkenröster",
               "price": null
             }
           ]
@@ -146,15 +142,7 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Reisfleisch mit Gurken-Rahmsalat",
-              "price": null
-            },
-            {
-              "name": "— oder —",
-              "price": null
-            },
-            {
-              "name": "Kaiserschmarr’n mit Zwetschkenröster",
+              "name": "Feiertag!",
               "price": null
             }
           ]
@@ -178,7 +166,7 @@
       "address": "Lienfeldergasse 35, 1160 Wien",
       "phone": "+43 1 4861455",
       "price_note": null,
-      "week_label": "Der Menüplan für 6. bis 8. Mai",
+      "week_label": "Der Menüplan für 13. bis 15. Mai",
       "menu_image": null,
       "days": [
         {
@@ -189,7 +177,7 @@
               "price": null
             },
             {
-              "name": "Paprikahendl mit Nockerln",
+              "name": "Bratwurst mit Erdäpfelschmarrn und Sauerkraut",
               "price": "13.50 €"
             }
           ]
@@ -198,12 +186,8 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Tagessuppe",
+              "name": "Feiertag-kein Mittagsmenü",
               "price": null
-            },
-            {
-              "name": "Linse mit Speckknödel",
-              "price": "13.50 €"
             }
           ]
         },
@@ -223,7 +207,11 @@
               "price": null
             },
             {
-              "name": "Krautfleckerln",
+              "name": "Rucolaspaghetti mit getrockneten Tomaten",
+              "price": null
+            },
+            {
+              "name": "Prosciuttochips & Granaspänen",
               "price": null
             }
           ]
@@ -238,9 +226,19 @@
       "address": "Rankgasse 25, 1160 Wien",
       "phone": "+43 1 493 91 84",
       "price_note": null,
-      "week_label": "KW 19",
+      "week_label": "KW 20",
       "menu_image": null,
-      "days": []
+      "days": [
+        {
+          "day": "Donnerstag",
+          "items": [
+            {
+              "name": "Feiertag",
+              "price": null
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "nigls",
@@ -258,11 +256,11 @@
           "day": "Montag",
           "items": [
             {
-              "name": "Tomatensuppe mit Nudeln",
+              "name": "Eintropfsuppe",
               "price": null
             },
             {
-              "name": "Beinfleisch mit Semmelkren",
+              "name": "Ofenkartoffel mit Tsatziki und Hühnerfilet",
               "price": "11.90 €"
             }
           ]
@@ -271,15 +269,11 @@
           "day": "Dienstag",
           "items": [
             {
-              "name": "Rollgerstlsuppe",
+              "name": "Brokkolicremesuppe",
               "price": null
             },
             {
-              "name": "A, C, GL, M,O",
-              "price": null
-            },
-            {
-              "name": "Majoranfleisch mit Teigwaren",
+              "name": "Faschierter Braten mit Kartoffelpüree und Röstzwiebel",
               "price": "11.90 €"
             }
           ]
@@ -306,23 +300,10 @@
           ]
         },
         {
-          "day": "Donnerstag",
-          "items": [
-            {
-              "name": "Karfiolcremesuppe",
-              "price": null
-            },
-            {
-              "name": "Spaghetti Bolognese",
-              "price": "11.90 €"
-            }
-          ]
-        },
-        {
           "day": "Freitag",
           "items": [
             {
-              "name": "Grießnockerlsuppe",
+              "name": "Zwiebelsuppe mit Käsebrot",
               "price": null
             },
             {
