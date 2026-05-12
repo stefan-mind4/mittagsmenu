@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-11T10:47:35.492926",
+  "updated": "2026-05-12T10:27:52.861555",
   "week": "KW 20",
   "restaurants": [
     {
@@ -329,7 +329,11 @@
           "day": "Dienstag",
           "items": [
             {
-              "name": "Rostbraten vom Grill mit kreolischen Linsen, Reis und Salat",
+              "name": "Klare Suppe",
+              "price": null
+            },
+            {
+              "name": "Pollo asado Ofen – Huhn mit Reis und Gurkensalat",
               "price": null
             }
           ]
@@ -338,11 +342,11 @@
           "day": "Mittwoch",
           "items": [
             {
-              "name": "Pastinakensuppe",
+              "name": "Suppe mit frittierten Kochbananen",
               "price": null
             },
             {
-              "name": "Picadillo de Carne kleinwürfeliges Rindsragout mit Gemüse dazu Reis und überbackene gelbe Kochbanane",
+              "name": "Carne mechada Gerupftes Rindfleisch mit Reis und Avocado",
               "price": null
             }
           ]
@@ -351,7 +355,11 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Higado de Res geröstete Rindsleber mit Reis, Spiegelei und Avocado",
+              "name": "Klare Suppe",
+              "price": null
+            },
+            {
+              "name": "Arroz Atollado kolumbianischer Mixreis mit Avocado und Kochbananen – Langchips",
               "price": null
             }
           ]
@@ -369,7 +377,7 @@
           "day": "Samstag",
           "items": [
             {
-              "name": "Sancocho de Gallina Hühner – Suppentopf mit Reis, kreolischen Salat und Avocado",
+              "name": "Pescado frito ganze frittierte Dorade mit Kokosreis, Avocado – Salat und frittierte Kochbananen",
               "price": null
             }
           ]
