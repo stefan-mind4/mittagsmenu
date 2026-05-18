@@ -1,6 +1,6 @@
 {
-  "updated": "2026-05-12T10:27:52.861555",
-  "week": "KW 20",
+  "updated": "2026-05-18T11:31:51.691538",
+  "week": "KW 21",
   "restaurants": [
     {
       "id": "ottakringer-stubn",
@@ -10,7 +10,7 @@
       "address": "Ottakringerstraße 152, 1160 Wien",
       "phone": "01 486 21 82",
       "price_note": "9–12 €",
-      "week_label": "11/15 Mai",
+      "week_label": "18/22 Mai",
       "menu_image": null,
       "days": [
         {
@@ -34,7 +34,7 @@
               "price": null
             },
             {
-              "name": "Blunzengröstl mit Kraut",
+              "name": "Hühnergeschnetzeltes mit Reis",
               "price": null
             }
           ]
@@ -47,7 +47,7 @@
               "price": null
             },
             {
-              "name": "Reisfleisch mit grünem Salat",
+              "name": "Berner Würstel mit Pommes",
               "price": null
             }
           ]
@@ -56,7 +56,11 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Feiertag",
+              "name": "Suppe",
+              "price": null
+            },
+            {
+              "name": "Geröstete Leber mit Kartoffeln",
               "price": null
             }
           ]
@@ -77,88 +81,6 @@
       ]
     },
     {
-      "id": "goesser-braeu",
-      "name": "Gösser Bräu Wien",
-      "url": "https://www.goesserbraeuwien.at/",
-      "cuisine": "Österreichische Küche",
-      "address": "Thaliastraße 125A, 1160 Wien",
-      "phone": "+43 1 3692286",
-      "price_note": "Hauptspeise 9,80 € · mit Suppe 10,80 €",
-      "week_label": "UNSERE MITTAGSTELLER vom 11.5. bis 15.5.2026",
-      "menu_image": null,
-      "days": [
-        {
-          "day": "Montag",
-          "items": [
-            {
-              "name": "Lasagne in der Pfanne mit buntem Blattsalat",
-              "price": null
-            },
-            {
-              "name": "— oder —",
-              "price": null
-            },
-            {
-              "name": "Spinatspätzle in Käse-Obers-Sauce",
-              "price": null
-            }
-          ]
-        },
-        {
-          "day": "Dienstag",
-          "items": [
-            {
-              "name": "Blunz’n-Gröst’l mit Kren und Krautsalat",
-              "price": null
-            },
-            {
-              "name": "— oder —",
-              "price": null
-            },
-            {
-              "name": "Erdäpfelpuffer mit Knoblauchsauce",
-              "price": null
-            }
-          ]
-        },
-        {
-          "day": "Mittwoch",
-          "items": [
-            {
-              "name": "Cordon Bleu mit Petersilerdäpfel",
-              "price": null
-            },
-            {
-              "name": "— oder —",
-              "price": null
-            },
-            {
-              "name": "Grießschmarr’n mit Zwetschkenröster",
-              "price": null
-            }
-          ]
-        },
-        {
-          "day": "Donnerstag",
-          "items": [
-            {
-              "name": "Feiertag!",
-              "price": null
-            }
-          ]
-        },
-        {
-          "day": "Freitag",
-          "items": [
-            {
-              "name": "Gebackenes Fischfilet mit Erdäpfelsalat und Sauce Tartare",
-              "price": null
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "wolfsberger",
       "name": "Gastwirtschaft Wolfsberger",
       "url": "https://www.gastwirtschaftwolfsberger.at/mittagsmen%C3%BC/",
@@ -166,7 +88,7 @@
       "address": "Lienfeldergasse 35, 1160 Wien",
       "phone": "+43 1 4861455",
       "price_note": null,
-      "week_label": "Der Menüplan für 13. bis 15. Mai",
+      "week_label": "Der Menüplan für 20. bis 22. Mai",
       "menu_image": null,
       "days": [
         {
@@ -177,7 +99,7 @@
               "price": null
             },
             {
-              "name": "Bratwurst mit Erdäpfelschmarrn und Sauerkraut",
+              "name": "Ausgelöste gebackene Hühnerhaxerl mit gemischtem Salat",
               "price": "13.50 €"
             }
           ]
@@ -186,8 +108,12 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Feiertag-kein Mittagsmenü",
+              "name": "Tagessuppe",
               "price": null
+            },
+            {
+              "name": "Faschierter Braten mit Erdäpfelpüree & knuspriger Zwiebel",
+              "price": "13.50 €"
             }
           ]
         },
@@ -200,19 +126,11 @@
             },
             {
               "name": "Gebackenes Seelachsfilet mit Erdäpfelsalat",
-              "price": null
+              "price": "15.00 €"
             },
             {
-              "name": "oder",
-              "price": null
-            },
-            {
-              "name": "Rucolaspaghetti mit getrockneten Tomaten",
-              "price": null
-            },
-            {
-              "name": "Prosciuttochips & Granaspänen",
-              "price": null
+              "name": "Apfel-Reisauflauf mit Zimtzucker",
+              "price": "13.50 €"
             }
           ]
         }
@@ -226,14 +144,26 @@
       "address": "Rankgasse 25, 1160 Wien",
       "phone": "+43 1 493 91 84",
       "price_note": null,
-      "week_label": "KW 20",
+      "week_label": "KW 21",
       "menu_image": null,
       "days": [
         {
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Feiertag",
+              "name": "Gekochtes Rindfleisch mit Grünkohl und Kartoffeln",
+              "price": "10.90 €"
+            },
+            {
+              "name": "> __ rem MAI",
+              "price": null
+            },
+            {
+              "name": "Gebackener Kabeljau oder Pangasius mit Gemüsemayonnaise und Kartoffelsalat",
+              "price": null
+            },
+            {
+              "name": "re oot th safe",
               "price": null
             }
           ]
@@ -256,11 +186,11 @@
           "day": "Montag",
           "items": [
             {
-              "name": "Eintropfsuppe",
+              "name": "Fritattensuppe",
               "price": null
             },
             {
-              "name": "Ofenkartoffel mit Tsatziki und Hühnerfilet",
+              "name": "Bauernnockerl mit griinem Salat",
               "price": "11.90 €"
             }
           ]
@@ -269,11 +199,11 @@
           "day": "Dienstag",
           "items": [
             {
-              "name": "Brokkolicremesuppe",
+              "name": "Kartoffelcremesuppe mit Croütons",
               "price": null
             },
             {
-              "name": "Faschierter Braten mit Kartoffelpüree und Röstzwiebel",
+              "name": "Uberbackenes Schweizer Schnitzel mit Tomaten, Schinken und Kase, dazu Reis",
               "price": "11.90 €"
             }
           ]
@@ -300,10 +230,23 @@
           ]
         },
         {
+          "day": "Donnerstag",
+          "items": [
+            {
+              "name": "Griessnockerlsuppe",
+              "price": null
+            },
+            {
+              "name": "Gekochtes weißes Scherzel mit Kartoffelrösti und Spinat",
+              "price": "11.90 €"
+            }
+          ]
+        },
+        {
           "day": "Freitag",
           "items": [
             {
-              "name": "Zwiebelsuppe mit Käsebrot",
+              "name": "Tomatensuppe mit Teigwaren",
               "price": null
             },
             {
