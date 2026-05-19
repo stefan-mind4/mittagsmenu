@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-18T11:31:51.691538",
+  "updated": "2026-05-19T10:58:27.503292",
   "week": "KW 21",
   "restaurants": [
     {
@@ -272,11 +272,7 @@
           "day": "Dienstag",
           "items": [
             {
-              "name": "Klare Suppe",
-              "price": null
-            },
-            {
-              "name": "Pollo asado Ofen – Huhn mit Reis und Gurkensalat",
+              "name": "Pollo al Romero Rosmarin – Huhn mit Reis, Maduros und weiße Bohnen",
               "price": null
             }
           ]
@@ -285,11 +281,7 @@
           "day": "Mittwoch",
           "items": [
             {
-              "name": "Suppe mit frittierten Kochbananen",
-              "price": null
-            },
-            {
-              "name": "Carne mechada Gerupftes Rindfleisch mit Reis und Avocado",
+              "name": "Mondongo kolumbianische Kuttelfleck – Suppentopf mit Reis und Avocado",
               "price": null
             }
           ]
@@ -298,11 +290,7 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Klare Suppe",
-              "price": null
-            },
-            {
-              "name": "Arroz Atollado kolumbianischer Mixreis mit Avocado und Kochbananen – Langchips",
+              "name": "Sudado de Res Rindsragout mit Erdäpfeln und Yuca dazu Reis, Tomatensalat und Spiegelei",
               "price": null
             }
           ]
@@ -320,7 +308,7 @@
           "day": "Samstag",
           "items": [
             {
-              "name": "Pescado frito ganze frittierte Dorade mit Kokosreis, Avocado – Salat und frittierte Kochbananen",
+              "name": "Carne de Res al Vino Gedünstetes Rindfleisch in Rotwein mit Gemüse dazu Nudelreis, Salat und frittierte Kochbananen",
               "price": null
             }
           ]
