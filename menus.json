@@ -1,6 +1,6 @@
 {
-  "updated": "2026-05-25T11:36:05.613956",
-  "week": "KW 22",
+  "updated": "2026-06-01T13:14:58.870664",
+  "week": "KW 23",
   "restaurants": [
     {
       "id": "ottakringer-stubn",
@@ -10,20 +10,11 @@
       "address": "Ottakringerstraße 152, 1160 Wien",
       "phone": "01 486 21 82",
       "price_note": "9–12 €",
-      "week_label": "25/29 Mai",
+      "week_label": "01/05 Juni",
       "menu_image": null,
       "days": [
         {
           "day": "Montag",
-          "items": [
-            {
-              "name": "Feiertag",
-              "price": null
-            }
-          ]
-        },
-        {
-          "day": "Dienstag",
           "items": [
             {
               "name": "Suppe",
@@ -36,6 +27,19 @@
           ]
         },
         {
+          "day": "Dienstag",
+          "items": [
+            {
+              "name": "Suppe",
+              "price": null
+            },
+            {
+              "name": "Gebratener Leberkäse mit Gemüse und Kartoffeln",
+              "price": null
+            }
+          ]
+        },
+        {
           "day": "Mittwoch",
           "items": [
             {
@@ -43,7 +47,7 @@
               "price": null
             },
             {
-              "name": "Schinkenfleckerl mit grünem Salat",
+              "name": "Selchfleisch mit Linsen und Knödel",
               "price": null
             }
           ]
@@ -52,11 +56,7 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Suppe",
-              "price": null
-            },
-            {
-              "name": "Krautfleisch mit Kartoffeln",
+              "name": "Feiertag",
               "price": null
             }
           ]
@@ -84,14 +84,22 @@
       "address": "Thaliastraße 125A, 1160 Wien",
       "phone": "+43 1 3692286",
       "price_note": "Hauptspeise 9,80 € · mit Suppe 10,80 €",
-      "week_label": "UNSERE MITTAGSTELLER vom 25.5. bis 29.5.2026",
+      "week_label": "UNSERE MITTAGSTELLER vom 1.6. bis 5.6.2026",
       "menu_image": null,
       "days": [
         {
           "day": "Montag",
           "items": [
             {
-              "name": "Feiertag!",
+              "name": "Surbraten mit Kraut und Serviettenknödel",
+              "price": null
+            },
+            {
+              "name": "— oder —",
+              "price": null
+            },
+            {
+              "name": "Spinatnockerl in Käse-Oberssauce",
               "price": null
             }
           ]
@@ -100,7 +108,7 @@
           "day": "Dienstag",
           "items": [
             {
-              "name": "Rahmschnitzerl mit Bandnudel",
+              "name": "Letschoschnitzerl mit Reis",
               "price": null
             },
             {
@@ -108,7 +116,7 @@
               "price": null
             },
             {
-              "name": "Cremespinat mit Spiegelei und Erdäpfelschmarr‘n",
+              "name": "Gemüsestrudel mit warmer Kräuter-Rahm-Sauce",
               "price": null
             }
           ]
@@ -117,7 +125,7 @@
           "day": "Mittwoch",
           "items": [
             {
-              "name": "Gebackener Schweinslungenbraten mit Petersilerdäpfel",
+              "name": "Cordon Bleu mit Petersilerdäpfel",
               "price": null
             },
             {
@@ -125,7 +133,7 @@
               "price": null
             },
             {
-              "name": "Geröstete Knödel mit Ei und buntem Blattsalat",
+              "name": "Marillenknödel mit Butter-Nuss-Brösel",
               "price": null
             }
           ]
@@ -134,15 +142,7 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Spare Ribs mit Knoblauchsauce und Erdäpfelchips",
-              "price": null
-            },
-            {
-              "name": "— oder —",
-              "price": null
-            },
-            {
-              "name": "Grießschmarr’n mit Apfelmus",
+              "name": "Feiertag!",
               "price": null
             }
           ]
@@ -152,6 +152,14 @@
           "items": [
             {
               "name": "Gebackenes Fischfilet mit Erdäpfelsalat und Sauce Tartare",
+              "price": null
+            },
+            {
+              "name": "Nur 80",
+              "price": null
+            },
+            {
+              "name": "Hauptspeise € 9,",
               "price": null
             }
           ]
@@ -173,7 +181,7 @@
           "day": "Mittwoch",
           "items": [
             {
-              "name": "Tagessuppe",
+              "name": "Kaspressknödelsuppe",
               "price": null
             },
             {
@@ -186,7 +194,7 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Tagessuppe",
+              "name": "Frittatensuppe",
               "price": null
             },
             {
@@ -199,7 +207,7 @@
           "day": "Freitag",
           "items": [
             {
-              "name": "Tagessuppe",
+              "name": "Rindssuppe mit Fleischroulade",
               "price": null
             },
             {
@@ -222,31 +230,9 @@
       "address": "Rankgasse 25, 1160 Wien",
       "phone": "+43 1 493 91 84",
       "price_note": null,
-      "week_label": "KW 22",
+      "week_label": "",
       "menu_image": null,
-      "days": [
-        {
-          "day": "Donnerstag",
-          "items": [
-            {
-              "name": "Schweinsbraten mit Erdäpfelknödel und Sauerkraut",
-              "price": "9.90 €"
-            },
-            {
-              "name": "> __Fremas,zo.m",
-              "price": null
-            },
-            {
-              "name": "Gebackener Kabeljau oder Pangasius mit Gemüsemayonnaise und Kartoffelsalat",
-              "price": null
-            },
-            {
-              "name": "Fr > ale",
-              "price": null
-            }
-          ]
-        }
-      ]
+      "days": []
     },
     {
       "id": "nigls",
@@ -264,8 +250,12 @@
           "day": "Montag",
           "items": [
             {
-              "name": "Feiertag",
+              "name": "Kohlrabicremesuppe mit Croütons",
               "price": null
+            },
+            {
+              "name": "Wurstsalat mit Gebäck",
+              "price": "11.90 €"
             }
           ]
         },
@@ -273,11 +263,11 @@
           "day": "Dienstag",
           "items": [
             {
-              "name": "Ungarische Krautsuppe mit Kartoffeln",
+              "name": "Fritattensuppe",
               "price": null
             },
             {
-              "name": "Uberbackenes Fleischpalatschinken mit grünem Salat",
+              "name": "Schweinsbraten mit Semmeknödel und Speckkraut",
               "price": "11.90 €"
             }
           ]
@@ -286,15 +276,15 @@
           "day": "Mittwoch",
           "items": [
             {
-              "name": "Schweinsschnitzel %",
+              "name": "Schweinsschnitzel 1.M",
               "price": "12.50 €"
             },
             {
-              "name": "Surschnitzel (vom Schwein) 4",
+              "name": "Surschnitzel (vom Schwein) 4%",
               "price": "13.50 €"
             },
             {
-              "name": "Hühnerschnitzel 4!",
+              "name": "Hühnerschnitzel",
               "price": "13.50 €"
             },
             {
@@ -307,12 +297,8 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Selleriecremesuppe mit Brotchips",
+              "name": "Feiertag",
               "price": null
-            },
-            {
-              "name": "Paprikahuhn mit Butterspätzle",
-              "price": "11.90 €"
             }
           ]
         },
@@ -320,12 +306,8 @@
           "day": "Freitag",
           "items": [
             {
-              "name": "Fritattensuppe",
+              "name": "Ausnahmsweise geschloßen!",
               "price": null
-            },
-            {
-              "name": "Gebackener Kabeljau mit Erdapfel-Vogerlsalat",
-              "price": "12.90 €"
             }
           ]
         }
@@ -346,7 +328,7 @@
           "day": "Dienstag",
           "items": [
             {
-              "name": "Pollo al Romero Rosmarin – Huhn mit Reis, Maduros und weiße Bohnen",
+              "name": "Cerdo Agridulce Schweinefleisch süßsauer mit kreolischen Linsen, Reis und Kochbanenen-Chips",
               "price": null
             }
           ]
@@ -355,7 +337,7 @@
           "day": "Mittwoch",
           "items": [
             {
-              "name": "Mondongo kolumbianische Kuttelfleck – Suppentopf mit Reis und Avocado",
+              "name": "Sancocho de Costilla Kolumbianischer Suppentopf mit Beinfleisch dazu Reis und Avocado",
               "price": null
             }
           ]
@@ -364,7 +346,11 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Sudado de Res Rindsragout mit Erdäpfeln und Yuca dazu Reis, Tomatensalat und Spiegelei",
+              "name": "klare Suppe",
+              "price": null
+            },
+            {
+              "name": "Arroz con Pollo bunter Hühnerreis mit Gemüse dazu Salat und Pommes Frites",
               "price": null
             }
           ]
@@ -382,7 +368,7 @@
           "day": "Samstag",
           "items": [
             {
-              "name": "Carne de Res al Vino Gedünstetes Rindfleisch in Rotwein mit Gemüse dazu Nudelreis, Salat und frittierte Kochbananen",
+              "name": "Viudo de Pescado ganze Dorade in Saft mit gedünstete Erdäpfel und Yuca dazu Koriander-Reis und Avocado",
               "price": null
             }
           ]
