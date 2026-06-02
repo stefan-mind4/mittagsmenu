@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-01T13:14:58.870664",
+  "updated": "2026-06-02T12:00:55.004596",
   "week": "KW 23",
   "restaurants": [
     {
@@ -328,7 +328,7 @@
           "day": "Dienstag",
           "items": [
             {
-              "name": "Cerdo Agridulce Schweinefleisch süßsauer mit kreolischen Linsen, Reis und Kochbanenen-Chips",
+              "name": "Rostbraten vom Grill mit Reis, kreolischen Linsen, roten Rübensalat und frittierte Kochbananen",
               "price": null
             }
           ]
@@ -337,7 +337,11 @@
           "day": "Mittwoch",
           "items": [
             {
-              "name": "Sancocho de Costilla Kolumbianischer Suppentopf mit Beinfleisch dazu Reis und Avocado",
+              "name": "Suppe mit Teigwaren",
+              "price": null
+            },
+            {
+              "name": "kleinwürfeliges Rindsragout mit Gemüse mit Reis und Spiegelei",
               "price": null
             }
           ]
@@ -346,11 +350,11 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "klare Suppe",
+              "name": "Sancocho Trifasico Suppentopf",
               "price": null
             },
             {
-              "name": "Arroz con Pollo bunter Hühnerreis mit Gemüse dazu Salat und Pommes Frites",
+              "name": "Carne mechada gerupftes Rindfleisch mit Reis und Avocado",
               "price": null
             }
           ]
@@ -368,7 +372,11 @@
           "day": "Samstag",
           "items": [
             {
-              "name": "Viudo de Pescado ganze Dorade in Saft mit gedünstete Erdäpfel und Yuca dazu Koriander-Reis und Avocado",
+              "name": "klare Suppe",
+              "price": null
+            },
+            {
+              "name": "Tamal Valluno in Bananenblatt gedämpfter Maisteig mit drei Sorten Fleisch und Gemüse dazu Reis und frittierte Kochbananen",
               "price": null
             }
           ]
