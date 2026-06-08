@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-02T12:00:55.004596",
-  "week": "KW 23",
+  "updated": "2026-06-08T12:15:20.240256",
+  "week": "KW 24",
   "restaurants": [
     {
       "id": "ottakringer-stubn",
@@ -10,7 +10,7 @@
       "address": "Ottakringerstraße 152, 1160 Wien",
       "phone": "01 486 21 82",
       "price_note": "9–12 €",
-      "week_label": "01/05 Juni",
+      "week_label": "08/12 Juni",
       "menu_image": null,
       "days": [
         {
@@ -34,7 +34,7 @@
               "price": null
             },
             {
-              "name": "Gebratener Leberkäse mit Gemüse und Kartoffeln",
+              "name": "Gebratene Hühnerkeule mit Reis und Salat",
               "price": null
             }
           ]
@@ -47,7 +47,7 @@
               "price": null
             },
             {
-              "name": "Selchfleisch mit Linsen und Knödel",
+              "name": "Faschierter Braten mit Püree und Röstzwiebeln",
               "price": null
             }
           ]
@@ -56,7 +56,11 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Feiertag",
+              "name": "Suppe",
+              "price": null
+            },
+            {
+              "name": "Grenadiermarsch mit grünem Salat",
               "price": null
             }
           ]
@@ -77,96 +81,6 @@
       ]
     },
     {
-      "id": "goesser-braeu",
-      "name": "Gösser Bräu Wien",
-      "url": "https://www.goesserbraeuwien.at/",
-      "cuisine": "Österreichische Küche",
-      "address": "Thaliastraße 125A, 1160 Wien",
-      "phone": "+43 1 3692286",
-      "price_note": "Hauptspeise 9,80 € · mit Suppe 10,80 €",
-      "week_label": "UNSERE MITTAGSTELLER vom 1.6. bis 5.6.2026",
-      "menu_image": null,
-      "days": [
-        {
-          "day": "Montag",
-          "items": [
-            {
-              "name": "Surbraten mit Kraut und Serviettenknödel",
-              "price": null
-            },
-            {
-              "name": "— oder —",
-              "price": null
-            },
-            {
-              "name": "Spinatnockerl in Käse-Oberssauce",
-              "price": null
-            }
-          ]
-        },
-        {
-          "day": "Dienstag",
-          "items": [
-            {
-              "name": "Letschoschnitzerl mit Reis",
-              "price": null
-            },
-            {
-              "name": "— oder —",
-              "price": null
-            },
-            {
-              "name": "Gemüsestrudel mit warmer Kräuter-Rahm-Sauce",
-              "price": null
-            }
-          ]
-        },
-        {
-          "day": "Mittwoch",
-          "items": [
-            {
-              "name": "Cordon Bleu mit Petersilerdäpfel",
-              "price": null
-            },
-            {
-              "name": "— oder —",
-              "price": null
-            },
-            {
-              "name": "Marillenknödel mit Butter-Nuss-Brösel",
-              "price": null
-            }
-          ]
-        },
-        {
-          "day": "Donnerstag",
-          "items": [
-            {
-              "name": "Feiertag!",
-              "price": null
-            }
-          ]
-        },
-        {
-          "day": "Freitag",
-          "items": [
-            {
-              "name": "Gebackenes Fischfilet mit Erdäpfelsalat und Sauce Tartare",
-              "price": null
-            },
-            {
-              "name": "Nur 80",
-              "price": null
-            },
-            {
-              "name": "Hauptspeise € 9,",
-              "price": null
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "wolfsberger",
       "name": "Gastwirtschaft Wolfsberger",
       "url": "https://www.gastwirtschaftwolfsberger.at/mittagsmen%C3%BC/",
@@ -174,18 +88,18 @@
       "address": "Lienfeldergasse 35, 1160 Wien",
       "phone": "+43 1 4861455",
       "price_note": null,
-      "week_label": "Der Menüplan für 27. bis 29. Mai",
+      "week_label": "Der Menüplan für 10. bis 12. Juni",
       "menu_image": null,
       "days": [
         {
           "day": "Mittwoch",
           "items": [
             {
-              "name": "Kaspressknödelsuppe",
+              "name": "Tagessuppe",
               "price": null
             },
             {
-              "name": "Erdäpfelgulasch mit Dürrer und einem Handsemmerl",
+              "name": "Schweinskotelette in pikanter Champignon-Specksauce dazu Bratkartoffeln",
               "price": "13.50 €"
             }
           ]
@@ -194,11 +108,11 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Frittatensuppe",
+              "name": "Tagessuppe",
               "price": null
             },
             {
-              "name": "Esterhazyrahmrindsbraten mit Serviettenknödel",
+              "name": "Halbes Brathendl mit Reis",
               "price": "13.50 €"
             }
           ]
@@ -207,7 +121,7 @@
           "day": "Freitag",
           "items": [
             {
-              "name": "Rindssuppe mit Fleischroulade",
+              "name": "Tagessuppe",
               "price": null
             },
             {
@@ -215,7 +129,11 @@
               "price": "15.00 €"
             },
             {
-              "name": "Kokos-Gemüsecurry mit Jasminreis",
+              "name": "oder",
+              "price": null
+            },
+            {
+              "name": "Karfiol mit Butterbrösel & gehacktem Ei dazu Petersilkartoffeln",
               "price": "13.50 €"
             }
           ]
@@ -245,73 +163,7 @@
       "week_label": "",
       "menu_image": null,
       "menu_pdf": null,
-      "days": [
-        {
-          "day": "Montag",
-          "items": [
-            {
-              "name": "Kohlrabicremesuppe mit Croütons",
-              "price": null
-            },
-            {
-              "name": "Wurstsalat mit Gebäck",
-              "price": "11.90 €"
-            }
-          ]
-        },
-        {
-          "day": "Dienstag",
-          "items": [
-            {
-              "name": "Fritattensuppe",
-              "price": null
-            },
-            {
-              "name": "Schweinsbraten mit Semmeknödel und Speckkraut",
-              "price": "11.90 €"
-            }
-          ]
-        },
-        {
-          "day": "Mittwoch",
-          "items": [
-            {
-              "name": "Schweinsschnitzel 1.M",
-              "price": "12.50 €"
-            },
-            {
-              "name": "Surschnitzel (vom Schwein) 4%",
-              "price": "13.50 €"
-            },
-            {
-              "name": "Hühnerschnitzel",
-              "price": "13.50 €"
-            },
-            {
-              "name": "Kalbsschnitzel jeweils mit Erdäpfel-Vogerlsalat",
-              "price": "18.90 €"
-            }
-          ]
-        },
-        {
-          "day": "Donnerstag",
-          "items": [
-            {
-              "name": "Feiertag",
-              "price": null
-            }
-          ]
-        },
-        {
-          "day": "Freitag",
-          "items": [
-            {
-              "name": "Ausnahmsweise geschloßen!",
-              "price": null
-            }
-          ]
-        }
-      ]
+      "days": []
     },
     {
       "id": "casa-mora",
