@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-08T12:15:20.240256",
+  "updated": "2026-06-09T10:56:40.403058",
   "week": "KW 24",
   "restaurants": [
     {
@@ -177,41 +177,6 @@
       "menu_image": null,
       "days": [
         {
-          "day": "Dienstag",
-          "items": [
-            {
-              "name": "Rostbraten vom Grill mit Reis, kreolischen Linsen, roten Rübensalat und frittierte Kochbananen",
-              "price": null
-            }
-          ]
-        },
-        {
-          "day": "Mittwoch",
-          "items": [
-            {
-              "name": "Suppe mit Teigwaren",
-              "price": null
-            },
-            {
-              "name": "kleinwürfeliges Rindsragout mit Gemüse mit Reis und Spiegelei",
-              "price": null
-            }
-          ]
-        },
-        {
-          "day": "Donnerstag",
-          "items": [
-            {
-              "name": "Sancocho Trifasico Suppentopf",
-              "price": null
-            },
-            {
-              "name": "Carne mechada gerupftes Rindfleisch mit Reis und Avocado",
-              "price": null
-            }
-          ]
-        },
-        {
           "day": "Freitag",
           "items": [
             {
@@ -221,14 +186,10 @@
           ]
         },
         {
-          "day": "Samstag",
+          "day": "Freitag",
           "items": [
             {
-              "name": "klare Suppe",
-              "price": null
-            },
-            {
-              "name": "Tamal Valluno in Bananenblatt gedämpfter Maisteig mit drei Sorten Fleisch und Gemüse dazu Reis und frittierte Kochbananen",
+              "name": "Ajiaco Hühner – Suppentopf mit dreierlei Erdäpfeln und speziellen Kräutern dazu Reis und Avocado",
               "price": null
             }
           ]
