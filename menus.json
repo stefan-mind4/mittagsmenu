@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-09T10:56:40.403058",
-  "week": "KW 24",
+  "updated": "2026-06-15T13:32:14.732258",
+  "week": "KW 25",
   "restaurants": [
     {
       "id": "ottakringer-stubn",
@@ -10,7 +10,7 @@
       "address": "Ottakringerstraße 152, 1160 Wien",
       "phone": "01 486 21 82",
       "price_note": "9–12 €",
-      "week_label": "08/12 Juni",
+      "week_label": "15/19 Juni",
       "menu_image": null,
       "days": [
         {
@@ -34,7 +34,7 @@
               "price": null
             },
             {
-              "name": "Gebratene Hühnerkeule mit Reis und Salat",
+              "name": "Schulterscherzel mit Rösti , Apfelkren und Schnittlauchsauce",
               "price": null
             }
           ]
@@ -47,7 +47,7 @@
               "price": null
             },
             {
-              "name": "Faschierter Braten mit Püree und Röstzwiebeln",
+              "name": "Knoblauchschnitzel mit Reis",
               "price": null
             }
           ]
@@ -60,7 +60,7 @@
               "price": null
             },
             {
-              "name": "Grenadiermarsch mit grünem Salat",
+              "name": "Spaghetti Carbonara",
               "price": null
             }
           ]
@@ -81,6 +81,96 @@
       ]
     },
     {
+      "id": "goesser-braeu",
+      "name": "Gösser Bräu Wien",
+      "url": "https://www.goesserbraeuwien.at/",
+      "cuisine": "Österreichische Küche",
+      "address": "Thaliastraße 125A, 1160 Wien",
+      "phone": "+43 1 3692286",
+      "price_note": "Hauptspeise 9,80 € · mit Suppe 10,80 €",
+      "week_label": "UNSERE MITTAGSTELLER vom 15.6. bis 19.6.2026",
+      "menu_image": null,
+      "days": [
+        {
+          "day": "Montag",
+          "items": [
+            {
+              "name": "Schweinsrahmgulasch mit Butternockerl",
+              "price": null
+            },
+            {
+              "name": "— oder —",
+              "price": null
+            },
+            {
+              "name": "Gebackene Champignons mit Sauce Tartare",
+              "price": null
+            }
+          ]
+        },
+        {
+          "day": "Dienstag",
+          "items": [
+            {
+              "name": "Spaghetti Bolognese mit Parmesan",
+              "price": null
+            },
+            {
+              "name": "— oder —",
+              "price": null
+            },
+            {
+              "name": "Gratinierte Gemüsenockerl mit buntem Blattsalat",
+              "price": null
+            }
+          ]
+        },
+        {
+          "day": "Mittwoch",
+          "items": [
+            {
+              "name": "Gebackener Schweinslungenbraten mit Petersilerdäpfel",
+              "price": null
+            },
+            {
+              "name": "— oder —",
+              "price": null
+            },
+            {
+              "name": "Spargelrisotto mit frischem Grana",
+              "price": null
+            }
+          ]
+        },
+        {
+          "day": "Donnerstag",
+          "items": [
+            {
+              "name": "Kalbsrollbraten mit Erbsenreis",
+              "price": null
+            },
+            {
+              "name": "— oder —",
+              "price": null
+            },
+            {
+              "name": "Mohnnudel mit Apfelmus",
+              "price": null
+            }
+          ]
+        },
+        {
+          "day": "Freitag",
+          "items": [
+            {
+              "name": "Gebackenes Fischfilet mit Erdäpfelsalat und Sauce Tartare",
+              "price": null
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "wolfsberger",
       "name": "Gastwirtschaft Wolfsberger",
       "url": "https://www.gastwirtschaftwolfsberger.at/mittagsmen%C3%BC/",
@@ -88,7 +178,7 @@
       "address": "Lienfeldergasse 35, 1160 Wien",
       "phone": "+43 1 4861455",
       "price_note": null,
-      "week_label": "Der Menüplan für 10. bis 12. Juni",
+      "week_label": "Der Menüplan für 17. bis 19. Juni",
       "menu_image": null,
       "days": [
         {
@@ -99,7 +189,7 @@
               "price": null
             },
             {
-              "name": "Schweinskotelette in pikanter Champignon-Specksauce dazu Bratkartoffeln",
+              "name": "Selchschopf mit Erdäpfelpüree",
               "price": "13.50 €"
             }
           ]
@@ -112,7 +202,7 @@
               "price": null
             },
             {
-              "name": "Halbes Brathendl mit Reis",
+              "name": "Gefüllter Paprika in Paradeissauce dazu Reis",
               "price": "13.50 €"
             }
           ]
@@ -133,7 +223,7 @@
               "price": null
             },
             {
-              "name": "Karfiol mit Butterbrösel & gehacktem Ei dazu Petersilkartoffeln",
+              "name": "Gemüselasagne",
               "price": "13.50 €"
             }
           ]
@@ -148,9 +238,31 @@
       "address": "Rankgasse 25, 1160 Wien",
       "phone": "+43 1 493 91 84",
       "price_note": null,
-      "week_label": "",
+      "week_label": "KW 25",
       "menu_image": null,
-      "days": []
+      "days": [
+        {
+          "day": "Donnerstag",
+          "items": [
+            {
+              "name": "Kalbs-Gulasch mit hausgemachten Löffelnockerln",
+              "price": "10.90 €"
+            },
+            {
+              "name": "> __FrEImAG,as. JUN",
+              "price": null
+            },
+            {
+              "name": "Gebackener Kabeljau oder Pangasius mit Gemüsemayonnaise und Kartoffelsalat",
+              "price": null
+            },
+            {
+              "name": "Fr > safe",
+              "price": null
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "nigls",
@@ -163,7 +275,81 @@
       "week_label": "",
       "menu_image": null,
       "menu_pdf": null,
-      "days": []
+      "days": [
+        {
+          "day": "Montag",
+          "items": [
+            {
+              "name": "Nudelsuppe",
+              "price": null
+            },
+            {
+              "name": "Geröstete Knödel mit Ei und grünem Salat",
+              "price": "11.90 €"
+            }
+          ]
+        },
+        {
+          "day": "Dienstag",
+          "items": [
+            {
+              "name": "Lauchcremesuppe",
+              "price": null
+            },
+            {
+              "name": "Gekochtes Sechfleich mit Sauerkraut und Knédel",
+              "price": "11.90 €"
+            }
+          ]
+        },
+        {
+          "day": "Mittwoch",
+          "items": [
+            {
+              "name": "Schweinsschnitzel 1.M",
+              "price": "12.50 €"
+            },
+            {
+              "name": "Surschnitzel (vom Schwein) 4%",
+              "price": "13.50 €"
+            },
+            {
+              "name": "Hühnerschnitzel",
+              "price": "13.50 €"
+            },
+            {
+              "name": "Kalbsschnitzel jeweils mit Erdäpfel-Vogerlsalat",
+              "price": "18.90 €"
+            }
+          ]
+        },
+        {
+          "day": "Donnerstag",
+          "items": [
+            {
+              "name": "Backerbsensuppe",
+              "price": null
+            },
+            {
+              "name": "Hühnergeschnetzeltes in Sauce Hollandaise mit Reis und grünem Salat",
+              "price": "11.90 €"
+            }
+          ]
+        },
+        {
+          "day": "Freitag",
+          "items": [
+            {
+              "name": "Kartoffelcremesuppe mit Speckwiirfel",
+              "price": null
+            },
+            {
+              "name": "Gebackener Kabeljau mit Erdapfel-Vogerlsalat",
+              "price": "12.90 €"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "casa-mora",
