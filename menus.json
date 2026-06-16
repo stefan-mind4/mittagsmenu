@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-15T13:32:14.732258",
+  "updated": "2026-06-16T12:48:59.330646",
   "week": "KW 25",
   "restaurants": [
     {
@@ -363,6 +363,41 @@
       "menu_image": null,
       "days": [
         {
+          "day": "Dienstag",
+          "items": [
+            {
+              "name": "Sudado de Pollo Hühner – Eintopf mit Erdäpfeln und Yuca dazu Reis, Salat und frittierte Kochbananen",
+              "price": null
+            }
+          ]
+        },
+        {
+          "day": "Mittwoch",
+          "items": [
+            {
+              "name": "Sancocho de Res Suppentopf",
+              "price": null
+            },
+            {
+              "name": "Carne guisada Rindfleisch im Saft mit Reis und Avocado",
+              "price": null
+            }
+          ]
+        },
+        {
+          "day": "Donnerstag",
+          "items": [
+            {
+              "name": "klare Suppe",
+              "price": null
+            },
+            {
+              "name": "Arroz tres carnes kolumbianischer Mixreis mit Pommes Frites",
+              "price": null
+            }
+          ]
+        },
+        {
           "day": "Freitag",
           "items": [
             {
@@ -372,10 +407,10 @@
           ]
         },
         {
-          "day": "Freitag",
+          "day": "Samstag",
           "items": [
             {
-              "name": "Ajiaco Hühner – Suppentopf mit dreierlei Erdäpfeln und speziellen Kräutern dazu Reis und Avocado",
+              "name": "Pernil de Pollo al Romero Rosmarin – Huhn mit schwarzen Bohnen-Reis, russischen Erdäpfel – Mayonnaisesalat und Tostadas",
               "price": null
             }
           ]
