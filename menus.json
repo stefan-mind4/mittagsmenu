@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-16T12:48:59.330646",
-  "week": "KW 25",
+  "updated": "2026-06-22T13:12:13.565741",
+  "week": "KW 26",
   "restaurants": [
     {
       "id": "ottakringer-stubn",
@@ -10,7 +10,7 @@
       "address": "Ottakringerstraße 152, 1160 Wien",
       "phone": "01 486 21 82",
       "price_note": "9–12 €",
-      "week_label": "15/19 Juni",
+      "week_label": "22/26 Juni",
       "menu_image": null,
       "days": [
         {
@@ -23,6 +23,14 @@
             {
               "name": "Schnitzel mit Kartoffeln und Salat",
               "price": null
+            },
+            {
+              "name": "oder",
+              "price": null
+            },
+            {
+              "name": "Schweizer Wurstsalat mit Gebäck",
+              "price": null
             }
           ]
         },
@@ -34,7 +42,7 @@
               "price": null
             },
             {
-              "name": "Schulterscherzel mit Rösti , Apfelkren und Schnittlauchsauce",
+              "name": "Gefüllte Paprika mit Tomatensauce und Kartoffeln",
               "price": null
             }
           ]
@@ -47,7 +55,7 @@
               "price": null
             },
             {
-              "name": "Knoblauchschnitzel mit Reis",
+              "name": "Kalbsrollbraten mit Erbsenreis",
               "price": null
             }
           ]
@@ -60,7 +68,7 @@
               "price": null
             },
             {
-              "name": "Spaghetti Carbonara",
+              "name": "Spinatstrudel mit Schnittlauchsauce",
               "price": null
             }
           ]
@@ -88,14 +96,14 @@
       "address": "Thaliastraße 125A, 1160 Wien",
       "phone": "+43 1 3692286",
       "price_note": "Hauptspeise 9,80 € · mit Suppe 10,80 €",
-      "week_label": "UNSERE MITTAGSTELLER vom 15.6. bis 19.6.2026",
+      "week_label": "UNSERE MITTAGSTELLER vom 22.6. bis 26.6.2026",
       "menu_image": null,
       "days": [
         {
           "day": "Montag",
           "items": [
             {
-              "name": "Schweinsrahmgulasch mit Butternockerl",
+              "name": "Zwiebel-Rindsbraten mit Serviettenknödel",
               "price": null
             },
             {
@@ -103,7 +111,7 @@
               "price": null
             },
             {
-              "name": "Gebackene Champignons mit Sauce Tartare",
+              "name": "Schwammerlrisotto mit frischem Grana",
               "price": null
             }
           ]
@@ -112,7 +120,7 @@
           "day": "Dienstag",
           "items": [
             {
-              "name": "Spaghetti Bolognese mit Parmesan",
+              "name": "Tiroler Schupfnudel mit Speck, Zwiebel und Paprika",
               "price": null
             },
             {
@@ -120,7 +128,7 @@
               "price": null
             },
             {
-              "name": "Gratinierte Gemüsenockerl mit buntem Blattsalat",
+              "name": "Gebackener Emmentaler mit Sauce Tartare und Preiselbeeren",
               "price": null
             }
           ]
@@ -129,7 +137,7 @@
           "day": "Mittwoch",
           "items": [
             {
-              "name": "Gebackener Schweinslungenbraten mit Petersilerdäpfel",
+              "name": "Gebackenes Schweinsschnitzerl mit Petersilerdäpfel",
               "price": null
             },
             {
@@ -137,7 +145,7 @@
               "price": null
             },
             {
-              "name": "Spargelrisotto mit frischem Grana",
+              "name": "Geröstete Knödel mit buntem Blattsalat",
               "price": null
             }
           ]
@@ -146,7 +154,7 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Kalbsrollbraten mit Erbsenreis",
+              "name": "Gratinierte Lasagne „al forno“ in der Pfanne",
               "price": null
             },
             {
@@ -154,7 +162,7 @@
               "price": null
             },
             {
-              "name": "Mohnnudel mit Apfelmus",
+              "name": "Gebackene Apfelspalten mit Vanillesauce und Schlagobers",
               "price": null
             }
           ]
@@ -178,7 +186,7 @@
       "address": "Lienfeldergasse 35, 1160 Wien",
       "phone": "+43 1 4861455",
       "price_note": null,
-      "week_label": "Der Menüplan für 17. bis 19. Juni",
+      "week_label": "Der Menüplan für 24. bis 26. Juni",
       "menu_image": null,
       "days": [
         {
@@ -189,7 +197,7 @@
               "price": null
             },
             {
-              "name": "Selchschopf mit Erdäpfelpüree",
+              "name": "Gebackenes Surschnitzel mit gemischtem Salat",
               "price": "13.50 €"
             }
           ]
@@ -202,7 +210,7 @@
               "price": null
             },
             {
-              "name": "Gefüllter Paprika in Paradeissauce dazu Reis",
+              "name": "Hacheehörnchen mit Frühkrautsalat",
               "price": "13.50 €"
             }
           ]
@@ -223,7 +231,7 @@
               "price": null
             },
             {
-              "name": "Gemüselasagne",
+              "name": "Zucchinigulasch mit Grießknödel & Granaspänen",
               "price": "13.50 €"
             }
           ]
@@ -238,18 +246,18 @@
       "address": "Rankgasse 25, 1160 Wien",
       "phone": "+43 1 493 91 84",
       "price_note": null,
-      "week_label": "KW 25",
+      "week_label": "KW 26",
       "menu_image": null,
       "days": [
         {
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Kalbs-Gulasch mit hausgemachten Löffelnockerln",
-              "price": "10.90 €"
+              "name": "Kalbsbraten mit Petersilkartoffeln und Blattsalat",
+              "price": "11.90 €"
             },
             {
-              "name": "> __FrEImAG,as. JUN",
+              "name": "> __Frermac,2,um 4",
               "price": null
             },
             {
@@ -280,11 +288,11 @@
           "day": "Montag",
           "items": [
             {
-              "name": "Nudelsuppe",
+              "name": "Fritattensuppe",
               "price": null
             },
             {
-              "name": "Geröstete Knödel mit Ei und grünem Salat",
+              "name": "Spareribs mit Bratkartoffeln und Knoblauchsauce",
               "price": "11.90 €"
             }
           ]
@@ -293,11 +301,11 @@
           "day": "Dienstag",
           "items": [
             {
-              "name": "Lauchcremesuppe",
+              "name": "Kalte Gurkenschale",
               "price": null
             },
             {
-              "name": "Gekochtes Sechfleich mit Sauerkraut und Knédel",
+              "name": "Hühnerroulade mit Tomaten-Mozzarella-Fülle, dazu Reis",
               "price": "11.90 €"
             }
           ]
@@ -327,11 +335,11 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Backerbsensuppe",
+              "name": "Fleischstrudelsuppe",
               "price": null
             },
             {
-              "name": "Hühnergeschnetzeltes in Sauce Hollandaise mit Reis und grünem Salat",
+              "name": "Gemischter Salatteller mit gegrilltem Halloumi",
               "price": "11.90 €"
             }
           ]
@@ -340,7 +348,7 @@
           "day": "Freitag",
           "items": [
             {
-              "name": "Kartoffelcremesuppe mit Speckwiirfel",
+              "name": "Gemüsecremesuppe mit Croütons",
               "price": null
             },
             {
