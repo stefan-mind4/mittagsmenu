@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-22T13:12:13.565741",
+  "updated": "2026-06-23T10:58:20.623181",
   "week": "KW 26",
   "restaurants": [
     {
@@ -374,7 +374,7 @@
           "day": "Dienstag",
           "items": [
             {
-              "name": "Sudado de Pollo Hühner – Eintopf mit Erdäpfeln und Yuca dazu Reis, Salat und frittierte Kochbananen",
+              "name": "Carne asada Schopfbraten vom Grill mit Reis, Salat und weißen Bohnen",
               "price": null
             }
           ]
@@ -383,11 +383,7 @@
           "day": "Mittwoch",
           "items": [
             {
-              "name": "Sancocho de Res Suppentopf",
-              "price": null
-            },
-            {
-              "name": "Carne guisada Rindfleisch im Saft mit Reis und Avocado",
+              "name": "Mondongo kolumbianischer Kuttelflecksuppe mit Reis und Avocado",
               "price": null
             }
           ]
@@ -396,11 +392,7 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "klare Suppe",
-              "price": null
-            },
-            {
-              "name": "Arroz tres carnes kolumbianischer Mixreis mit Pommes Frites",
+              "name": "Estofado de Pollo Huhn auf Gärtnerinnen Art mit Reis, Salat und Maduros",
               "price": null
             }
           ]
@@ -418,7 +410,7 @@
           "day": "Samstag",
           "items": [
             {
-              "name": "Pernil de Pollo al Romero Rosmarin – Huhn mit schwarzen Bohnen-Reis, russischen Erdäpfel – Mayonnaisesalat und Tostadas",
+              "name": "Pescado frito Frittierte Dorade in ganzen mit Erbsenreis, Avocado-Salat und frittierte Kochbananen",
               "price": null
             }
           ]
