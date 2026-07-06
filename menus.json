@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-30T10:53:01.814464",
-  "week": "KW 27",
+  "updated": "2026-07-06T11:48:58.428084",
+  "week": "KW 28",
   "restaurants": [
     {
       "id": "ottakringer-stubn",
@@ -10,7 +10,7 @@
       "address": "Ottakringerstraße 152, 1160 Wien",
       "phone": "01 486 21 82",
       "price_note": "9–12 €",
-      "week_label": "",
+      "week_label": "06/10  Juli",
       "menu_image": null,
       "days": [
         {
@@ -23,14 +23,6 @@
             {
               "name": "Schnitzel mit Kartoffeln und Salat",
               "price": null
-            },
-            {
-              "name": "oder",
-              "price": null
-            },
-            {
-              "name": "Schweizer Wurstsalat mit Gebäck",
-              "price": null
             }
           ]
         },
@@ -42,7 +34,7 @@
               "price": null
             },
             {
-              "name": "Eiernockerl mit grünem Salat",
+              "name": "Schinkenfleckerl mit grünem Salat",
               "price": null
             }
           ]
@@ -55,7 +47,7 @@
               "price": null
             },
             {
-              "name": "Chili con Carne mit Fladenbrot",
+              "name": "Faschierter Braten mit Püree und Röstzwiebeln",
               "price": null
             }
           ]
@@ -68,7 +60,7 @@
               "price": null
             },
             {
-              "name": "Augsburger mit Dillfisolen und Rösti",
+              "name": "Hühner -Letschoschnitzel mit Reis",
               "price": null
             }
           ]
@@ -96,14 +88,14 @@
       "address": "Thaliastraße 125A, 1160 Wien",
       "phone": "+43 1 3692286",
       "price_note": "Hauptspeise 9,80 € · mit Suppe 10,80 €",
-      "week_label": "UNSERE MITTAGSTELLER vom 29.6. bis 3.7.2026",
+      "week_label": "UNSERE MITTAGSTELLER vom 6.7. bis 10.7.2026",
       "menu_image": null,
       "days": [
         {
           "day": "Montag",
           "items": [
             {
-              "name": "Surbraten mit Bierkraut und Serviettenknödel",
+              "name": "Gegrillte Schweinsmedaillos auf Sauce Hollandaise mit Gemüsegröst‘l",
               "price": null
             },
             {
@@ -111,7 +103,7 @@
               "price": null
             },
             {
-              "name": "Mozzarella Caprese mit Gebäck",
+              "name": "Gemüsestrudel mit warmer Kräuter-Rahm-Sauce",
               "price": null
             }
           ]
@@ -120,7 +112,7 @@
           "day": "Dienstag",
           "items": [
             {
-              "name": "Gekochtes Rindfleisch mit cremigen Dilleräpfel",
+              "name": "Hascheehörnchen mit Rote-Rüben-Salat",
               "price": null
             },
             {
@@ -128,7 +120,7 @@
               "price": null
             },
             {
-              "name": "Griechischer Bauernsalat mit Gebäck",
+              "name": "Spaghetti mit Basilikum-Pesto, Mozzarella und gegrillten Kirschparadeiser",
               "price": null
             }
           ]
@@ -137,7 +129,7 @@
           "day": "Mittwoch",
           "items": [
             {
-              "name": "Cordon Bleu mit Petersilerdäpfel",
+              "name": "Gebackenes Surschnitzerl mit Petersilerdäpfel",
               "price": null
             },
             {
@@ -145,7 +137,7 @@
               "price": null
             },
             {
-              "name": "Gratinierte Käsespätzle mit Röstzwiebel",
+              "name": "Champignonsauce mit Serviettenknödel",
               "price": null
             }
           ]
@@ -154,7 +146,7 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Spare Ribs mit Knoblauchsauce und Braterdäpfel",
+              "name": "Chili con Carne mit Hausbrot",
               "price": null
             },
             {
@@ -162,7 +154,7 @@
               "price": null
             },
             {
-              "name": "Grießschmarr’n mit Zwetschkenröster",
+              "name": "Marillenknödel in Butter-Nuß-Brösel",
               "price": null
             }
           ]
@@ -186,18 +178,18 @@
       "address": "Lienfeldergasse 35, 1160 Wien",
       "phone": "+43 1 4861455",
       "price_note": null,
-      "week_label": "Der Menüplan für 24. bis 26. Juni",
+      "week_label": "Der Menüplan für 8. bis 10. Juli",
       "menu_image": null,
       "days": [
         {
           "day": "Mittwoch",
           "items": [
             {
-              "name": "Nudelsuppe",
+              "name": "Tagessuppe",
               "price": null
             },
             {
-              "name": "Gebackenes Surschnitzel mit gemischtem Salat",
+              "name": "Schweinskotelette mit Tomaten, Schinken & Käse gratiniert dazu Pommes frites",
               "price": "13.50 €"
             }
           ]
@@ -206,11 +198,11 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Gazpacho",
+              "name": "Tagessuppe",
               "price": null
             },
             {
-              "name": "Hacheehörnchen mit Frühkrautsalat",
+              "name": "Hühnerbrust mit Ratatouille dazu Basmatireis",
               "price": "13.50 €"
             }
           ]
@@ -219,7 +211,7 @@
           "day": "Freitag",
           "items": [
             {
-              "name": "Grießnockerlsuppe",
+              "name": "Tagessuppe",
               "price": null
             },
             {
@@ -231,7 +223,7 @@
               "price": null
             },
             {
-              "name": "Griechischer Salat mit Feta und Oliven dazu ein Handsemmerl vom Joseph",
+              "name": "Buchteln mit Vanillesauce",
               "price": "13.50 €"
             }
           ]
@@ -246,9 +238,57 @@
       "address": "Rankgasse 25, 1160 Wien",
       "phone": "+43 1 493 91 84",
       "price_note": null,
-      "week_label": "",
+      "week_label": "KW 28",
       "menu_image": null,
-      "days": []
+      "days": [
+        {
+          "day": "Montag",
+          "items": [
+            {
+              "name": "Grammelknödel mit Sauerkraut",
+              "price": "8.90 €"
+            }
+          ]
+        },
+        {
+          "day": "Dienstag",
+          "items": [
+            {
+              "name": "Steirisches Wurzelfleisch mit Kren und Salzkartoffeln",
+              "price": "9.90 €"
+            },
+            {
+              "name": "> _Hirtwoch os",
+              "price": null
+            },
+            {
+              "name": "Back-Henderl mit gemischtem Salat",
+              "price": "8.90 €"
+            }
+          ]
+        },
+        {
+          "day": "Donnerstag",
+          "items": [
+            {
+              "name": "Gegrillte Schopfbratenschnitte mit Letscho und Pommes Frites",
+              "price": "9.90 €"
+            },
+            {
+              "name": "> _Fremc,ao.uu",
+              "price": null
+            },
+            {
+              "name": "Gebackener Kabeljau oder Pangasius mit Gemüsemayonnaise und Kartoffelsalat",
+              "price": null
+            },
+            {
+              "name": "Fr > ale",
+              "price": null
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "nigls",
@@ -266,11 +306,11 @@
           "day": "Montag",
           "items": [
             {
-              "name": "Nudelsuppe",
+              "name": "Knoblauchcremesuppe mit Croütons",
               "price": null
             },
             {
-              "name": "Geröstete Knödel mit Ei und grünem Salat",
+              "name": "Blunzengröstl mit Krautsalat",
               "price": "11.90 €"
             }
           ]
@@ -279,11 +319,11 @@
           "day": "Dienstag",
           "items": [
             {
-              "name": "Lauchcremesuppe",
+              "name": "Gulaschsuppe vom Rind",
               "price": null
             },
             {
-              "name": "Gekochtes Sechfleich mit Sauerkraut und Knédel",
+              "name": "Krautfleckerl mit grünem Salat",
               "price": "11.90 €"
             }
           ]
@@ -292,19 +332,19 @@
           "day": "Mittwoch",
           "items": [
             {
-              "name": "Schweinsschnitzel 1.M",
+              "name": "Schweinsschnitzel 4",
               "price": "12.50 €"
             },
             {
-              "name": "Surschnitzel (vom Schwein) 4%",
+              "name": "Surschnitzel (vom Schwein) **",
               "price": "13.50 €"
             },
             {
-              "name": "Hühnerschnitzel",
+              "name": "Hühnerschnitzel 4",
               "price": "13.50 €"
             },
             {
-              "name": "Kalbsschnitzel jeweils mit Erdäpfel-Vogerlsalat",
+              "name": "Kalbsschnitzel * jeweils mit Erdäpfel-Vogerlsalat",
               "price": "18.90 €"
             }
           ]
@@ -313,11 +353,11 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Backerbsensuppe",
+              "name": "Fruchtige Currycremesuppe mit Chips",
               "price": null
             },
             {
-              "name": "Hühnergeschnetzeltes in Sauce Hollandaise mit Reis und grünem Salat",
+              "name": "Faschierte Laibchen mit Erdäpfelpüree und feinem Bratensaft",
               "price": "11.90 €"
             }
           ]
@@ -326,11 +366,11 @@
           "day": "Freitag",
           "items": [
             {
-              "name": "Kartoffelcremesuppe mit Speckwiirfel",
+              "name": "Grießnockerlsuppe",
               "price": null
             },
             {
-              "name": "Gebackener Kabeljau mit Erdapfel-Vogerlsalat",
+              "name": "Gebackener Kabeljau oder Polardorsch mit Erdapfel-Vogerlsalat",
               "price": "12.90 €"
             }
           ]
@@ -349,19 +389,10 @@
       "menu_image": null,
       "days": [
         {
-          "day": "Dienstag",
-          "items": [
-            {
-              "name": "Carne asada Schopfbraten vom Grill mit Reis, Salat und weißen Bohnen",
-              "price": null
-            }
-          ]
-        },
-        {
           "day": "Mittwoch",
           "items": [
             {
-              "name": "Mondongo kolumbianischer Kuttelflecksuppe mit Reis und Avocado",
+              "name": "Sudado de Res Rindsragout mit Erdäpfeln und Yuca dazu Reis, Maduros und Salat mit Maiskölbchen",
               "price": null
             }
           ]
@@ -370,7 +401,11 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Estofado de Pollo Huhn auf Gärtnerinnen Art mit Reis, Salat und Maduros",
+              "name": "Maiscremesuppe",
+              "price": null
+            },
+            {
+              "name": "Zitronen-Hühnerunterkeulen mit Reis und kreolischen Salat",
               "price": null
             }
           ]
@@ -388,7 +423,7 @@
           "day": "Samstag",
           "items": [
             {
-              "name": "Pescado frito Frittierte Dorade in ganzen mit Erbsenreis, Avocado-Salat und frittierte Kochbananen",
+              "name": "Arroz de Mariscos Kolumbianischer Mixreis mit Meeresfrüchten, frittierte Kochbananen und Octapus-Salat",
               "price": null
             }
           ]
