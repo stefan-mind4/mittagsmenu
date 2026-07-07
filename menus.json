@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-06T11:48:58.428084",
+  "updated": "2026-07-07T10:50:38.224218",
   "week": "KW 28",
   "restaurants": [
     {
@@ -389,10 +389,23 @@
       "menu_image": null,
       "days": [
         {
+          "day": "Dienstag",
+          "items": [
+            {
+              "name": "Rindfleisch mit Erbsen dazu Reis, Salat und frittierte Kochbananen",
+              "price": null
+            }
+          ]
+        },
+        {
           "day": "Mittwoch",
           "items": [
             {
-              "name": "Sudado de Res Rindsragout mit Erdäpfeln und Yuca dazu Reis, Maduros und Salat mit Maiskölbchen",
+              "name": "Suppe",
+              "price": null
+            },
+            {
+              "name": "Rindfleisch in Saft mit Reis und Avocado",
               "price": null
             }
           ]
@@ -401,11 +414,7 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Maiscremesuppe",
-              "price": null
-            },
-            {
-              "name": "Zitronen-Hühnerunterkeulen mit Reis und kreolischen Salat",
+              "name": "Pollo Frito gebackenes Huhn mit russischen Erdäpfel- Mayonnaisesalat, schwarzen Reis und Maduros",
               "price": null
             }
           ]
@@ -423,7 +432,11 @@
           "day": "Samstag",
           "items": [
             {
-              "name": "Arroz de Mariscos Kolumbianischer Mixreis mit Meeresfrüchten, frittierte Kochbananen und Octapus-Salat",
+              "name": "Sancocho de Cola kolumbianischer Suppentopf",
+              "price": null
+            },
+            {
+              "name": "Rinderschlepp in Saft mit Reis und Avocado",
               "price": null
             }
           ]
