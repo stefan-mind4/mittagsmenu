@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-13T10:39:53.793077",
+  "updated": "2026-07-14T09:53:16.046455",
   "week": "KW 29",
   "restaurants": [
     {
@@ -300,19 +300,10 @@
       "menu_image": null,
       "days": [
         {
-          "day": "Dienstag",
-          "items": [
-            {
-              "name": "Rindfleisch mit Erbsen dazu Reis, Salat und frittierte Kochbananen",
-              "price": null
-            }
-          ]
-        },
-        {
           "day": "Mittwoch",
           "items": [
             {
-              "name": "Suppe",
+              "name": "Sancocho de Costilla Suppentopf",
               "price": null
             },
             {
@@ -325,7 +316,7 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Pollo Frito gebackenes Huhn mit russischen Erdäpfel- Mayonnaisesalat, schwarzen Reis und Maduros",
+              "name": "Bistec de Encebollado kreolischer Zwiebelrostbraten mit Reis, Salat und Spiegelei",
               "price": null
             }
           ]
@@ -335,19 +326,6 @@
           "items": [
             {
               "name": "BANDEJA PAISA kolumbianischer Bauernschmaus",
-              "price": null
-            }
-          ]
-        },
-        {
-          "day": "Samstag",
-          "items": [
-            {
-              "name": "Sancocho de Cola kolumbianischer Suppentopf",
-              "price": null
-            },
-            {
-              "name": "Rinderschlepp in Saft mit Reis und Avocado",
               "price": null
             }
           ]
