@@ -1,6 +1,6 @@
 {
-  "updated": "2026-07-14T09:53:16.046455",
-  "week": "KW 29",
+  "updated": "2026-07-20T10:26:20.457332",
+  "week": "KW 30",
   "restaurants": [
     {
       "id": "ottakringer-stubn",
@@ -43,14 +43,14 @@
       "address": "Thaliastraße 125A, 1160 Wien",
       "phone": "+43 1 3692286",
       "price_note": "Hauptspeise 9,80 € · mit Suppe 10,80 €",
-      "week_label": "UNSERE MITTAGSTELLER vom 13.7. bis 17.7.2026",
+      "week_label": "UNSERE MITTAGSTELLER vom 20.7. bis 24.7.2026",
       "menu_image": null,
       "days": [
         {
           "day": "Montag",
           "items": [
             {
-              "name": "Champignon-Rindsbraten mit Serviettenknödel",
+              "name": "Schopfbraten mit Bierkraut und Serviettenknödel",
               "price": null
             },
             {
@@ -58,7 +58,7 @@
               "price": null
             },
             {
-              "name": "Cremespinat mit Spiegelei und Erdäpfelschmarr‘n",
+              "name": "Erdäpfel-Krautstrudel mit Kräuter-Rahm-Sauce",
               "price": null
             }
           ]
@@ -67,7 +67,7 @@
           "day": "Dienstag",
           "items": [
             {
-              "name": "Mayoranfleisch mit Butterhörnchen",
+              "name": "Blunz’n-Gröst’l mit Kren und Krautsalat",
               "price": null
             },
             {
@@ -75,7 +75,7 @@
               "price": null
             },
             {
-              "name": "Gebackener Karfiol mit Sauce Tartare",
+              "name": "Gebackenes Käse-Duett mit Preiselbeeren und Sauce Tartare",
               "price": null
             }
           ]
@@ -84,7 +84,7 @@
           "day": "Mittwoch",
           "items": [
             {
-              "name": "Gebackener Schweinslungenbraten mit Petersilerdäpfel",
+              "name": "Gebackenes Surschnitzerl mit Petersilerdäpfel",
               "price": null
             },
             {
@@ -92,7 +92,7 @@
               "price": null
             },
             {
-              "name": "Eiernockerl mit buntem Blattsalat",
+              "name": "Gemüsegröst’l mit Spiegelei",
               "price": null
             }
           ]
@@ -101,7 +101,7 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Hühnergeschnetzeltes mit Kräuterreis",
+              "name": "Faschierter Braten mit Erdäpfelpürree und Röstzwiebel",
               "price": null
             },
             {
@@ -109,7 +109,7 @@
               "price": null
             },
             {
-              "name": "Mohnnudel mit Apfelmus",
+              "name": "Reisauflauf mit Früchten auf Beerenspiegel mit Schlagobers",
               "price": null
             }
           ]
@@ -140,11 +140,11 @@
           "day": "Mittwoch",
           "items": [
             {
-              "name": "Tagessuppe",
+              "name": "Rindssuppe mit Käseschöberl",
               "price": null
             },
             {
-              "name": "Surbraten mit Erdäpfelknödel und warmem Speckkraut",
+              "name": "Surbraten mit Erdäpfelknödel und Rotkraut",
               "price": "13.50 €"
             }
           ]
@@ -153,7 +153,7 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Tagessuppe",
+              "name": "Paradeissuppe",
               "price": null
             },
             {
@@ -166,7 +166,7 @@
           "day": "Freitag",
           "items": [
             {
-              "name": "Tagessuppe",
+              "name": "Hühnercremesuppe mit Gemüse",
               "price": null
             },
             {
@@ -193,7 +193,7 @@
       "address": "Rankgasse 25, 1160 Wien",
       "phone": "+43 1 493 91 84",
       "price_note": null,
-      "week_label": "",
+      "week_label": "KW 30",
       "menu_image": null,
       "days": []
     },
@@ -213,11 +213,11 @@
           "day": "Montag",
           "items": [
             {
-              "name": "Fritattensuppe",
+              "name": "Erbsencremesuppe mit Brotchips",
               "price": null
             },
             {
-              "name": "Tiroler-Gröstl mit Spiegelei und grünem Salat",
+              "name": "Spaghetti Bolognese mit griinem Salat",
               "price": "11.90 €"
             }
           ]
@@ -226,11 +226,19 @@
           "day": "Dienstag",
           "items": [
             {
-              "name": "Karottencremesuppe mit Croütons",
+              "name": "Fleischstrudelsuppe",
               "price": null
             },
             {
-              "name": "Hühnerspieß mit Pommes und Tzatziki",
+              "name": "AGGL",
+              "price": null
+            },
+            {
+              "name": "Gebratenes Schweinskaree mit Pfeffersauce und Röstitaler",
+              "price": null
+            },
+            {
+              "name": "ACGO",
               "price": "11.90 €"
             }
           ]
@@ -260,12 +268,12 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Französische Zwiebelsuppe mit Käsebrot",
+              "name": "Leberknödelsuppe",
               "price": null
             },
             {
-              "name": "Schweinskotelett mit Letschogemiise mit Erdäpfelkroketten",
-              "price": null
+              "name": "Mexikanisches Hühnerragout mit Basmatireis",
+              "price": "11.90 €"
             }
           ]
         },
@@ -273,7 +281,7 @@
           "day": "Freitag",
           "items": [
             {
-              "name": "Klare Gemiisesuppe mit Nudeln",
+              "name": "Tomatencremesuppe mit Nudeln",
               "price": null
             },
             {
@@ -281,7 +289,7 @@
               "price": null
             },
             {
-              "name": "Gebackener Kabeljau oder Polardorsch mit Erdapfel-Vogerlsalat",
+              "name": "Gebackener Kabeljau mit Erdapfel-Vogerlsalat",
               "price": "12.90 €"
             }
           ]
