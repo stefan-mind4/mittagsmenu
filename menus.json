@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-20T10:26:20.457332",
+  "updated": "2026-07-21T10:21:04.725286",
   "week": "KW 30",
   "restaurants": [
     {
@@ -308,14 +308,23 @@
       "menu_image": null,
       "days": [
         {
+          "day": "Dienstag",
+          "items": [
+            {
+              "name": "Sudado de Res Rindsragout mit Erdäpfeln und Yuca dazu Reis, Maduros und Spiegelei",
+              "price": null
+            }
+          ]
+        },
+        {
           "day": "Mittwoch",
           "items": [
             {
-              "name": "Sancocho de Costilla Suppentopf",
+              "name": "Suppe mit frittierten Kochbananen",
               "price": null
             },
             {
-              "name": "Rindfleisch in Saft mit Reis und Avocado",
+              "name": "Hühnerkeule mit kreolischen Sauce dazu Reis und Salat",
               "price": null
             }
           ]
@@ -324,7 +333,7 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Bistec de Encebollado kreolischer Zwiebelrostbraten mit Reis, Salat und Spiegelei",
+              "name": "Bistec de Higado geröstete Rindsleber mit Reis, gedämpfte Erdäpfeln und Avocado",
               "price": null
             }
           ]
@@ -334,6 +343,15 @@
           "items": [
             {
               "name": "BANDEJA PAISA kolumbianischer Bauernschmaus",
+              "price": null
+            }
+          ]
+        },
+        {
+          "day": "Samstag",
+          "items": [
+            {
+              "name": "Lengua en Salsa Rindszunge in Saft mit Reis, Avocado-Salat und frittierte Kochbananen",
               "price": null
             }
           ]
