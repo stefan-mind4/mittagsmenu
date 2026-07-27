@@ -1,6 +1,6 @@
 {
-  "updated": "2026-07-21T10:21:04.725286",
-  "week": "KW 30",
+  "updated": "2026-07-27T10:54:42.540769",
+  "week": "KW 31",
   "restaurants": [
     {
       "id": "ottakringer-stubn",
@@ -43,14 +43,14 @@
       "address": "Thaliastraße 125A, 1160 Wien",
       "phone": "+43 1 3692286",
       "price_note": "Hauptspeise 9,80 € · mit Suppe 10,80 €",
-      "week_label": "UNSERE MITTAGSTELLER vom 20.7. bis 24.7.2026",
+      "week_label": "UNSERE MITTAGSTELLER vom 27.7. bis 31.7.2026",
       "menu_image": null,
       "days": [
         {
           "day": "Montag",
           "items": [
             {
-              "name": "Schopfbraten mit Bierkraut und Serviettenknödel",
+              "name": "Naturschnitzerl mit Eierschwammerlsauce und Erdäpfelkroketten",
               "price": null
             },
             {
@@ -58,7 +58,7 @@
               "price": null
             },
             {
-              "name": "Erdäpfel-Krautstrudel mit Kräuter-Rahm-Sauce",
+              "name": "Gebackene Champignons mit Sauce Tartare",
               "price": null
             }
           ]
@@ -67,7 +67,7 @@
           "day": "Dienstag",
           "items": [
             {
-              "name": "Blunz’n-Gröst’l mit Kren und Krautsalat",
+              "name": "Gekochtes Rindfleisch mit Rahmgemüse und Erdäpfelschmarr’n",
               "price": null
             },
             {
@@ -75,7 +75,7 @@
               "price": null
             },
             {
-              "name": "Gebackenes Käse-Duett mit Preiselbeeren und Sauce Tartare",
+              "name": "Rahmgemüse mit Spiegelei und Kräutererdäpfel",
               "price": null
             }
           ]
@@ -84,7 +84,7 @@
           "day": "Mittwoch",
           "items": [
             {
-              "name": "Gebackenes Surschnitzerl mit Petersilerdäpfel",
+              "name": "Gebackenes Schweinsschnitzerl mit Petersilerdäpfel",
               "price": null
             },
             {
@@ -92,7 +92,7 @@
               "price": null
             },
             {
-              "name": "Gemüsegröst’l mit Spiegelei",
+              "name": "Käsespätzle mit Röstzwiebel",
               "price": null
             }
           ]
@@ -101,7 +101,7 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Faschierter Braten mit Erdäpfelpürree und Röstzwiebel",
+              "name": "Rindsbraten in Kräuter-Rahm-Sauce mit Serviettenknödel",
               "price": null
             },
             {
@@ -109,7 +109,7 @@
               "price": null
             },
             {
-              "name": "Reisauflauf mit Früchten auf Beerenspiegel mit Schlagobers",
+              "name": "Kaiserschmarr’n mit Zwetschkenröster",
               "price": null
             }
           ]
@@ -133,18 +133,18 @@
       "address": "Lienfeldergasse 35, 1160 Wien",
       "phone": "+43 1 4861455",
       "price_note": null,
-      "week_label": "Der Menüplan für 15. bis 17. Juli",
+      "week_label": "Der Menüplan für 29. bis 31. Juli",
       "menu_image": null,
       "days": [
         {
           "day": "Mittwoch",
           "items": [
             {
-              "name": "Rindssuppe mit Käseschöberl",
+              "name": "Tagessuppe",
               "price": null
             },
             {
-              "name": "Surbraten mit Erdäpfelknödel und Rotkraut",
+              "name": "Penne „Amatriciana“ mit Tomaten, würzigem Speck & Pfefferoni",
               "price": "13.50 €"
             }
           ]
@@ -153,11 +153,11 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Paradeissuppe",
+              "name": "Tagessuppe",
               "price": null
             },
             {
-              "name": "Cevapcici mit Tzaziki & Pommes frites",
+              "name": "Gefüllter Paprika in Paradeissauce dazu Reis",
               "price": "13.50 €"
             }
           ]
@@ -166,7 +166,7 @@
           "day": "Freitag",
           "items": [
             {
-              "name": "Hühnercremesuppe mit Gemüse",
+              "name": "Tagessuppe",
               "price": null
             },
             {
@@ -178,7 +178,7 @@
               "price": null
             },
             {
-              "name": "Krautfleckerln",
+              "name": "Karfiol & Broccoliquiche mit Blattsalat",
               "price": "13.50 €"
             }
           ]
@@ -193,7 +193,7 @@
       "address": "Rankgasse 25, 1160 Wien",
       "phone": "+43 1 493 91 84",
       "price_note": null,
-      "week_label": "KW 30",
+      "week_label": "KW 31",
       "menu_image": null,
       "days": []
     },
