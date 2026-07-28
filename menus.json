@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-27T10:54:42.540769",
+  "updated": "2026-07-28T10:29:12.949149",
   "week": "KW 31",
   "restaurants": [
     {
@@ -311,7 +311,7 @@
           "day": "Dienstag",
           "items": [
             {
-              "name": "Sudado de Res Rindsragout mit Erdäpfeln und Yuca dazu Reis, Maduros und Spiegelei",
+              "name": "Schopfbraten vom Grill dazu Reis, Kichererbsen mit Chorizo und Maduros",
               "price": null
             }
           ]
@@ -320,11 +320,11 @@
           "day": "Mittwoch",
           "items": [
             {
-              "name": "Suppe mit frittierten Kochbananen",
+              "name": "Sancocho de Costilla Suppentopf",
               "price": null
             },
             {
-              "name": "Hühnerkeule mit kreolischen Sauce dazu Reis und Salat",
+              "name": "Carne mechada gerupftes Rindfleisch mit Reis und Avocado",
               "price": null
             }
           ]
@@ -333,7 +333,7 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Bistec de Higado geröstete Rindsleber mit Reis, gedämpfte Erdäpfeln und Avocado",
+              "name": "Sudado de Pollo Hühner – Eintopf mit Erdäpfeln und Yuca dazu Reis, Salat und überbackene Maduros",
               "price": null
             }
           ]
@@ -351,7 +351,7 @@
           "day": "Samstag",
           "items": [
             {
-              "name": "Lengua en Salsa Rindszunge in Saft mit Reis, Avocado-Salat und frittierte Kochbananen",
+              "name": "Sobrebarriga a la Criolla gedünstetes Flankensteak in kreolischer Sauce mit Nudelreis, roten Rübensalat und frittierte Kochbananen",
               "price": null
             }
           ]
