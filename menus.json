@@ -1,6 +1,6 @@
 {
-  "updated": "2026-07-28T10:29:12.949149",
-  "week": "KW 31",
+  "updated": "2026-08-03T10:55:15.481687",
+  "week": "KW 32",
   "restaurants": [
     {
       "id": "ottakringer-stubn",
@@ -14,24 +14,49 @@
       "menu_image": null,
       "days": [
         {
-          "day": "Montag",
-          "items": []
-        },
-        {
           "day": "Dienstag",
-          "items": []
-        },
-        {
-          "day": "Mittwoch",
-          "items": []
-        },
-        {
-          "day": "Donnerstag",
-          "items": []
-        },
-        {
-          "day": "Freitag",
-          "items": []
+          "items": [
+            {
+              "name": "Eiernockerl mit grünem Salat",
+              "price": null
+            },
+            {
+              "name": "Mittwoch",
+              "price": null
+            },
+            {
+              "name": "Suppe",
+              "price": null
+            },
+            {
+              "name": "Holzfällersteak mit Rosmarinkartoffeln und Speckfisolen",
+              "price": null
+            },
+            {
+              "name": "Donnerstag",
+              "price": null
+            },
+            {
+              "name": "Suppe",
+              "price": null
+            },
+            {
+              "name": "Curry- Hühnergeschnetzeltes mit Früchten und Reis",
+              "price": null
+            },
+            {
+              "name": "Freitag",
+              "price": null
+            },
+            {
+              "name": "Suppe",
+              "price": null
+            },
+            {
+              "name": "Gebackener Fisch mit Kartoffelsalat",
+              "price": null
+            }
+          ]
         }
       ]
     },
@@ -43,14 +68,14 @@
       "address": "Thaliastraße 125A, 1160 Wien",
       "phone": "+43 1 3692286",
       "price_note": "Hauptspeise 9,80 € · mit Suppe 10,80 €",
-      "week_label": "UNSERE MITTAGSTELLER vom 27.7. bis 31.7.2026",
+      "week_label": "UNSERE MITTAGSTELLER vom 3.8. bis 7.8.2026",
       "menu_image": null,
       "days": [
         {
           "day": "Montag",
           "items": [
             {
-              "name": "Naturschnitzerl mit Eierschwammerlsauce und Erdäpfelkroketten",
+              "name": "Letscho-Kotelett mit Kräuterreis",
               "price": null
             },
             {
@@ -58,7 +83,7 @@
               "price": null
             },
             {
-              "name": "Gebackene Champignons mit Sauce Tartare",
+              "name": "Eierschwammerlrisotto mit frischem Grana",
               "price": null
             }
           ]
@@ -67,7 +92,7 @@
           "day": "Dienstag",
           "items": [
             {
-              "name": "Gekochtes Rindfleisch mit Rahmgemüse und Erdäpfelschmarr’n",
+              "name": "Steirisches Wurzelfleisch mit Kümmelerdäpfel",
               "price": null
             },
             {
@@ -75,7 +100,7 @@
               "price": null
             },
             {
-              "name": "Rahmgemüse mit Spiegelei und Kräutererdäpfel",
+              "name": "Geröstete Knödel mit Ei und Rote-Rüben-Salat",
               "price": null
             }
           ]
@@ -84,7 +109,7 @@
           "day": "Mittwoch",
           "items": [
             {
-              "name": "Gebackenes Schweinsschnitzerl mit Petersilerdäpfel",
+              "name": "Gebackenes Hühnerschnitzerl in Kürbiskernpanade mit Petersilerdäpfel",
               "price": null
             },
             {
@@ -92,7 +117,7 @@
               "price": null
             },
             {
-              "name": "Käsespätzle mit Röstzwiebel",
+              "name": "Gemüsegröst‘l mit Schafkäse und Spiegelei",
               "price": null
             }
           ]
@@ -101,7 +126,7 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Rindsbraten in Kräuter-Rahm-Sauce mit Serviettenknödel",
+              "name": "Spaghetti Bolognese mit Parmesan",
               "price": null
             },
             {
@@ -109,7 +134,7 @@
               "price": null
             },
             {
-              "name": "Kaiserschmarr’n mit Zwetschkenröster",
+              "name": "Grießschmarr’n mit Beerenröster",
               "price": null
             }
           ]
@@ -140,7 +165,7 @@
           "day": "Mittwoch",
           "items": [
             {
-              "name": "Tagessuppe",
+              "name": "Grießnockerlsuppe",
               "price": null
             },
             {
@@ -153,7 +178,7 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Tagessuppe",
+              "name": "Gemüsecremesuppe",
               "price": null
             },
             {
@@ -166,7 +191,7 @@
           "day": "Freitag",
           "items": [
             {
-              "name": "Tagessuppe",
+              "name": "Gazpacho",
               "price": null
             },
             {
@@ -193,9 +218,49 @@
       "address": "Rankgasse 25, 1160 Wien",
       "phone": "+43 1 493 91 84",
       "price_note": null,
-      "week_label": "KW 31",
+      "week_label": "KW 32",
       "menu_image": null,
-      "days": []
+      "days": [
+        {
+          "day": "Dienstag",
+          "items": [
+            {
+              "name": "Cevapcici mit Pommes, Zwiebelsenf und Ketchup",
+              "price": "8.90 €"
+            },
+            {
+              "name": "__HiTTwoch,os.aucust",
+              "price": null
+            },
+            {
+              "name": "Gefüllte Zucchini in Paradeissauce und Bandnudeln",
+              "price": "9.90 €"
+            }
+          ]
+        },
+        {
+          "day": "Donnerstag",
+          "items": [
+            {
+              "name": "Lammbraten mit Speckfisolen und Reis",
+              "price": "10.90 €"
+            }
+          ]
+        },
+        {
+          "day": "Freitag",
+          "items": [
+            {
+              "name": "Gebackener Kabeljau oder Pangasius mit Gemüsemayonnaise und Kartoffelsalat",
+              "price": null
+            },
+            {
+              "name": "Fr > safe",
+              "price": null
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "nigls",
