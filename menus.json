@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-03T10:55:15.481687",
+  "updated": "2026-08-04T10:32:00.812811",
   "week": "KW 32",
   "restaurants": [
     {
@@ -373,38 +373,34 @@
       "menu_image": null,
       "days": [
         {
-          "day": "Dienstag",
+          "day": "Samstag",
           "items": [
             {
-              "name": "Schopfbraten vom Grill dazu Reis, Kichererbsen mit Chorizo und Maduros",
+              "name": "Picadillo de Carne kleinwürfeliges Rindsragout mit Gemüse dazu Reis, Salat und Maduros",
               "price": null
             }
           ]
         },
         {
-          "day": "Mittwoch",
+          "day": "Samstag",
           "items": [
             {
-              "name": "Sancocho de Costilla Suppentopf",
-              "price": null
-            },
-            {
-              "name": "Carne mechada gerupftes Rindfleisch mit Reis und Avocado",
+              "name": "Hühnerfilet vom Grill mit Reis, Salat und kreolischen Linsen",
               "price": null
             }
           ]
         },
         {
-          "day": "Donnerstag",
+          "day": "Samstag",
           "items": [
             {
-              "name": "Sudado de Pollo Hühner – Eintopf mit Erdäpfeln und Yuca dazu Reis, Salat und überbackene Maduros",
+              "name": "Arroz Atollado kolumbianischer Mixreis mit harten Ei, pikanter Sauce und Kochbanenen – Langchips",
               "price": null
             }
           ]
         },
         {
-          "day": "Freitag",
+          "day": "Samstag",
           "items": [
             {
               "name": "BANDEJA PAISA kolumbianischer Bauernschmaus",
@@ -416,7 +412,7 @@
           "day": "Samstag",
           "items": [
             {
-              "name": "Sobrebarriga a la Criolla gedünstetes Flankensteak in kreolischer Sauce mit Nudelreis, roten Rübensalat und frittierte Kochbananen",
+              "name": "Sancocho Trifasico kolumbianischer Suppentopf mit dreierlei Fleisch dazu Hühnerkeule in Salsa, Reis, pikanter Dip und Avocado",
               "price": null
             }
           ]
