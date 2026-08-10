@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-04T10:32:00.812811",
-  "week": "KW 32",
+  "updated": "2026-08-10T08:58:47.152074",
+  "week": "KW 33",
   "restaurants": [
     {
       "id": "ottakringer-stubn",
@@ -17,7 +17,7 @@
           "day": "Dienstag",
           "items": [
             {
-              "name": "Eiernockerl mit grünem Salat",
+              "name": "Hascheehörnchen mit grünem Salat",
               "price": null
             },
             {
@@ -29,7 +29,7 @@
               "price": null
             },
             {
-              "name": "Holzfällersteak mit Rosmarinkartoffeln und Speckfisolen",
+              "name": "Krautfleisch mit Kartoffeln",
               "price": null
             },
             {
@@ -41,7 +41,7 @@
               "price": null
             },
             {
-              "name": "Curry- Hühnergeschnetzeltes mit Früchten und Reis",
+              "name": "Berner Würstel mit Pommes",
               "price": null
             },
             {
@@ -68,14 +68,14 @@
       "address": "Thaliastraße 125A, 1160 Wien",
       "phone": "+43 1 3692286",
       "price_note": "Hauptspeise 9,80 € · mit Suppe 10,80 €",
-      "week_label": "UNSERE MITTAGSTELLER vom 3.8. bis 7.8.2026",
+      "week_label": "UNSERE MITTAGSTELLER vom 10.8. bis 14.8.2026",
       "menu_image": null,
       "days": [
         {
           "day": "Montag",
           "items": [
             {
-              "name": "Letscho-Kotelett mit Kräuterreis",
+              "name": "Gratinierte Fleischpalatschinke",
               "price": null
             },
             {
@@ -83,7 +83,7 @@
               "price": null
             },
             {
-              "name": "Eierschwammerlrisotto mit frischem Grana",
+              "name": "Eiernockerl mit buntem Blattsalat",
               "price": null
             }
           ]
@@ -92,7 +92,7 @@
           "day": "Dienstag",
           "items": [
             {
-              "name": "Steirisches Wurzelfleisch mit Kümmelerdäpfel",
+              "name": "Chili con Carne mit Hausbrot",
               "price": null
             },
             {
@@ -100,7 +100,7 @@
               "price": null
             },
             {
-              "name": "Geröstete Knödel mit Ei und Rote-Rüben-Salat",
+              "name": "Oma’s Krautfleckerl mit Pfefferrahm",
               "price": null
             }
           ]
@@ -109,7 +109,7 @@
           "day": "Mittwoch",
           "items": [
             {
-              "name": "Gebackenes Hühnerschnitzerl in Kürbiskernpanade mit Petersilerdäpfel",
+              "name": "Gebackener Schweinslungenbraten mit Petersilerdäpfel",
               "price": null
             },
             {
@@ -117,7 +117,7 @@
               "price": null
             },
             {
-              "name": "Gemüsegröst‘l mit Schafkäse und Spiegelei",
+              "name": "Spinat-Erdäpfelstrudel mit Kräuterdip",
               "price": null
             }
           ]
@@ -126,7 +126,7 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Spaghetti Bolognese mit Parmesan",
+              "name": "½ Grillhenderl mit Erbsenreis",
               "price": null
             },
             {
@@ -134,7 +134,7 @@
               "price": null
             },
             {
-              "name": "Grießschmarr’n mit Beerenröster",
+              "name": "Schönbrunner Reisauflauf auf Beerenspiegel mit Schlagobers",
               "price": null
             }
           ]
@@ -218,23 +218,28 @@
       "address": "Rankgasse 25, 1160 Wien",
       "phone": "+43 1 493 91 84",
       "price_note": null,
-      "week_label": "KW 32",
+      "week_label": "KW 33",
       "menu_image": null,
       "days": [
+        {
+          "day": "Montag",
+          "items": [
+            {
+              "name": "Rahm-Beuschel mit Semmelknödel",
+              "price": "8.90 €"
+            }
+          ]
+        },
         {
           "day": "Dienstag",
           "items": [
             {
-              "name": "Cevapcici mit Pommes, Zwiebelsenf und Ketchup",
-              "price": "8.90 €"
-            },
-            {
-              "name": "__HiTTwoch,os.aucust",
-              "price": null
-            },
-            {
-              "name": "Gefüllte Zucchini in Paradeissauce und Bandnudeln",
+              "name": "Letscho Kotelette mit Pommes-Frites",
               "price": "9.90 €"
+            },
+            {
+              "name": "Back-Henderl mit Erdäpfel-Vogerlsalat",
+              "price": "8.90 €"
             }
           ]
         },
@@ -242,8 +247,8 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Lammbraten mit Speckfisolen und Reis",
-              "price": "10.90 €"
+              "name": "Gefüllte Kalbsbrust mit Semmelfülle und grünem Salat",
+              "price": "11.90 €"
             }
           ]
         },
@@ -255,7 +260,7 @@
               "price": null
             },
             {
-              "name": "Fr > safe",
+              "name": "Fr > ale",
               "price": null
             }
           ]
@@ -371,53 +376,7 @@
       "price_note": "Mittagsangebot 12–14 Uhr: 12,90 €",
       "week_label": "",
       "menu_image": null,
-      "days": [
-        {
-          "day": "Samstag",
-          "items": [
-            {
-              "name": "Picadillo de Carne kleinwürfeliges Rindsragout mit Gemüse dazu Reis, Salat und Maduros",
-              "price": null
-            }
-          ]
-        },
-        {
-          "day": "Samstag",
-          "items": [
-            {
-              "name": "Hühnerfilet vom Grill mit Reis, Salat und kreolischen Linsen",
-              "price": null
-            }
-          ]
-        },
-        {
-          "day": "Samstag",
-          "items": [
-            {
-              "name": "Arroz Atollado kolumbianischer Mixreis mit harten Ei, pikanter Sauce und Kochbanenen – Langchips",
-              "price": null
-            }
-          ]
-        },
-        {
-          "day": "Samstag",
-          "items": [
-            {
-              "name": "BANDEJA PAISA kolumbianischer Bauernschmaus",
-              "price": null
-            }
-          ]
-        },
-        {
-          "day": "Samstag",
-          "items": [
-            {
-              "name": "Sancocho Trifasico kolumbianischer Suppentopf mit dreierlei Fleisch dazu Hühnerkeule in Salsa, Reis, pikanter Dip und Avocado",
-              "price": null
-            }
-          ]
-        }
-      ]
+      "days": []
     }
   ]
 }
