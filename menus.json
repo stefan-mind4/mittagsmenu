@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-18T08:29:01.229927",
-  "week": "KW 34",
+  "updated": "2026-08-24T08:12:04.981758",
+  "week": "KW 35",
   "restaurants": [
     {
       "id": "ottakringer-stubn",
@@ -17,7 +17,7 @@
           "day": "Dienstag",
           "items": [
             {
-              "name": "Krautfleckerl",
+              "name": "Specklinsen mit Knödel",
               "price": null
             },
             {
@@ -29,7 +29,7 @@
               "price": null
             },
             {
-              "name": "Faschierte Laibchen mit Püree und Röstzwiebeln",
+              "name": "Gefüllte Paprika mit Tomatensauce und Kartoffeln",
               "price": null
             },
             {
@@ -41,7 +41,7 @@
               "price": null
             },
             {
-              "name": "Gebratene Hühnerkeule mit Reis und Salat",
+              "name": "Gebratener Leberkäse mit Gemüse und Kartoffeln",
               "price": null
             },
             {
@@ -54,96 +54,6 @@
             },
             {
               "name": "Gebackener Fisch mit Kartoffelsalat",
-              "price": null
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "goesser-braeu",
-      "name": "Gösser Bräu Wien",
-      "url": "https://www.goesserbraeuwien.at/",
-      "cuisine": "Österreichische Küche",
-      "address": "Thaliastraße 125A, 1160 Wien",
-      "phone": "+43 1 3692286",
-      "price_note": "Hauptspeise 9,80 € · mit Suppe 10,80 €",
-      "week_label": "UNSERE MITTAGSTELLER vom 17.8. bis 21.8.2026",
-      "menu_image": null,
-      "days": [
-        {
-          "day": "Montag",
-          "items": [
-            {
-              "name": "Gekochtes Rindfleisch mit Cremespinat und Erdäpfelschmarr‘n",
-              "price": null
-            },
-            {
-              "name": "— oder —",
-              "price": null
-            },
-            {
-              "name": "Cremespinat mit Spiegelei und Erdäpfelschmarr‘n",
-              "price": null
-            }
-          ]
-        },
-        {
-          "day": "Dienstag",
-          "items": [
-            {
-              "name": "Hascheehörnchen mit Chinakohlsalat",
-              "price": null
-            },
-            {
-              "name": "— oder —",
-              "price": null
-            },
-            {
-              "name": "Gebackene Gouda mit Sauce Tartare und Preiselbeeren",
-              "price": null
-            }
-          ]
-        },
-        {
-          "day": "Mittwoch",
-          "items": [
-            {
-              "name": "Gebackenes Schweinsschnitzerl mit Petersilerdäpfel",
-              "price": null
-            },
-            {
-              "name": "— oder —",
-              "price": null
-            },
-            {
-              "name": "Champignonsauce mit Rahm und Serviettenknödel",
-              "price": null
-            }
-          ]
-        },
-        {
-          "day": "Donnerstag",
-          "items": [
-            {
-              "name": "Szegediner Gulasch mit Buttererdäpfel",
-              "price": null
-            },
-            {
-              "name": "— oder —",
-              "price": null
-            },
-            {
-              "name": "Mohnnudel mit Apfelmus",
-              "price": null
-            }
-          ]
-        },
-        {
-          "day": "Freitag",
-          "items": [
-            {
-              "name": "Gebackenes Fischfilet mit Erdäpfelsalat und Sauce Tartare",
               "price": null
             }
           ]
@@ -218,9 +128,48 @@
       "address": "Rankgasse 25, 1160 Wien",
       "phone": "+43 1 493 91 84",
       "price_note": null,
-      "week_label": "",
+      "week_label": "KW 35",
       "menu_image": null,
-      "days": []
+      "days": [
+        {
+          "day": "Dienstag",
+          "items": [
+            {
+              "name": "Reisfleisch mit grünem Salat",
+              "price": "8.90 €"
+            },
+            {
+              "name": "> __Hittwoch,2s.aucust 4",
+              "price": null
+            },
+            {
+              "name": "Rindsroulade mit Teigspiralen und Saft",
+              "price": "11.90 €"
+            }
+          ]
+        },
+        {
+          "day": "Donnerstag",
+          "items": [
+            {
+              "name": "Schopfbraten mit Erdäpfelknödel und Sauerkraut",
+              "price": "9.90 €"
+            },
+            {
+              "name": "> _Freimac,2e.aucust 4",
+              "price": null
+            },
+            {
+              "name": "Gebackener Kabeljau oder Pangasius mit Gemüsemayonnaise und Kartoffelsalat",
+              "price": null
+            },
+            {
+              "name": "re oot th ale",
+              "price": null
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "nigls",
@@ -238,15 +187,15 @@
           "day": "Montag",
           "items": [
             {
-              "name": "Fritattensuppe",
+              "name": "Rindsuppe mit Schinkenschöberl",
               "price": null
             },
             {
-              "name": "Hühnerroulade mit Tomaten-Mozzarella-Füllung und Reis",
+              "name": "A,CGL",
               "price": null
             },
             {
-              "name": "ACGL",
+              "name": "Gebackene Champignon mit Sauce Tartare und Blattsalat",
               "price": "11.90 €"
             }
           ]
@@ -255,11 +204,11 @@
           "day": "Dienstag",
           "items": [
             {
-              "name": "Kartoffelcremesuppe",
+              "name": "Karottencremesuppe mit Croütons",
               "price": null
             },
             {
-              "name": "Champignonschnitzel mit Nockerl",
+              "name": "Spinatstrudel mit Schafkäsefüllung und kleinem gemischtem Salat",
               "price": "11.90 €"
             }
           ]
@@ -268,15 +217,15 @@
           "day": "Mittwoch",
           "items": [
             {
-              "name": "Schweinsschnitzel +“",
+              "name": "Schweinsschnitzel 4",
               "price": "12.50 €"
             },
             {
-              "name": "Surschnitzel (vom Schwein) 4",
+              "name": "Surschnitzel (vom Schwein) **",
               "price": "13.50 €"
             },
             {
-              "name": "Hühnerschnitzel *",
+              "name": "Hühnerschnitzel 4",
               "price": "13.50 €"
             },
             {
@@ -289,11 +238,15 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Barlauchcremesuppe mit Croütons",
+              "name": "Fritattensuppe",
               "price": null
             },
             {
-              "name": "Gefüllte Paprika mit Tomatensauce und Salzkartoffel",
+              "name": "Schweinskotelett mit Letschogemtise und Bratkartoffel",
+              "price": null
+            },
+            {
+              "name": "ACGM",
               "price": "11.90 €"
             }
           ]
@@ -302,11 +255,11 @@
           "day": "Freitag",
           "items": [
             {
-              "name": "Grießnockerlsuppe",
+              "name": "Tomatencremesuppe",
               "price": null
             },
             {
-              "name": "ACGL",
+              "name": "ACG L",
               "price": null
             },
             {
