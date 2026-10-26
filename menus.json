@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-20T13:13:38.254429",
-  "week": "KW 43",
+  "updated": "2026-10-26T14:29:37.415991",
+  "week": "KW 44",
   "restaurants": [
     {
       "id": "ottakringer-stubn",
@@ -17,7 +17,7 @@
           "day": "Dienstag",
           "items": [
             {
-              "name": "Krautroulade mit Kartoffeln",
+              "name": "Schnitzel mit Kartoffeln und Salat",
               "price": null
             },
             {
@@ -29,7 +29,7 @@
               "price": null
             },
             {
-              "name": "Knoblauchschnitzel mit Reis",
+              "name": "Blunzengröstl mit Kraut",
               "price": null
             },
             {
@@ -41,7 +41,7 @@
               "price": null
             },
             {
-              "name": "Grenadiermarsch mit grünem Salat",
+              "name": "Gebratene Hühnerkeule mit Reis und Salat",
               "price": null
             },
             {
@@ -68,22 +68,14 @@
       "address": "Thaliastraße 125A, 1160 Wien",
       "phone": "+43 1 3692286",
       "price_note": "Hauptspeise 9,80 € · mit Suppe 10,80 €",
-      "week_label": "UNSERE MITTAGSTELLER vom 19.10. bis 23.10.2026",
+      "week_label": "UNSERE MITTAGSTELLER vom 27.10. bis 30.10.2026",
       "menu_image": null,
       "days": [
         {
           "day": "Montag",
           "items": [
             {
-              "name": "Mayoranfleisch mit Hörnchen",
-              "price": null
-            },
-            {
-              "name": "— oder —",
-              "price": null
-            },
-            {
-              "name": "Gemüsestrudel auf warmer Kräutersauce",
+              "name": "Feiertag!",
               "price": null
             }
           ]
@@ -92,7 +84,7 @@
           "day": "Dienstag",
           "items": [
             {
-              "name": "Cevapcici mit Pommes Frites und Zwiebelsenf",
+              "name": "Kalbsrollbraten mit Erbsenreis",
               "price": null
             },
             {
@@ -100,7 +92,7 @@
               "price": null
             },
             {
-              "name": "Gebackener Emmentaler mit Preiselbeeren",
+              "name": "Erdäpfel-Spinat-Strudel auf warmer Kräuter-Rahm-Sauce",
               "price": null
             }
           ]
@@ -109,7 +101,7 @@
           "day": "Mittwoch",
           "items": [
             {
-              "name": "Cordon Bleu mit Petersilerdäpfel",
+              "name": "Gebackenes Surschnitzerl mit Petersilerdäpfel",
               "price": null
             },
             {
@@ -117,7 +109,7 @@
               "price": null
             },
             {
-              "name": "Spinatnockerl in Käse-Oberssauce",
+              "name": "Champignonsauce mit Serviettenknödel",
               "price": null
             }
           ]
@@ -126,7 +118,7 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Knoblauchschnitzerl mit Braterdäpfel",
+              "name": "Schweins-Rahm-Gulasch mit Butternockerl",
               "price": null
             },
             {
@@ -134,7 +126,7 @@
               "price": null
             },
             {
-              "name": "Grießschmarr’n mit Apfelmus",
+              "name": "Gebackene Apfelspalten mit Vanillesauce",
               "price": null
             }
           ]
@@ -158,7 +150,7 @@
       "address": "Lienfeldergasse 35, 1160 Wien",
       "phone": "+43 1 4861455",
       "price_note": null,
-      "week_label": "Der Menüplan für 21. bis 23. Oktober",
+      "week_label": "Der Menüplan für 28. bis 30. Oktober",
       "menu_image": null,
       "days": [
         {
@@ -169,7 +161,7 @@
               "price": null
             },
             {
-              "name": "Berner Würstel mit Pommes frites",
+              "name": "Überbackene Schinkenfleckerln mit Bummerlsalat",
               "price": "13.50 €"
             }
           ]
@@ -182,7 +174,7 @@
               "price": null
             },
             {
-              "name": "Schweinsschopfbraten mit Semmelknödel & warmem Speckkraut",
+              "name": "Gekochtes Rindfleisch mit Petersilkartoffeln & Dillfisolen",
               "price": "13.50 €"
             }
           ]
@@ -203,7 +195,7 @@
               "price": null
             },
             {
-              "name": "Grießschmarrn mit Zwetschkenröster",
+              "name": "Kokos-Gemüsecurry mit Jasminreis",
               "price": "13.50 €"
             }
           ]
@@ -218,58 +210,9 @@
       "address": "Rankgasse 25, 1160 Wien",
       "phone": "+43 1 493 91 84",
       "price_note": null,
-      "week_label": "KW 43",
+      "week_label": "",
       "menu_image": null,
-      "days": [
-        {
-          "day": "Montag",
-          "items": [
-            {
-              "name": "Cevapcici mit Pommes, Zwiebelsenf und Ketchup",
-              "price": "8.90 €"
-            }
-          ]
-        },
-        {
-          "day": "Dienstag",
-          "items": [
-            {
-              "name": "Geröstete Leber mit Salzkartoffeln",
-              "price": "9.90 €"
-            },
-            {
-              "name": "> _Mirrwock, oKrosER 4",
-              "price": null
-            },
-            {
-              "name": "Blunz‘n Gröstl mit Sauerkraut und Erdapfelschmarren",
-              "price": "9.90 €"
-            }
-          ]
-        },
-        {
-          "day": "Donnerstag",
-          "items": [
-            {
-              "name": "Schweinsbraten mit Erdäpfelknödel und Sauerkraut",
-              "price": "9.90 €"
-            }
-          ]
-        },
-        {
-          "day": "Freitag",
-          "items": [
-            {
-              "name": "Gebackener Kabeljau oder Pangasius mit Gemüsemayonnaise und Kartoffelsalat",
-              "price": null
-            },
-            {
-              "name": "Fr > ale",
-              "price": null
-            }
-          ]
-        }
-      ]
+      "days": []
     },
     {
       "id": "nigls",
@@ -287,12 +230,8 @@
           "day": "Montag",
           "items": [
             {
-              "name": "Kürbiscremesuppe mit Croütons",
+              "name": "Feiertag",
               "price": null
-            },
-            {
-              "name": "Chili con Pollo (mit Huhn mit Reis",
-              "price": "12.50 €"
             }
           ]
         },
@@ -300,15 +239,11 @@
           "day": "Dienstag",
           "items": [
             {
-              "name": "Krautsuppe",
+              "name": "Knoblauchcremesuppe mit Croütons",
               "price": null
             },
             {
-              "name": "Grenadiermarsch mit Blattsalat",
-              "price": null
-            },
-            {
-              "name": "AGGL",
+              "name": "Burgenlandischer Krautstrudel mit Grammeln, Kräuterdip und Blattsalat",
               "price": "12.50 €"
             }
           ]
@@ -317,19 +252,19 @@
           "day": "Mittwoch",
           "items": [
             {
-              "name": "Schweinsschnitzel *",
+              "name": "Schweinsschnitzel “",
               "price": "13.90 €"
             },
             {
-              "name": "Surschnitzel (vom Schwein) 4",
+              "name": "Surschnitzel (vom Schwein) *",
               "price": "14.80 €"
             },
             {
-              "name": "Hühnerschnitzel *",
+              "name": "Hühnerschnitzel 4",
               "price": "14.80 €"
             },
             {
-              "name": "Kalbsschnitzel * jeweils mit Erdäpfel-Vogerlsalat",
+              "name": "Kalbsschnitzel jeweils mit Erdäpfel-Vogerlsalat",
               "price": "19.50 €"
             }
           ]
@@ -338,11 +273,11 @@
           "day": "Donnerstag",
           "items": [
             {
-              "name": "Minestrone mit Nudeln",
+              "name": "Zucchinicremesuppe mit Blauschimmelkäse",
               "price": null
             },
             {
-              "name": "Specklinsen mit Serviettenknödel",
+              "name": "Bauernspätzle mit Wildschwein-Kabanossi und Krautsalat",
               "price": "12.50 €"
             }
           ]
@@ -351,15 +286,15 @@
           "day": "Freitag",
           "items": [
             {
-              "name": "Tiroler Speckknödelsuppe",
+              "name": "Rotkrautcremesuppe mit Brotchips",
               "price": null
             },
             {
-              "name": "AGCL",
+              "name": "AGGL",
               "price": null
             },
             {
-              "name": "Gebackener Zander mit Erdapfel-Vogerlsalat",
+              "name": "Gebackener Seelachs mit Erdäpfel-Vogerlsalat",
               "price": "13.50 €"
             }
           ]
